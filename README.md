@@ -35,7 +35,5 @@ Das Instrument ist kein Entscheidungsautomat. Regelbasierte Orientierung hebt ty
 - `beispiele/` – vier hypothetische Anwendungsfälle als finaler JSON-Fallzustand und Prüfbericht (PDF)
 
 
-## Kompatibilität
-
-
+## Credit
 © Ronny Weßling, 2026
