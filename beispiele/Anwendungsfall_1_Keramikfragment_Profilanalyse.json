@@ -1,0 +1,293 @@
+{
+  "appVersion": "1.0",
+  "meta": {
+    "objectName": "Anwendungsfall 1 - Keramikfragment für Profilanalyse",
+    "objectId": "AF-01",
+    "context": "Hypothetischer Anwendungsfall Kapitel 8",
+    "editor": "Ronny Weßling",
+    "date": "2026-10-11",
+    "mode": "planning"
+  },
+  "b1": {
+    "uses": [
+      {
+        "id": "u1",
+        "area": "Wissenschaftliche Dokumentation / Analyse",
+        "reason": ""
+      }
+    ],
+    "evaluationBasis": "",
+    "originalPurpose": "",
+    "reuse": [],
+    "boundary": ""
+  },
+  "b2": {
+    "groups": [
+      {
+        "id": "rmv34e30v6",
+        "useId": "u1",
+        "infoDecision": "yes",
+        "featureDecision": "yes",
+        "informations": [
+          "Größe, Maße und Maßstab",
+          "Erfassungsumfang: bestimmte Bereiche / Details",
+          "Operation: verlässlich messen",
+          "Maßhaltigkeit und metrische Auswertbarkeit",
+          "Operation: Formen oder Merkmale vergleichen",
+          "Randstellung, Profilverlauf, Wandstärke, Orientierung und rekonstruierbarer Durchmesser"
+        ],
+        "infoOwn": "",
+        "features": [
+          "Rand- und Profilbereich"
+        ],
+        "featureOwn": "",
+        "conditions": [],
+        "conditionOwn": "",
+        "splitSuggestionDismissed": true
+      }
+    ],
+    "objectContext": {
+      "materialGroups": [
+        "Keramik"
+      ],
+      "materialOwn": "",
+      "conditions": [],
+      "conditionOwn": "",
+      "conditionDecision": "no"
+    },
+    "demandProfile": {
+      "representations": [
+        "Größe, Maße und Maßstab"
+      ],
+      "representationOwn": "Randstellung, Profilverlauf, Wandstärke, Orientierung und rekonstruierbarer Durchmesser",
+      "coverage": [
+        "Bestimmte Bereiche / Details"
+      ],
+      "coverageOwn": "Rand- und Profilbereich",
+      "outerCoverage": "Nur ausgewählte äußere Bereiche",
+      "outerCoverageOwn": "Rand- und Profilbereich",
+      "detailAreas": "",
+      "innerStructures": "no",
+      "innerOwn": "",
+      "operations": [
+        "Verlässlich messen",
+        "Formen oder Merkmale vergleichen"
+      ],
+      "operationOwn": "",
+      "manualRepresentations": [],
+      "manualCoverage": [],
+      "manualOperations": [],
+      "dismissedRepresentations": [
+        "Räumliche Form und geometrische Details"
+      ],
+      "dismissedCoverage": [],
+      "dismissedOperations": [],
+      "initialized": true,
+      "touched": false
+    }
+  },
+  "b3": {
+    "forms": {
+      "__joint__": {
+        "selected": [
+          "Maß- / Profildokumentation",
+          "Zeichnung",
+          "Fotografie"
+        ],
+        "own": "",
+        "ownIs3D": "",
+        "contribution": ""
+      }
+    },
+    "roles": {
+      "u1": {
+        "value": "notneeded",
+        "reason": "",
+        "no3dForms": "",
+        "no3dReason": ""
+      }
+    },
+    "role3d": "",
+    "roleReason": "",
+    "no3dForms": "",
+    "no3dReason": "",
+    "qualityProfiles": []
+  },
+  "b4": {
+    "planning": {
+      "projectConditions": "",
+      "procedures": [],
+      "procedureOwn": "",
+      "procedureLinks": {},
+      "components": [
+        "Masterfassung",
+        "Analysefassung",
+        "Maßstabs-/Referenz-/Kontrollinformationen",
+        "Bearbeitungs-/Prozessdokumentation",
+        "Metadaten und Paradata",
+        "Ausgangs-/Rohdaten"
+      ],
+      "componentOwn": "",
+      "componentsInitialized": false,
+      "system": "",
+      "capture": "",
+      "control": "",
+      "processing": "",
+      "products": "",
+      "data": "",
+      "conflicts": {
+        "Nachnutzbarkeit ↔ Aufwand der Datenhaltung": {
+          "status": "",
+          "handling": "",
+          "consequence": ""
+        },
+        "Nutzbarkeit / Bearbeitung ↔ Modellintegrität / Nachvollziehbarkeit": {
+          "status": "",
+          "handling": "",
+          "consequence": ""
+        }
+      },
+      "manualConflicts": []
+    },
+    "evaluation": {
+      "inventory": {
+        "0": {
+          "status": "",
+          "evidence": "",
+          "note": ""
+        },
+        "1": {
+          "status": "",
+          "evidence": "",
+          "note": ""
+        },
+        "2": {
+          "status": "",
+          "evidence": "",
+          "note": ""
+        },
+        "3": {
+          "status": "",
+          "evidence": "",
+          "note": ""
+        },
+        "4": {
+          "status": "",
+          "evidence": "",
+          "note": ""
+        },
+        "5": {
+          "status": "",
+          "evidence": "",
+          "note": ""
+        },
+        "6": {
+          "status": "",
+          "evidence": "",
+          "note": ""
+        },
+        "7": {
+          "status": "",
+          "evidence": "",
+          "note": ""
+        },
+        "8": {
+          "status": "",
+          "evidence": "",
+          "note": ""
+        },
+        "9": {
+          "status": "",
+          "evidence": "",
+          "note": ""
+        },
+        "10": {
+          "status": "",
+          "evidence": "",
+          "note": ""
+        },
+        "11": {
+          "status": "",
+          "evidence": "",
+          "note": ""
+        },
+        "12": {
+          "status": "",
+          "evidence": "",
+          "note": ""
+        },
+        "13": {
+          "status": "",
+          "evidence": "",
+          "note": ""
+        },
+        "14": {
+          "status": "",
+          "evidence": "",
+          "note": ""
+        },
+        "15": {
+          "status": "",
+          "evidence": "",
+          "note": ""
+        }
+      }
+    },
+    "actual": {},
+    "actualUi": {}
+  },
+  "b5": {
+    "comparisons": {},
+    "consequences": {},
+    "consequenceUi": {}
+  },
+  "workflow": {
+    "started": true,
+    "completed": {
+      "uses": true,
+      "requirements": true,
+      "profile": true,
+      "implementation": true,
+      "comparison": true
+    },
+    "stale": {
+      "uses": false,
+      "requirements": false,
+      "profile": false,
+      "implementation": false,
+      "comparison": false
+    },
+    "activeEdit": null,
+    "revisionLog": [],
+    "revisionNoticeDismissed": false
+  },
+  "result": {
+    "type": "planning_result",
+    "label": "Ergebnis",
+    "mode": "planning",
+    "statement": "Dokumentationsstrategie festgelegt; es wurde keine dreidimensionale Dokumentationsform ausgewählt. Weitere Angaben zur 3D-Qualität sind für diese Strategie nicht erforderlich.",
+    "status": "no_3d_quality_assessment_required",
+    "documentationForms": [
+      "Maß- / Profildokumentation",
+      "Zeichnung",
+      "Fotografie"
+    ],
+    "threeDRole": "notneeded",
+    "targetUses": [
+      {
+        "ref": "N1",
+        "use": "Wissenschaftliche Dokumentation / Analyse"
+      }
+    ],
+    "consideredReuse": [],
+    "qualityComparison": {
+      "total": 0,
+      "fulfilled": 0,
+      "deviations": 0,
+      "notAssessable": 0,
+      "open": 0,
+      "areas": []
+    },
+    "issues": []
+  }
+}

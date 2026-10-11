@@ -1,0 +1,974 @@
+{
+  "appVersion": "1.0",
+  "meta": {
+    "objectName": "Anwendungsfall 4 - Vorhandenes Webmodell für morphometrische Analyse",
+    "objectId": "AF-04",
+    "context": "Hypothetischer Anwendungsfall Kapitel 8",
+    "editor": "Ronny Weßling",
+    "date": "2026-10-11",
+    "mode": "evaluation"
+  },
+  "b1": {
+    "uses": [
+      {
+        "id": "u1",
+        "area": "Wissenschaftliche Dokumentation / Analyse",
+        "reason": ""
+      }
+    ],
+    "evaluationBasis": "new",
+    "originalPurpose": "Online-Präsentation / Webvermittlung",
+    "reuse": [],
+    "boundary": ""
+  },
+  "b2": {
+    "groups": [
+      {
+        "id": "rmv34e4cx6",
+        "useId": "u1",
+        "infoDecision": "yes",
+        "featureDecision": "yes",
+        "informations": [
+          "Darstellung: räumliche Form und geometrische Details",
+          "Größe, Maße und Maßstab",
+          "Erfassungsumfang: gesamtes Objekt",
+          "Operation: verlässlich messen",
+          "Maßhaltigkeit und metrische Auswertbarkeit",
+          "Operation: Formen oder Merkmale vergleichen"
+        ],
+        "infoOwn": "",
+        "features": [
+          "gesamtes Objekt"
+        ],
+        "featureOwn": "",
+        "conditions": [],
+        "conditionOwn": "",
+        "splitSuggestionDismissed": true
+      }
+    ],
+    "objectContext": {
+      "materialGroups": [
+        "Keramik"
+      ],
+      "materialOwn": "",
+      "conditions": [],
+      "conditionOwn": "",
+      "conditionDecision": "no"
+    },
+    "demandProfile": {
+      "representations": [
+        "Räumliche Form und geometrische Details",
+        "Größe, Maße und Maßstab"
+      ],
+      "representationOwn": "",
+      "coverage": [
+        "Gesamtes Objekt"
+      ],
+      "coverageOwn": "",
+      "outerCoverage": "Gesamtes äußeres Objekt",
+      "outerCoverageOwn": "",
+      "detailAreas": "",
+      "innerStructures": "no",
+      "innerOwn": "",
+      "operations": [
+        "Verlässlich messen",
+        "Formen oder Merkmale vergleichen"
+      ],
+      "operationOwn": "",
+      "manualRepresentations": [],
+      "manualCoverage": [],
+      "manualOperations": [],
+      "dismissedRepresentations": [],
+      "dismissedCoverage": [],
+      "dismissedOperations": [],
+      "initialized": true,
+      "touched": false
+    }
+  },
+  "b3": {
+    "forms": {
+      "__joint__": {
+        "selected": [
+          "3D-Oberflächendokumentation"
+        ],
+        "own": "",
+        "ownIs3D": "",
+        "contribution": ""
+      }
+    },
+    "roles": {
+      "u1": {
+        "value": "required",
+        "reason": "",
+        "no3dForms": "",
+        "no3dReason": ""
+      }
+    },
+    "role3d": "",
+    "roleReason": "",
+    "no3dForms": "",
+    "no3dReason": "",
+    "qualityProfiles": [
+      {
+        "id": "qpmv34e4f7n",
+        "useId": "__joint__",
+        "areas": {
+          "G": {
+            "na": false,
+            "items": [
+              {
+                "id": "qimv34e4d48",
+                "requirement": "Gesamtform und Proportionen",
+                "level": "3",
+                "reason": "",
+                "source": "auto",
+                "tip": "Gemeinsame Soll-Anforderung. Auslöser:\nZ1 · Wissenschaftliche Dokumentation / Analyse: O-0991-G1 · Tabelle 7.7; ergänzend Tabelle 7.4; Kap. 5–7 der Masterarbeit · G 1–4\nBei mehreren Anforderungen an dieselbe konkrete Eigenschaft wird für den Vorschlag die höchste erforderliche Mindeststufe berücksichtigt.",
+                "ruleId": "O-0991-G1",
+                "scopeGroupIds": [
+                  "rmv34e4cx6"
+                ],
+                "scopeKeys": [
+                  "outer:whole"
+                ],
+                "autoLevel": "1"
+              },
+              {
+                "id": "qimv34e4d59",
+                "requirement": "geometrische Formtreue relevanter Bereiche",
+                "level": "3",
+                "reason": "",
+                "source": "auto",
+                "tip": "Gemeinsame Soll-Anforderung. Auslöser:\nZ1 · Wissenschaftliche Dokumentation / Analyse: O-0991-G1 · Tabelle 7.7; ergänzend Tabelle 7.4; Kap. 5–7 der Masterarbeit · G 1–4\nZ1 · Wissenschaftliche Dokumentation / Analyse: O-0991-A1 · Tabelle 7.7 (metrischer oder morphometrischer Formvergleich); ergänzend Tabelle 7.4 sowie Kap. 5.3, 5.8 und 6.6.1 der Masterarbeit · G 3–4\nBei mehreren Anforderungen an dieselbe konkrete Eigenschaft wird für den Vorschlag die höchste erforderliche Mindeststufe berücksichtigt.",
+                "ruleId": "O-0991-G1, O-0991-A1",
+                "scopeGroupIds": [
+                  "rmv34e4cx6"
+                ],
+                "scopeKeys": [
+                  "outer:whole"
+                ],
+                "autoLevel": "3"
+              },
+              {
+                "id": "qimv34e4d8a",
+                "requirement": "kleinste relevante Merkmalsgröße / Detailerkennbarkeit",
+                "level": "3",
+                "reason": "",
+                "source": "auto",
+                "tip": "Gemeinsame Soll-Anforderung. Auslöser:\nZ1 · Wissenschaftliche Dokumentation / Analyse: O-0991-G1 · Tabelle 7.7; ergänzend Tabelle 7.4; Kap. 5–7 der Masterarbeit · G 1–4\nBei mehreren Anforderungen an dieselbe konkrete Eigenschaft wird für den Vorschlag die höchste erforderliche Mindeststufe berücksichtigt.",
+                "ruleId": "O-0991-G1",
+                "scopeGroupIds": [
+                  "rmv34e4cx6"
+                ],
+                "scopeKeys": [
+                  "outer:whole"
+                ],
+                "autoLevel": "1"
+              },
+              {
+                "id": "qimv34e4d9b",
+                "requirement": "Maßstab / Maßbezug",
+                "level": "3",
+                "reason": "",
+                "source": "auto",
+                "tip": "Gemeinsame Soll-Anforderung. Auslöser:\nZ1 · Wissenschaftliche Dokumentation / Analyse: O-0991-A1 · Tabelle 7.7 (metrischer oder morphometrischer Formvergleich); ergänzend Tabelle 7.4 sowie Kap. 5.3, 5.8 und 6.6.1 der Masterarbeit · G 3–4\nZ1 · Wissenschaftliche Dokumentation / Analyse: O-0994-G0 · Tabelle 7.4 und Tabelle 7.7; Kap. 5.3.2, 6 und 7.5.3 der Masterarbeit · G 2\nBei mehreren Anforderungen an dieselbe konkrete Eigenschaft wird für den Vorschlag die höchste erforderliche Mindeststufe berücksichtigt.",
+                "ruleId": "O-0991-A1, O-0994-G0",
+                "scopeGroupIds": [
+                  "rmv34e4cx6"
+                ],
+                "scopeKeys": [
+                  "outer:whole"
+                ],
+                "autoLevel": "3"
+              },
+              {
+                "id": "qimv34e4dbc",
+                "requirement": "metrische Genauigkeit relevanter Messungen",
+                "level": "3",
+                "reason": "",
+                "source": "auto",
+                "tip": "Gemeinsame Soll-Anforderung. Auslöser:\nZ1 · Wissenschaftliche Dokumentation / Analyse: O-0991-A1 · Tabelle 7.7 (metrischer oder morphometrischer Formvergleich); ergänzend Tabelle 7.4 sowie Kap. 5.3, 5.8 und 6.6.1 der Masterarbeit · G 3–4\nBei mehreren Anforderungen an dieselbe konkrete Eigenschaft wird für den Vorschlag die höchste erforderliche Mindeststufe berücksichtigt.",
+                "ruleId": "O-0991-A1",
+                "scopeGroupIds": [
+                  "rmv34e4cx6"
+                ],
+                "scopeKeys": [
+                  "outer:whole"
+                ],
+                "autoLevel": "3"
+              },
+              {
+                "id": "qimv34e4ddd",
+                "requirement": "Unsicherheit und Kontrollierbarkeit der Geometrie",
+                "level": "3",
+                "reason": "",
+                "source": "auto",
+                "tip": "Gemeinsame Soll-Anforderung. Auslöser:\nZ1 · Wissenschaftliche Dokumentation / Analyse: O-0991-A1 · Tabelle 7.7 (metrischer oder morphometrischer Formvergleich); ergänzend Tabelle 7.4 sowie Kap. 5.3, 5.8 und 6.6.1 der Masterarbeit · G 3–4\nBei mehreren Anforderungen an dieselbe konkrete Eigenschaft wird für den Vorschlag die höchste erforderliche Mindeststufe berücksichtigt.",
+                "ruleId": "O-0991-A1",
+                "scopeGroupIds": [
+                  "rmv34e4cx6"
+                ],
+                "scopeKeys": [
+                  "outer:whole"
+                ],
+                "autoLevel": "3"
+              }
+            ],
+            "split": false,
+            "commonLevel": "3",
+            "autoCommonLevel": "3",
+            "requireCommonChoice": false,
+            "reason": "",
+            "dismissedAuto": []
+          },
+          "T": {
+            "na": false,
+            "items": [],
+            "split": false,
+            "commonLevel": "",
+            "autoCommonLevel": "",
+            "requireCommonChoice": false,
+            "reason": "",
+            "dismissedAuto": []
+          },
+          "V": {
+            "na": false,
+            "items": [
+              {
+                "id": "qimv34e4dge",
+                "requirement": "Abdeckung aller relevanten Objektbereiche",
+                "level": "1",
+                "reason": "",
+                "source": "auto",
+                "tip": "Gemeinsame Soll-Anforderung. Auslöser:\nZ1 · Wissenschaftliche Dokumentation / Analyse: O-0991-G1 · Tabelle 7.7; ergänzend Tabelle 7.4; Kap. 5–7 der Masterarbeit · V 1–4\nZ1 · Wissenschaftliche Dokumentation / Analyse: O-0991-V1 · Tabelle 7.7; ergänzend Tabelle 7.4; Kap. 5–7 der Masterarbeit · V 1–4\nBei mehreren Anforderungen an dieselbe konkrete Eigenschaft wird für den Vorschlag die höchste erforderliche Mindeststufe berücksichtigt.",
+                "ruleId": "O-0991-G1, O-0991-V1",
+                "scopeGroupIds": [
+                  "rmv34e4cx6"
+                ],
+                "scopeKeys": [
+                  "outer:whole"
+                ],
+                "autoLevel": "1"
+              },
+              {
+                "id": "qimv34e4dif",
+                "requirement": "Nachvollziehbarkeit des Erfassungsumfangs",
+                "level": "1",
+                "reason": "",
+                "source": "auto",
+                "tip": "Gemeinsame Soll-Anforderung. Auslöser:\nZ1 · Wissenschaftliche Dokumentation / Analyse: O-0991-G1 · Tabelle 7.7; ergänzend Tabelle 7.4; Kap. 5–7 der Masterarbeit · V 1–4\nZ1 · Wissenschaftliche Dokumentation / Analyse: O-0991-V1 · Tabelle 7.7; ergänzend Tabelle 7.4; Kap. 5–7 der Masterarbeit · V 1–4\nBei mehreren Anforderungen an dieselbe konkrete Eigenschaft wird für den Vorschlag die höchste erforderliche Mindeststufe berücksichtigt.",
+                "ruleId": "O-0991-G1, O-0991-V1",
+                "scopeGroupIds": [
+                  "rmv34e4cx6"
+                ],
+                "scopeKeys": [
+                  "outer:whole"
+                ],
+                "autoLevel": "1"
+              },
+              {
+                "id": "qimv34e4djg",
+                "requirement": "Dokumentation verbleibender Fehlstellen",
+                "level": "1",
+                "reason": "",
+                "source": "auto",
+                "tip": "Gemeinsame Soll-Anforderung. Auslöser:\nZ1 · Wissenschaftliche Dokumentation / Analyse: O-0991-V1 · Tabelle 7.7; ergänzend Tabelle 7.4; Kap. 5–7 der Masterarbeit · V 1–4\nBei mehreren Anforderungen an dieselbe konkrete Eigenschaft wird für den Vorschlag die höchste erforderliche Mindeststufe berücksichtigt.",
+                "ruleId": "O-0991-V1",
+                "scopeGroupIds": [
+                  "rmv34e4cx6"
+                ],
+                "scopeKeys": [
+                  "outer:whole"
+                ],
+                "autoLevel": "1"
+              }
+            ],
+            "split": false,
+            "commonLevel": "1",
+            "autoCommonLevel": "1",
+            "requireCommonChoice": false,
+            "reason": "",
+            "dismissedAuto": []
+          },
+          "B": {
+            "na": false,
+            "items": [
+              {
+                "id": "qimv34e4dlh",
+                "requirement": "Bearbeitungsstatus der verwendeten Modellfassung",
+                "level": "1",
+                "reason": "",
+                "source": "auto",
+                "tip": "Gemeinsame Soll-Anforderung. Auslöser:\nZ1 · Wissenschaftliche Dokumentation / Analyse: O-0991-G1 · Tabelle 7.7; ergänzend Tabelle 7.4; Kap. 5–7 der Masterarbeit · B 1–3\nBei mehreren Anforderungen an dieselbe konkrete Eigenschaft wird für den Vorschlag die höchste erforderliche Mindeststufe berücksichtigt.",
+                "ruleId": "O-0991-G1",
+                "scopeGroupIds": [
+                  "rmv34e4cx6"
+                ],
+                "scopeKeys": [
+                  "outer:whole"
+                ],
+                "autoLevel": "1"
+              }
+            ],
+            "split": false,
+            "commonLevel": "1",
+            "autoCommonLevel": "1",
+            "requireCommonChoice": false,
+            "reason": "",
+            "dismissedAuto": []
+          },
+          "D": {
+            "na": false,
+            "items": [],
+            "split": false,
+            "commonLevel": "",
+            "autoCommonLevel": "",
+            "requireCommonChoice": false,
+            "reason": "",
+            "dismissedAuto": []
+          },
+          "A": {
+            "na": false,
+            "items": [
+              {
+                "id": "qimv34e4doi",
+                "requirement": "Messungen und definierte Datenoperationen",
+                "level": "2",
+                "reason": "",
+                "source": "auto",
+                "tip": "Gemeinsame Soll-Anforderung. Auslöser:\nZ1 · Wissenschaftliche Dokumentation / Analyse: O-0991-A1 · Tabelle 7.7 (metrischer oder morphometrischer Formvergleich); ergänzend Tabelle 7.4 sowie Kap. 5.3, 5.8 und 6.6.1 der Masterarbeit · A 2–4\nBei mehreren Anforderungen an dieselbe konkrete Eigenschaft wird für den Vorschlag die höchste erforderliche Mindeststufe berücksichtigt.",
+                "ruleId": "O-0991-A1",
+                "scopeGroupIds": [
+                  "rmv34e4cx6"
+                ],
+                "scopeKeys": [
+                  "outer:whole"
+                ],
+                "autoLevel": "2"
+              },
+              {
+                "id": "qimv34e4dqj",
+                "requirement": "vergleichbare Orientierung / Ausrichtung",
+                "level": "2",
+                "reason": "",
+                "source": "auto",
+                "tip": "Gemeinsame Soll-Anforderung. Auslöser:\nZ1 · Wissenschaftliche Dokumentation / Analyse: O-0991-A2 · Tabelle 7.7; ergänzend Tabelle 7.4; Kap. 5.8 und 6.6 der Masterarbeit · A 2–3\nBei mehreren Anforderungen an dieselbe konkrete Eigenschaft wird für den Vorschlag die höchste erforderliche Mindeststufe berücksichtigt.",
+                "ruleId": "O-0991-A2",
+                "scopeGroupIds": [
+                  "rmv34e4cx6"
+                ],
+                "scopeKeys": [
+                  "outer:whole"
+                ],
+                "autoLevel": "2"
+              }
+            ],
+            "split": false,
+            "commonLevel": "2",
+            "autoCommonLevel": "2",
+            "requireCommonChoice": false,
+            "reason": "",
+            "dismissedAuto": []
+          }
+        }
+      }
+    ]
+  },
+  "b4": {
+    "planning": {
+      "projectConditions": "",
+      "procedures": [],
+      "procedureOwn": "",
+      "procedureLinks": {},
+      "components": [],
+      "componentOwn": "",
+      "componentsInitialized": false,
+      "system": "",
+      "capture": "",
+      "control": "",
+      "processing": "",
+      "products": "",
+      "data": "",
+      "conflicts": {},
+      "manualConflicts": []
+    },
+    "evaluation": {
+      "inventory": {
+        "0": {
+          "status": "unclear",
+          "evidence": "",
+          "note": ""
+        },
+        "1": {
+          "status": "unclear",
+          "evidence": "",
+          "note": ""
+        },
+        "2": {
+          "status": "unclear",
+          "evidence": "Die publizierte Fassung ist sichtbar; ursprüngliche Objektlagen und tatsächliche Erfassungsabdeckung sind nicht dokumentiert.",
+          "note": ""
+        },
+        "3": {
+          "status": "absent",
+          "evidence": "Im angenommenen Bestand nicht vorhanden.",
+          "note": ""
+        },
+        "4": {
+          "status": "unclear",
+          "evidence": "",
+          "note": ""
+        },
+        "5": {
+          "status": "unclear",
+          "evidence": "",
+          "note": ""
+        },
+        "6": {
+          "status": "absent",
+          "evidence": "Im angenommenen Bestand nicht vorhanden.",
+          "note": ""
+        },
+        "7": {
+          "status": "unclear",
+          "evidence": "",
+          "note": ""
+        },
+        "8": {
+          "status": "absent",
+          "evidence": "Im bewerteten Bestand liegt kein Mastermodell beziehungsweise keine qualitätsgesicherte Ausgangsfassung vor.",
+          "note": ""
+        },
+        "9": {
+          "status": "absent",
+          "evidence": "Im bewerteten Bestand liegen keine gesonderten Analysemodelle, Segmentierungen oder Annotationen vor.",
+          "note": ""
+        },
+        "10": {
+          "status": "present",
+          "evidence": "Eine reduzierte Web- beziehungsweise Präsentationsfassung liegt vor.",
+          "note": ""
+        },
+        "11": {
+          "status": "unclear",
+          "evidence": "Nur grundlegende Angaben zur Online-Publikation vorhanden.",
+          "note": "Keine ausreichenden Informationen zur ursprünglichen geometrischen Kontrolle."
+        },
+        "12": {
+          "status": "unclear",
+          "evidence": "Nur grundlegende Angaben zur Online-Publikation vorhanden.",
+          "note": "Keine ausreichenden Informationen zur ursprünglichen geometrischen Kontrolle."
+        },
+        "13": {
+          "status": "unclear",
+          "evidence": "",
+          "note": ""
+        },
+        "14": {
+          "status": "unclear",
+          "evidence": "",
+          "note": ""
+        },
+        "15": {
+          "status": "unclear",
+          "evidence": "",
+          "note": ""
+        }
+      }
+    },
+    "actual": {
+      "G|gesamtform und proportionen|joint:outer:whole": {
+        "key": "G|gesamtform und proportionen|joint:outer:whole",
+        "level": "n.b.",
+        "evidence": "",
+        "uncertainty": ""
+      },
+      "G|geometrische formtreue relevanter bereiche|joint:outer:whole": {
+        "key": "G|geometrische formtreue relevanter bereiche|joint:outer:whole",
+        "level": "n.b.",
+        "evidence": "",
+        "uncertainty": ""
+      },
+      "G|kleinste relevante merkmalsgröße / detailerkennbarkeit|joint:outer:whole": {
+        "key": "G|kleinste relevante merkmalsgröße / detailerkennbarkeit|joint:outer:whole",
+        "level": "n.b.",
+        "evidence": "",
+        "uncertainty": ""
+      },
+      "G|maßstab / maßbezug|joint:outer:whole": {
+        "key": "G|maßstab / maßbezug|joint:outer:whole",
+        "level": "0",
+        "evidence": "",
+        "uncertainty": ""
+      },
+      "G|metrische genauigkeit relevanter messungen|joint:outer:whole": {
+        "key": "G|metrische genauigkeit relevanter messungen|joint:outer:whole",
+        "level": "n.b.",
+        "evidence": "",
+        "uncertainty": ""
+      },
+      "G|unsicherheit und kontrollierbarkeit der geometrie|joint:outer:whole": {
+        "key": "G|unsicherheit und kontrollierbarkeit der geometrie|joint:outer:whole",
+        "level": "n.b.",
+        "evidence": "",
+        "uncertainty": ""
+      },
+      "V|abdeckung aller relevanten objektbereiche|joint:outer:whole": {
+        "key": "V|abdeckung aller relevanten objektbereiche|joint:outer:whole",
+        "level": "1",
+        "evidence": "",
+        "uncertainty": ""
+      },
+      "V|nachvollziehbarkeit des erfassungsumfangs|joint:outer:whole": {
+        "key": "V|nachvollziehbarkeit des erfassungsumfangs|joint:outer:whole",
+        "level": "1",
+        "evidence": "",
+        "uncertainty": ""
+      },
+      "V|dokumentation verbleibender fehlstellen|joint:outer:whole": {
+        "key": "V|dokumentation verbleibender fehlstellen|joint:outer:whole",
+        "level": "1",
+        "evidence": "",
+        "uncertainty": ""
+      },
+      "B|bearbeitungsstatus der verwendeten modellfassung|joint:outer:whole": {
+        "key": "B|bearbeitungsstatus der verwendeten modellfassung|joint:outer:whole",
+        "level": "1",
+        "evidence": "",
+        "uncertainty": ""
+      },
+      "A|messungen und definierte datenoperationen|joint:outer:whole": {
+        "key": "A|messungen und definierte datenoperationen|joint:outer:whole",
+        "level": "0",
+        "evidence": "",
+        "uncertainty": ""
+      },
+      "A|vergleichbare orientierung / ausrichtung|joint:outer:whole": {
+        "key": "A|vergleichbare orientierung / ausrichtung|joint:outer:whole",
+        "level": "n.b.",
+        "evidence": "",
+        "uncertainty": ""
+      }
+    },
+    "actualUi": {
+      "__joint__|G": {
+        "split": true,
+        "evidence": "",
+        "uncertainty": ""
+      },
+      "__joint__|V": {
+        "split": false,
+        "evidence": "",
+        "uncertainty": ""
+      },
+      "__joint__|B": {
+        "split": false,
+        "evidence": "",
+        "uncertainty": ""
+      },
+      "__joint__|A": {
+        "split": true,
+        "evidence": "",
+        "uncertainty": ""
+      }
+    }
+  },
+  "b5": {
+    "comparisons": {
+      "qimv34e4d48": {
+        "status": "unknown",
+        "note": ""
+      },
+      "qimv34e4d59": {
+        "status": "unknown",
+        "note": ""
+      },
+      "qimv34e4d8a": {
+        "status": "unknown",
+        "note": ""
+      },
+      "qimv34e4d9b": {
+        "status": "deviation",
+        "note": ""
+      },
+      "qimv34e4dbc": {
+        "status": "unknown",
+        "note": ""
+      },
+      "qimv34e4ddd": {
+        "status": "unknown",
+        "note": ""
+      },
+      "qimv34e4dge": {
+        "status": "fulfilled",
+        "note": ""
+      },
+      "qimv34e4dif": {
+        "status": "fulfilled",
+        "note": ""
+      },
+      "qimv34e4djg": {
+        "status": "fulfilled",
+        "note": ""
+      },
+      "qimv34e4dlh": {
+        "status": "fulfilled",
+        "note": ""
+      },
+      "qimv34e4doi": {
+        "status": "deviation",
+        "note": ""
+      },
+      "qimv34e4dqj": {
+        "status": "unknown",
+        "note": ""
+      }
+    },
+    "consequences": {
+      "qimv34e4d48": {
+        "selected": [
+          "weitere vorhandene Nachweise oder Unterlagen suchen"
+        ],
+        "own": "",
+        "note": "Bewertung bezieht sich ausschließlich auf die neue morphometrische Zielnutzung.",
+        "details": {
+          "weitere vorhandene Nachweise oder Unterlagen suchen": "Originaldaten, Kontrollmessungen oder Verarbeitungsprotokolle wären für eine belastbare Beurteilung erforderlich."
+        }
+      },
+      "qimv34e4d59": {
+        "selected": [
+          "weitere vorhandene Nachweise oder Unterlagen suchen"
+        ],
+        "own": "",
+        "note": "Bewertung bezieht sich ausschließlich auf die neue morphometrische Zielnutzung.",
+        "details": {
+          "weitere vorhandene Nachweise oder Unterlagen suchen": "Originaldaten, Kontrollmessungen oder Verarbeitungsprotokolle wären für eine belastbare Beurteilung erforderlich."
+        }
+      },
+      "qimv34e4d8a": {
+        "selected": [
+          "weitere vorhandene Nachweise oder Unterlagen suchen"
+        ],
+        "own": "",
+        "note": "Bewertung bezieht sich ausschließlich auf die neue morphometrische Zielnutzung.",
+        "details": {
+          "weitere vorhandene Nachweise oder Unterlagen suchen": "Originaldaten, Kontrollmessungen oder Verarbeitungsprotokolle wären für eine belastbare Beurteilung erforderlich."
+        }
+      },
+      "qimv34e4d9b": {
+        "selected": [
+          "Zielnutzung mit vorhandenem Bestand ausschließen"
+        ],
+        "own": "",
+        "note": "Bewertung bezieht sich ausschließlich auf die neue morphometrische Zielnutzung.",
+        "details": {
+          "Zielnutzung mit vorhandenem Bestand ausschließen": "Ein belastbarer Maßbezug fehlt. Ein morphometrischer Formvergleich ist mit dieser Fassung nicht vertretbar."
+        }
+      },
+      "qimv34e4dbc": {
+        "selected": [
+          "weitere vorhandene Nachweise oder Unterlagen suchen"
+        ],
+        "own": "",
+        "note": "Bewertung bezieht sich ausschließlich auf die neue morphometrische Zielnutzung.",
+        "details": {
+          "weitere vorhandene Nachweise oder Unterlagen suchen": "Originaldaten, Kontrollmessungen oder Verarbeitungsprotokolle wären für eine belastbare Beurteilung erforderlich."
+        }
+      },
+      "qimv34e4ddd": {
+        "selected": [
+          "weitere vorhandene Nachweise oder Unterlagen suchen"
+        ],
+        "own": "",
+        "note": "Bewertung bezieht sich ausschließlich auf die neue morphometrische Zielnutzung.",
+        "details": {
+          "weitere vorhandene Nachweise oder Unterlagen suchen": "Originaldaten, Kontrollmessungen oder Verarbeitungsprotokolle wären für eine belastbare Beurteilung erforderlich."
+        }
+      },
+      "qimv34e4doi": {
+        "selected": [
+          "ergänzende Neudigitalisierung durchführen"
+        ],
+        "own": "",
+        "note": "Bewertung bezieht sich ausschließlich auf die neue morphometrische Zielnutzung.",
+        "details": {
+          "ergänzende Neudigitalisierung durchführen": "Für eine verlässliche metrische Auswertung ist eine neue, kontrollierte Erfassung erforderlich."
+        }
+      },
+      "qimv34e4dqj": {
+        "selected": [
+          "weitere vorhandene Nachweise oder Unterlagen suchen"
+        ],
+        "own": "",
+        "note": "Bewertung bezieht sich ausschließlich auf die neue morphometrische Zielnutzung.",
+        "details": {
+          "weitere vorhandene Nachweise oder Unterlagen suchen": "Originaldaten, Kontrollmessungen oder Verarbeitungsprotokolle wären für eine belastbare Beurteilung erforderlich."
+        }
+      },
+      "qimv34e4dge": {
+        "selected": [],
+        "own": "",
+        "note": "",
+        "details": {}
+      },
+      "qimv34e4dif": {
+        "selected": [],
+        "own": "",
+        "note": "",
+        "details": {}
+      },
+      "qimv34e4djg": {
+        "selected": [],
+        "own": "",
+        "note": "",
+        "details": {}
+      },
+      "qimv34e4dlh": {
+        "selected": [],
+        "own": "",
+        "note": "",
+        "details": {}
+      }
+    },
+    "consequenceUi": {
+      "G": {
+        "split": true
+      },
+      "A": {
+        "split": true
+      }
+    }
+  },
+  "workflow": {
+    "started": true,
+    "completed": {
+      "uses": true,
+      "requirements": true,
+      "profile": true,
+      "implementation": true,
+      "comparison": true
+    },
+    "stale": {
+      "uses": false,
+      "requirements": false,
+      "profile": false,
+      "implementation": false,
+      "comparison": false
+    },
+    "activeEdit": null,
+    "revisionLog": [],
+    "revisionNoticeDismissed": false
+  },
+  "result": {
+    "type": "suitability_assessment",
+    "label": "Eignungsbewertung",
+    "mode": "evaluation",
+    "statement": "Bestand erfüllt das Soll nicht vollständig.",
+    "status": "deviation",
+    "documentationForms": [
+      "3D-Oberflächendokumentation"
+    ],
+    "threeDRole": "required",
+    "targetUses": [
+      {
+        "ref": "Z1",
+        "use": "Wissenschaftliche Dokumentation / Analyse"
+      }
+    ],
+    "consideredReuse": [],
+    "qualityComparison": {
+      "total": 12,
+      "fulfilled": 4,
+      "deviations": 2,
+      "notAssessable": 6,
+      "open": 0,
+      "areas": [
+        {
+          "area": "G",
+          "label": "G – Geometrie",
+          "status": "teilweise erfüllt",
+          "total": 6,
+          "fulfilled": 0,
+          "deviations": 1,
+          "notAssessable": 5,
+          "open": 0
+        },
+        {
+          "area": "V",
+          "label": "V – Vollständigkeit, Erfassungsabdeckung und Fehlstellen",
+          "status": "erfüllt",
+          "total": 3,
+          "fulfilled": 3,
+          "deviations": 0,
+          "notAssessable": 0,
+          "open": 0
+        },
+        {
+          "area": "B",
+          "label": "B – Bearbeitung, Modellintegrität und Derivatstatus",
+          "status": "erfüllt",
+          "total": 1,
+          "fulfilled": 1,
+          "deviations": 0,
+          "notAssessable": 0,
+          "open": 0
+        },
+        {
+          "area": "A",
+          "label": "A – analytische, semantische und algorithmische Auswertbarkeit",
+          "status": "teilweise erfüllt",
+          "total": 2,
+          "fulfilled": 0,
+          "deviations": 1,
+          "notAssessable": 1,
+          "open": 0
+        }
+      ]
+    },
+    "issues": [
+      {
+        "area": "G",
+        "areaLabel": "G – Geometrie",
+        "requirement": "Gesamtform und Proportionen",
+        "scope": "gesamtes äußeres Objekt",
+        "sollLevel": "3",
+        "actualLevel": "n.b.",
+        "comparisonStatus": "unknown",
+        "comparisonLabel": "nicht beurteilbar",
+        "consequences": [
+          {
+            "label": "weitere vorhandene Nachweise oder Unterlagen suchen",
+            "detail": "Originaldaten, Kontrollmessungen oder Verarbeitungsprotokolle wären für eine belastbare Beurteilung erforderlich."
+          }
+        ],
+        "comparisonNote": "",
+        "consequenceNote": "Bewertung bezieht sich ausschließlich auf die neue morphometrische Zielnutzung."
+      },
+      {
+        "area": "G",
+        "areaLabel": "G – Geometrie",
+        "requirement": "Formtreue der relevanten Bereiche",
+        "scope": "gesamtes äußeres Objekt",
+        "sollLevel": "3",
+        "actualLevel": "n.b.",
+        "comparisonStatus": "unknown",
+        "comparisonLabel": "nicht beurteilbar",
+        "consequences": [
+          {
+            "label": "weitere vorhandene Nachweise oder Unterlagen suchen",
+            "detail": "Originaldaten, Kontrollmessungen oder Verarbeitungsprotokolle wären für eine belastbare Beurteilung erforderlich."
+          }
+        ],
+        "comparisonNote": "",
+        "consequenceNote": "Bewertung bezieht sich ausschließlich auf die neue morphometrische Zielnutzung."
+      },
+      {
+        "area": "G",
+        "areaLabel": "G – Geometrie",
+        "requirement": "Feine geometrische Details erkennbar",
+        "scope": "gesamtes äußeres Objekt",
+        "sollLevel": "3",
+        "actualLevel": "n.b.",
+        "comparisonStatus": "unknown",
+        "comparisonLabel": "nicht beurteilbar",
+        "consequences": [
+          {
+            "label": "weitere vorhandene Nachweise oder Unterlagen suchen",
+            "detail": "Originaldaten, Kontrollmessungen oder Verarbeitungsprotokolle wären für eine belastbare Beurteilung erforderlich."
+          }
+        ],
+        "comparisonNote": "",
+        "consequenceNote": "Bewertung bezieht sich ausschließlich auf die neue morphometrische Zielnutzung."
+      },
+      {
+        "area": "G",
+        "areaLabel": "G – Geometrie",
+        "requirement": "Maßstab und Größenbezug",
+        "scope": "gesamtes äußeres Objekt",
+        "sollLevel": "3",
+        "actualLevel": "0",
+        "comparisonStatus": "deviation",
+        "comparisonLabel": "Abweichung",
+        "consequences": [
+          {
+            "label": "Zielnutzung mit vorhandenem Bestand ausschließen",
+            "detail": "Ein belastbarer Maßbezug fehlt. Ein morphometrischer Formvergleich ist mit dieser Fassung nicht vertretbar."
+          }
+        ],
+        "comparisonNote": "",
+        "consequenceNote": "Bewertung bezieht sich ausschließlich auf die neue morphometrische Zielnutzung."
+      },
+      {
+        "area": "G",
+        "areaLabel": "G – Geometrie",
+        "requirement": "Benötigte Messungen verlässlich",
+        "scope": "gesamtes äußeres Objekt",
+        "sollLevel": "3",
+        "actualLevel": "n.b.",
+        "comparisonStatus": "unknown",
+        "comparisonLabel": "nicht beurteilbar",
+        "consequences": [
+          {
+            "label": "weitere vorhandene Nachweise oder Unterlagen suchen",
+            "detail": "Originaldaten, Kontrollmessungen oder Verarbeitungsprotokolle wären für eine belastbare Beurteilung erforderlich."
+          }
+        ],
+        "comparisonNote": "",
+        "consequenceNote": "Bewertung bezieht sich ausschließlich auf die neue morphometrische Zielnutzung."
+      },
+      {
+        "area": "G",
+        "areaLabel": "G – Geometrie",
+        "requirement": "Geometrie kontrollierbar",
+        "scope": "gesamtes äußeres Objekt",
+        "sollLevel": "3",
+        "actualLevel": "n.b.",
+        "comparisonStatus": "unknown",
+        "comparisonLabel": "nicht beurteilbar",
+        "consequences": [
+          {
+            "label": "weitere vorhandene Nachweise oder Unterlagen suchen",
+            "detail": "Originaldaten, Kontrollmessungen oder Verarbeitungsprotokolle wären für eine belastbare Beurteilung erforderlich."
+          }
+        ],
+        "comparisonNote": "",
+        "consequenceNote": "Bewertung bezieht sich ausschließlich auf die neue morphometrische Zielnutzung."
+      },
+      {
+        "area": "A",
+        "areaLabel": "A – analytische, semantische und algorithmische Auswertbarkeit",
+        "requirement": "Benötigte Messungen und Operationen möglich",
+        "scope": "gesamtes äußeres Objekt",
+        "sollLevel": "2",
+        "actualLevel": "0",
+        "comparisonStatus": "deviation",
+        "comparisonLabel": "Abweichung",
+        "consequences": [
+          {
+            "label": "ergänzende Neudigitalisierung durchführen",
+            "detail": "Für eine verlässliche metrische Auswertung ist eine neue, kontrollierte Erfassung erforderlich."
+          }
+        ],
+        "comparisonNote": "",
+        "consequenceNote": "Bewertung bezieht sich ausschließlich auf die neue morphometrische Zielnutzung."
+      },
+      {
+        "area": "A",
+        "areaLabel": "A – analytische, semantische und algorithmische Auswertbarkeit",
+        "requirement": "Vergleichbare Ausrichtung möglich",
+        "scope": "gesamtes äußeres Objekt",
+        "sollLevel": "2",
+        "actualLevel": "n.b.",
+        "comparisonStatus": "unknown",
+        "comparisonLabel": "nicht beurteilbar",
+        "consequences": [
+          {
+            "label": "weitere vorhandene Nachweise oder Unterlagen suchen",
+            "detail": "Originaldaten, Kontrollmessungen oder Verarbeitungsprotokolle wären für eine belastbare Beurteilung erforderlich."
+          }
+        ],
+        "comparisonNote": "",
+        "consequenceNote": "Bewertung bezieht sich ausschließlich auf die neue morphometrische Zielnutzung."
+      }
+    ]
+  }
+}

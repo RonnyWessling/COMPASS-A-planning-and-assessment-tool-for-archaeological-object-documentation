@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Planungs- und Bewertungsinstrument zur archäologischen Objektdokumentation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <noscript><div class="noscript">Für die Anwendung muss JavaScript im Browser aktiviert sein.</div></noscript>
+
+  <header class="app-header">
+    <div class="brand">
+      <h1>Planungs- und Bewertungsinstrument</h1>
+    </div>
+    <div class="header-actions">
+      <button class="ghost danger" id="resetBtn" type="button">Neu beginnen</button>
+      <button class="ghost" id="saveCaseBtn" type="button" title="Exportiert den vollständigen Bearbeitungsstand als JSON-Datei.">Fall speichern</button>
+      <button class="ghost" id="loadCaseBtn" type="button" title="Lädt einen zuvor gespeicherten JSON-Bearbeitungsstand.">Fall laden</button>
+      <button class="ghost header-info" type="button" data-info="about">Info</button>
+      <input id="importFile" type="file" accept="application/json,.json" hidden>
+    </div>
+    <nav class="progress" aria-label="Arbeitsbereiche">
+      <button class="progress-step active" data-target="intro">Start</button><span></span>
+      <button class="progress-step" data-target="uses">Nutzung</button><span></span>
+      <button class="progress-step" data-target="requirements">Anforderungen</button><span></span>
+      <button class="progress-step" data-target="profile">Dokumentation &amp; Soll-Profil</button><span></span>
+      <button class="progress-step" data-target="implementation">Umsetzung &amp; Praxis-Profil</button><span></span>
+      <button class="progress-step" data-target="comparison">Soll–Praxis-Abgleich</button><span></span>
+      <button class="progress-step" data-target="result">Ergebnis</button>
+    </nav>
+  </header>
+
+  <main class="app-shell">
+    <aside id="caseSummary" class="case-summary" aria-label="Fallübersicht"></aside>
+
+    <section id="intro" class="screen active">
+      <div class="lock-slot" data-lock-slot="intro"></div>
+      <div class="hero card hero-large compact-hero">
+        <div class="hero-main">
+          <div class="eyebrow">PLANEN · BEWERTEN · NACHVOLLZIEHBAR DOKUMENTIEREN</div>
+          <h2>Planung und Bewertung archäologischer Objektdokumentation</h2>
+          <p class="hero-lead">Das Instrument unterstützt die fachliche Planung einer neuen Dokumentation und die zweckbezogene Bewertung eines vorhandenen Datenbestands. Ausgangspunkt ist die Nutzung; Verfahren und technische Umsetzung werden erst danach festgelegt.</p>
+        </div>
+        <button class="info-button" type="button" data-info="intro" aria-label="Hinweise zu dieser Startseite">i</button>
+      </div>
+      <div id="importNotice" class="import-notice hidden" role="status"></div>
+
+      <div class="card start-block">
+        <div class="section-heading simple question-heading"><div><h3>Welche Angaben identifizieren den Fall?</h3></div></div>
+        <div class="form-grid">
+          <label>Objekt / Objektansprache<input id="objectName" type="text"></label>
+          <label>Objekt-ID / Fund- oder Inventarnummer<input id="objectId" type="text"></label>
+          <label>Projekt / Fundstelle / Sammlung<input id="context" type="text"></label>
+          <label>Bearbeiter/in<input id="editor" type="text"></label>
+          <label>Datum<input id="date" type="date"></label>
+        </div>
+      </div>
+
+      <div class="card start-block" id="objectContextCard">
+        <div class="section-heading simple question-heading"><div><h3>Welcher Fund- oder Materialgruppe ist das Objekt zuzuordnen?</h3></div><p class="question-support">Mehrfachauswahl möglich.</p></div>
+        <div id="objectMaterialBlock" class="object-context-block"></div>
+        <div class="question-break"></div>
+        <div class="section-heading simple question-heading"><div><h3>Welche Eigenschaften des konkreten Objekts oder seiner gegebenen Situation beeinflussen, wie es dokumentiert werden kann?</h3></div></div>
+        <div id="objectConditionBlock" class="object-context-block"></div>
+      </div>
+
+      <div class="card start-block">
+        <div class="section-heading simple question-heading"><div><h3>Wird eine neue Dokumentation geplant oder ein vorhandener Datenbestand bewertet?</h3></div></div>
+        <div class="mode-grid" id="modeGrid"></div>
+      </div>
+
+      <div class="nav-row end"><button class="primary" id="startBtn" type="button" disabled>Anwendung starten →</button></div>
+      <div class="screen-copyright">© Ronny Weßling, 2026 · Version 1.0</div>
+    </section>
+
+    <section id="uses" class="screen">
+      <div class="lock-slot" data-lock-slot="uses"></div>
+      <div class="sheet-title"><div><div class="eyebrow" id="modeEyebrow1"></div><h2 id="usesMainTitle">Nutzung</h2></div><button class="info-button" data-info="uses" type="button">i</button></div>
+      <div class="purpose-box"><strong>ZWECK</strong><span id="usesPurpose"></span></div>
+      <div class="card">
+        <div class="section-heading simple question-heading"><div><h3 id="primaryUseHeading">Wofür soll das Fundobjekt dokumentiert werden?</h3></div><p class="question-support" id="primaryUseSupport">Mehrfachauswahl möglich.</p></div>
+        <div class="orientation-callout prominent-help"><div><strong>Orientierungshilfe: Nutzungen</strong><span>Auswahl- und Orientierungskatalog mit Erläuterungen zu den Nutzungen.</span></div><button class="orientation-button" type="button" data-help="usage">Orientierungshilfe</button></div>
+        <div id="evaluationBasisWrap" class="retrospective-only hidden evaluation-basis"></div>
+        <div id="useBlocks" class="stack"></div>
+        <button class="add-row add-block" id="addUseBtn" type="button">+ weitere Nutzung hinzufügen</button>
+        <div id="originalPurposeWrap" class="retrospective-only hidden separated"><label class="full-label">Ursprünglicher Erzeugungszweck des vorhandenen Bestands – soweit bekannt <span class="optional-label">optional</span><textarea id="originalPurpose" rows="3" placeholder="Nur zur Einordnung, wenn für eine neue oder spätere Zielnutzung bewertet wird."></textarea></label></div>
+      </div>
+      <div class="card" id="reuseCard">
+        <div class="section-heading simple question-heading"><div><h3>Welche späteren Nutzungen sollen bewusst offengehalten werden?</h3></div><p class="question-support">Mehrfachauswahl möglich.</p></div>
+        <div id="reuseBlocks" class="stack"></div>
+        <button class="add-row add-block" id="addReuseBtn" type="button">+ weitere Nachnutzung hinzufügen</button>
+        <label class="full-label separated" id="boundaryLabel">Bewusste Begrenzung<textarea id="boundary" rows="3"></textarea></label>
+      </div>
+      <div class="result-box"><strong>ERGEBNIS</strong><span id="usesResult"></span></div>
+      <div class="view-controls" aria-label="Ansicht steuern"><button class="text-button" type="button" data-expand-all="uses">Alle aufklappen</button><span>·</span><button class="text-button" type="button" data-collapse-all="uses">Alle zuklappen</button></div>
+      <div class="nav-row"><button class="secondary" data-go="intro">← Zurück</button><button class="primary complete-next" data-complete="uses" id="toRequirementsBtn">Abschnitt abschließen &amp; weiter →</button></div>
+      <div class="screen-copyright">© Ronny Weßling, 2026 · Version 1.0</div>
+    </section>
+
+    <section id="requirements" class="screen">
+      <div class="lock-slot" data-lock-slot="requirements"></div>
+      <div class="sheet-title"><div><div class="eyebrow" id="modeEyebrow2"></div><h2>Anforderungen konkretisieren</h2></div><button class="info-button" data-info="requirements" type="button">i</button></div>
+
+      <div class="card process-card">
+        <div class="section-heading simple question-heading"><div><h3>Welche Informationen über das Objekt muss das Ergebnis bereitstellen?</h3></div><p class="question-support">Mehrfachauswahl möglich.</p></div>
+        <div id="representationRequirements"></div>
+      </div>
+
+      <div class="card process-card">
+        <div class="section-heading simple question-heading"><div><h3>Welche äußeren Bereiche des Objekts müssen dokumentiert werden?</h3></div></div>
+        <div id="coverageRequirements"></div>
+        <div class="substep-divider"><span>Innere Strukturen</span></div>
+        <div id="innerStructureRequirements"></div>
+      </div>
+
+      <div class="card process-card">
+        <div class="section-heading simple question-heading"><div><h3>Was muss mit den Daten möglich sein?</h3></div><p class="question-support">Mehrfachauswahl möglich.</p></div>
+        <div id="operationRequirements"></div>
+      </div>
+
+      
+      <div class="nav-row"><button class="secondary" data-go="uses">← Zurück</button><button class="primary complete-next" data-complete="requirements" id="toProfileBtn">Abschnitt abschließen &amp; weiter →</button></div>
+      <div class="screen-copyright">© Ronny Weßling, 2026 · Version 1.0</div>
+    </section>
+
+    <section id="profile" class="screen">
+      <div class="lock-slot" data-lock-slot="profile"></div>
+      <div class="sheet-title"><div><div class="eyebrow" id="modeEyebrow3"></div><h2>Dokumentation und Soll-Profil</h2></div><button class="info-button" data-info="profile" type="button">i</button></div>
+      <div class="card process-card">
+        <div class="section-heading simple question-heading"><div><h3>Welche Dokumentationsform oder Kombination kann die festgelegten Anforderungen erfüllen? <button class="term-info" type="button" data-info="hierarchy" aria-label="Dokumentationsform erklären">i</button></h3></div><p class="question-support">Mehrfachauswahl möglich. Typische Dokumentationsformen aus den bisherigen Anforderungen und Objektbedingungen sind hervorgehoben.</p></div>
+        <button class="inline-help-link form-orientation-link" type="button" data-help="forms">Orientierungshilfe</button>
+        <div id="formGroups" class="stack"></div>
+      </div>
+      <div id="roleBlocks" class="stack"></div>
+      <div id="sollProfileWrap" class="hidden">
+        <div class="card process-card">
+          <div class="section-heading simple question-heading"><div><h3>Welche Qualität muss die 3D-Dokumentation erreichen? <button class="term-info" type="button" data-info="sollprofile" aria-label="Soll-Profil erklären">i</button></h3></div></div>
+          <div class="quality-legend"><strong>Stufen</strong><span><b>1 – orientierend</b> · <b>2 – definiert</b> · <b>3 – kontrolliert</b> · <b>4 – hochkontrolliert</b></span><small>Eine höhere Stufe ist nicht automatisch zweckgeeigneter. Die konkrete Anforderung bleibt maßgeblich.</small></div>
+          <div id="qualityProfiles" class="stack"></div>
+          <div id="qualityUseAdder" class="quality-use-adder"></div>
+        </div>
+      </div>
+      <div class="result-box"><strong>ERGEBNIS</strong><span id="profileResult">Dokumentationsform und – soweit 3D gewählt wurde – erforderliche Qualitätsstufen.</span></div>
+      <div class="view-controls" aria-label="Ansicht steuern"><button class="text-button" type="button" data-expand-all="profile">Alle aufklappen</button><span>·</span><button class="text-button" type="button" data-collapse-all="profile">Alle zuklappen</button></div>
+      <div class="nav-row"><button class="secondary" data-go="requirements">← Zurück</button><button class="primary complete-next" data-complete="profile" id="toImplementationBtn">Abschnitt abschließen &amp; weiter →</button></div>
+      <div class="screen-copyright">© Ronny Weßling, 2026 · Version 1.0</div>
+    </section>
+
+    <section id="implementation" class="screen">
+      <div class="lock-slot" data-lock-slot="implementation"></div>
+      <div class="sheet-title"><div><div class="eyebrow" id="modeEyebrow4"></div><h2 id="implementationTitle">Konkrete Umsetzung und Praxis-Profil</h2></div><button class="info-button" data-info="implementation" type="button">i</button></div>
+      
+      <div id="implementationUseContext"></div>
+      <div id="planningImplementation" class="planning-only">
+        <div class="card process-card">
+          <div class="section-heading simple question-heading"><div><h3>Wie soll die Dokumentation konkret umgesetzt werden?</h3></div><button class="term-info" type="button" data-info="hierarchy" aria-label="Umsetzung erklären">i</button></div>
+          <div class="orientation-callout compact-help"><div><strong>Typische Verfahren und Umsetzungsansätze</strong></div><button class="orientation-button" type="button" data-help="procedures">Orientierungshilfe</button></div>
+          <div id="procedureChoices"></div>
+          <div class="orientation-callout compact-help"><div><strong>Daten und Fassungen</strong></div><button class="orientation-button" type="button" data-help="data-components">Orientierungshilfe</button></div>
+          <div id="dataComponentSuggestions"></div>
+          <div id="implementationDetails" class="accordion-stack"></div>
+          <div class="implementation-check-section">
+            <div class="orientation-callout compact-help"><div><strong>Zielkonflikte und Abwägungen</strong><span>Mögliche Konflikte werden aus den bisherigen Angaben hervorgehoben; eigene Abwägungen können ergänzt werden.</span></div><button class="orientation-button" type="button" data-help="conflicts">Orientierungshilfe</button></div>
+            <div id="conflictHints"></div>
+          </div>
+        </div>
+      </div>
+      <div id="evaluationInventory" class="evaluation-only hidden">
+        <div class="card process-card">
+          <div class="section-heading simple question-heading"><div><h3>Was ist über Entstehung, Verfahren, Datenbestand und Bearbeitung tatsächlich nachweisbar?</h3></div><p class="question-support">Erfasst wird, was belegt, nachweislich fehlend, ungeklärt oder derzeit nicht zugänglich ist.</p></div>
+          <div class="orientation-callout prominent-help"><div><strong>Orientierungshilfe: Bestandsaufnahme</strong><span>Prüffelder für Verfahren, Datenzustände, Prozessinformationen, Modellfassungen und Dokumentationszusammenhang.</span></div><button class="orientation-button" type="button" data-help="inventory">Orientierungshilfe</button></div>
+          <div id="inventoryList" class="stack"></div>
+        </div>
+      </div>
+      <div class="card process-card" id="actualProfileCard">
+        <div class="section-heading simple question-heading"><div><h3 id="actualProfileHeading">Welche Qualität ist mit der geplanten Umsetzung voraussichtlich erreichbar?</h3><p id="actualProfileIntro" class="question-support"></p></div><button class="term-info" type="button" data-help="actualprofile" aria-label="Praxis-/Ist-Profil erklären">i</button></div>
+        <div id="actualProfiles" class="stack"></div>
+      </div>
+      <div class="result-box"><strong>ERGEBNIS</strong><span id="implementationResult"></span></div>
+      <div class="view-controls" aria-label="Ansicht steuern"><button class="text-button" type="button" data-expand-all="implementation">Alle aufklappen</button><span>·</span><button class="text-button" type="button" data-collapse-all="implementation">Alle zuklappen</button></div>
+      <div class="nav-row"><button class="secondary" data-go="profile">← Zurück</button><button class="primary complete-next" data-complete="implementation" id="toComparisonBtn">Abschnitt abschließen &amp; weiter →</button></div>
+      <div class="screen-copyright">© Ronny Weßling, 2026 · Version 1.0</div>
+    </section>
+
+    <section id="comparison" class="screen">
+      <div class="lock-slot" data-lock-slot="comparison"></div>
+      <div class="sheet-title"><div><div class="eyebrow" id="modeEyebrow5"></div><h2 id="comparisonTitle">Soll–Praxis-Abgleich und Folgerungen</h2></div><button class="info-button" data-info="comparison" type="button">i</button></div>
+      
+      <div class="card process-card">
+        <div class="section-heading simple question-heading"><div><h3 id="comparisonQuestion">Entspricht die erwartbare Qualität dem Soll?</h3></div></div>
+        <div id="comparisonList" class="stack"></div>
+      </div>
+      <div class="card process-card">
+        <div class="section-heading simple question-heading"><div><h3>Welche Folgerungen ergeben sich aus Abweichungen oder nicht beurteilbaren Bereichen?</h3></div></div>
+        <div id="consequenceList" class="stack"></div>
+        
+      </div>
+      
+      <div class="view-controls" aria-label="Ansicht steuern"><button class="text-button" type="button" data-expand-all="comparison">Alle aufklappen</button><span>·</span><button class="text-button" type="button" data-collapse-all="comparison">Alle zuklappen</button></div>
+      <div class="nav-row"><button class="secondary" data-go="implementation">← Zurück</button><button class="primary complete-next" data-complete="comparison" id="toResultBtn">Abschnitt abschließen &amp; Ergebnis →</button></div>
+      <div class="screen-copyright">© Ronny Weßling, 2026 · Version 1.0</div>
+    </section>
+
+    <section id="result" class="screen">
+      <div class="sheet-title"><div><div class="eyebrow">ZUSAMMENFÜHRUNG · KEIN WEITERER PRÜFSCHRITT</div><h2 id="resultTitle">Ergebnisdokumentation</h2></div></div>
+      
+      <div id="resultContent"></div>
+      <div class="card" id="revisionCard"><div class="section-heading simple"><div><h3>Änderungsprotokoll</h3></div><p>Jede umgesetzte Änderung eines bereits abgeschlossenen Stands wird mit Zeitpunkt sowie vorherigem und neuem Wert dokumentiert. Automatische Kontextmarker machen fachlich relevante Bearbeitungsreihenfolgen sichtbar, ohne eine Absicht zu unterstellen.</p></div><div id="revisionLog"></div></div>
+      <div class="card export-card"><div class="section-heading simple"><div><h3>Dokumentieren und exportieren</h3></div><p>Der Prüfbericht fasst die fachlich relevanten Entscheidungen und Ergebnisse kompakt zusammen. Der JSON-Export enthält zusätzlich den vollständigen strukturierten Bearbeitungsstand und kann später wieder importiert werden.</p></div><div class="button-row"><button class="secondary" id="exportBtn" type="button">JSON exportieren</button><button class="primary" id="printBtn" type="button">Prüfbericht als PDF</button></div></div>
+      <div class="nav-row"><button class="secondary" data-go="comparison">← Zurück</button></div>
+      <div class="screen-copyright">© Ronny Weßling, 2026 · Version 1.0</div>
+    </section>
+  </main>
+
+  <dialog id="helpDialog" class="help-dialog"><button class="dialog-close" id="helpClose" type="button" aria-label="Schließen">×</button><div id="helpContent"></div></dialog>
+  <dialog id="editDialog" class="edit-dialog"><button class="dialog-close" id="editClose" type="button" aria-label="Schließen">×</button><div id="editContent"></div></dialog>
+<div id="printReport" class="print-report" aria-hidden="true"></div>
+
+  <script src="instrument-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

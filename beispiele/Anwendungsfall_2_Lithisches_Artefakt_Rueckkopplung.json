@@ -1,0 +1,919 @@
+{
+  "appVersion": "1.0",
+  "meta": {
+    "objectName": "Anwendungsfall 2 - Lithisches Artefakt mit Rückkopplung",
+    "objectId": "AF-02",
+    "context": "Hypothetischer Anwendungsfall Kapitel 8",
+    "editor": "Ronny Weßling",
+    "date": "2026-10-11",
+    "mode": "planning"
+  },
+  "b1": {
+    "uses": [
+      {
+        "id": "u1",
+        "area": "Wissenschaftliche Dokumentation / Analyse",
+        "reason": ""
+      }
+    ],
+    "evaluationBasis": "",
+    "originalPurpose": "",
+    "reuse": [],
+    "boundary": ""
+  },
+  "b2": {
+    "groups": [
+      {
+        "id": "rmv34e36q6",
+        "useId": "u1",
+        "infoDecision": "yes",
+        "featureDecision": "yes",
+        "informations": [
+          "Darstellung: räumliche Form und geometrische Details",
+          "Größe, Maße und Maßstab",
+          "Erfassungsumfang: gesamtes Objekt",
+          "Operation: verlässlich messen",
+          "Maßhaltigkeit und metrische Auswertbarkeit",
+          "Operation: Formen oder Merkmale vergleichen",
+          "Kanten, Grate, Negative, Retuschen sowie Schlag- und Bruchflächen"
+        ],
+        "infoOwn": "",
+        "features": [
+          "gesamtes Objekt",
+          "Retuschen, Negative, Kanten, Schlag- und Bruchflächen"
+        ],
+        "featureOwn": "",
+        "conditions": [],
+        "conditionOwn": "",
+        "splitSuggestionDismissed": true
+      }
+    ],
+    "objectContext": {
+      "materialGroups": [
+        "Lithische Artefakte"
+      ],
+      "materialOwn": "",
+      "conditions": [
+        "sehr dunkle Oberfläche",
+        "glänzende / stark reflektierende Oberfläche",
+        "konservatorische Handhabungseinschränkung"
+      ],
+      "conditionOwn": "",
+      "conditionDecision": "yes"
+    },
+    "demandProfile": {
+      "representations": [
+        "Räumliche Form und geometrische Details",
+        "Größe, Maße und Maßstab"
+      ],
+      "representationOwn": "Kanten, Grate, Negative, Retuschen sowie Schlag- und Bruchflächen",
+      "coverage": [
+        "Gesamtes Objekt"
+      ],
+      "coverageOwn": "",
+      "outerCoverage": "Gesamtes äußeres Objekt",
+      "outerCoverageOwn": "",
+      "detailAreas": "Retuschen, Negative, Kanten, Schlag- und Bruchflächen",
+      "innerStructures": "no",
+      "innerOwn": "",
+      "operations": [
+        "Verlässlich messen",
+        "Formen oder Merkmale vergleichen"
+      ],
+      "operationOwn": "",
+      "manualRepresentations": [],
+      "manualCoverage": [],
+      "manualOperations": [],
+      "dismissedRepresentations": [],
+      "dismissedCoverage": [],
+      "dismissedOperations": [],
+      "initialized": true,
+      "touched": false
+    }
+  },
+  "b3": {
+    "forms": {
+      "__joint__": {
+        "selected": [
+          "3D-Oberflächendokumentation"
+        ],
+        "own": "",
+        "ownIs3D": "",
+        "contribution": ""
+      }
+    },
+    "roles": {
+      "u1": {
+        "value": "required",
+        "reason": "",
+        "no3dForms": "",
+        "no3dReason": ""
+      }
+    },
+    "role3d": "",
+    "roleReason": "",
+    "no3dForms": "",
+    "no3dReason": "",
+    "qualityProfiles": [
+      {
+        "id": "qpmv34e39ip",
+        "useId": "__joint__",
+        "areas": {
+          "G": {
+            "na": false,
+            "items": [
+              {
+                "id": "qimv34e3708",
+                "requirement": "geometrische Formtreue relevanter Bereiche",
+                "level": "3",
+                "reason": "",
+                "source": "auto",
+                "tip": "Gemeinsame Soll-Anforderung. Auslöser:\nN1 · Wissenschaftliche Dokumentation / Analyse: O-3.3-06 · Tabelle 7.7; Kap. 5–6 und 7.5.3 der Masterarbeit · G 2–4\nN1 · Wissenschaftliche Dokumentation / Analyse: O-0991-G1 · Tabelle 7.7; ergänzend Tabelle 7.4; Kap. 5–7 der Masterarbeit · G 1–4\nN1 · Wissenschaftliche Dokumentation / Analyse: O-0991-A1 · Tabelle 7.7 (metrischer oder morphometrischer Formvergleich); ergänzend Tabelle 7.4 sowie Kap. 5.3, 5.8 und 6.6.1 der Masterarbeit · G 3–4\nBei mehreren Anforderungen an dieselbe konkrete Eigenschaft wird für den Vorschlag die höchste erforderliche Mindeststufe berücksichtigt.",
+                "ruleId": "O-3.3-06, O-0991-G1, O-0991-A1",
+                "scopeGroupIds": [
+                  "rmv34e36q6"
+                ],
+                "scopeKeys": [
+                  "outer:whole",
+                  "outer:detail"
+                ],
+                "autoLevel": "3"
+              },
+              {
+                "id": "qimv34e3729",
+                "requirement": "kleinste relevante Merkmalsgröße / Detailerkennbarkeit",
+                "level": "3",
+                "reason": "",
+                "source": "auto",
+                "tip": "Gemeinsame Soll-Anforderung. Auslöser:\nN1 · Wissenschaftliche Dokumentation / Analyse: O-3.3-06 · Tabelle 7.7; Kap. 5–6 und 7.5.3 der Masterarbeit · G 2–4\nN1 · Wissenschaftliche Dokumentation / Analyse: O-0991-G1 · Tabelle 7.7; ergänzend Tabelle 7.4; Kap. 5–7 der Masterarbeit · G 1–4\nBei mehreren Anforderungen an dieselbe konkrete Eigenschaft wird für den Vorschlag die höchste erforderliche Mindeststufe berücksichtigt.",
+                "ruleId": "O-3.3-06, O-0991-G1",
+                "scopeGroupIds": [
+                  "rmv34e36q6"
+                ],
+                "scopeKeys": [
+                  "outer:whole",
+                  "outer:detail"
+                ],
+                "autoLevel": "2"
+              },
+              {
+                "id": "qimv34e374a",
+                "requirement": "Gesamtform und Proportionen",
+                "level": "3",
+                "reason": "",
+                "source": "auto",
+                "tip": "Gemeinsame Soll-Anforderung. Auslöser:\nN1 · Wissenschaftliche Dokumentation / Analyse: O-0991-G1 · Tabelle 7.7; ergänzend Tabelle 7.4; Kap. 5–7 der Masterarbeit · G 1–4\nBei mehreren Anforderungen an dieselbe konkrete Eigenschaft wird für den Vorschlag die höchste erforderliche Mindeststufe berücksichtigt.",
+                "ruleId": "O-0991-G1",
+                "scopeGroupIds": [
+                  "rmv34e36q6"
+                ],
+                "scopeKeys": [
+                  "outer:whole",
+                  "outer:detail"
+                ],
+                "autoLevel": "1"
+              },
+              {
+                "id": "qimv34e375b",
+                "requirement": "Maßstab / Maßbezug",
+                "level": "3",
+                "reason": "",
+                "source": "auto",
+                "tip": "Gemeinsame Soll-Anforderung. Auslöser:\nN1 · Wissenschaftliche Dokumentation / Analyse: O-0991-A1 · Tabelle 7.7 (metrischer oder morphometrischer Formvergleich); ergänzend Tabelle 7.4 sowie Kap. 5.3, 5.8 und 6.6.1 der Masterarbeit · G 3–4\nN1 · Wissenschaftliche Dokumentation / Analyse: O-0994-G0 · Tabelle 7.4 und Tabelle 7.7; Kap. 5.3.2, 6 und 7.5.3 der Masterarbeit · G 2\nBei mehreren Anforderungen an dieselbe konkrete Eigenschaft wird für den Vorschlag die höchste erforderliche Mindeststufe berücksichtigt.",
+                "ruleId": "O-0991-A1, O-0994-G0",
+                "scopeGroupIds": [
+                  "rmv34e36q6"
+                ],
+                "scopeKeys": [
+                  "outer:whole",
+                  "outer:detail"
+                ],
+                "autoLevel": "3"
+              },
+              {
+                "id": "qimv34e377c",
+                "requirement": "metrische Genauigkeit relevanter Messungen",
+                "level": "3",
+                "reason": "",
+                "source": "auto",
+                "tip": "Gemeinsame Soll-Anforderung. Auslöser:\nN1 · Wissenschaftliche Dokumentation / Analyse: O-0991-A1 · Tabelle 7.7 (metrischer oder morphometrischer Formvergleich); ergänzend Tabelle 7.4 sowie Kap. 5.3, 5.8 und 6.6.1 der Masterarbeit · G 3–4\nBei mehreren Anforderungen an dieselbe konkrete Eigenschaft wird für den Vorschlag die höchste erforderliche Mindeststufe berücksichtigt.",
+                "ruleId": "O-0991-A1",
+                "scopeGroupIds": [
+                  "rmv34e36q6"
+                ],
+                "scopeKeys": [
+                  "outer:whole",
+                  "outer:detail"
+                ],
+                "autoLevel": "3"
+              },
+              {
+                "id": "qimv34e379d",
+                "requirement": "Unsicherheit und Kontrollierbarkeit der Geometrie",
+                "level": "3",
+                "reason": "",
+                "source": "auto",
+                "tip": "Gemeinsame Soll-Anforderung. Auslöser:\nN1 · Wissenschaftliche Dokumentation / Analyse: O-0991-A1 · Tabelle 7.7 (metrischer oder morphometrischer Formvergleich); ergänzend Tabelle 7.4 sowie Kap. 5.3, 5.8 und 6.6.1 der Masterarbeit · G 3–4\nBei mehreren Anforderungen an dieselbe konkrete Eigenschaft wird für den Vorschlag die höchste erforderliche Mindeststufe berücksichtigt.",
+                "ruleId": "O-0991-A1",
+                "scopeGroupIds": [
+                  "rmv34e36q6"
+                ],
+                "scopeKeys": [
+                  "outer:whole",
+                  "outer:detail"
+                ],
+                "autoLevel": "3"
+              }
+            ],
+            "split": false,
+            "commonLevel": "3",
+            "autoCommonLevel": "3",
+            "requireCommonChoice": false,
+            "reason": "",
+            "dismissedAuto": []
+          },
+          "T": {
+            "na": false,
+            "items": [],
+            "split": false,
+            "commonLevel": "",
+            "autoCommonLevel": "",
+            "requireCommonChoice": false,
+            "reason": "",
+            "dismissedAuto": []
+          },
+          "V": {
+            "na": false,
+            "items": [
+              {
+                "id": "qimv34e37ce",
+                "requirement": "Abdeckung aller relevanten Objektbereiche",
+                "level": "2",
+                "reason": "",
+                "source": "auto",
+                "tip": "Gemeinsame Soll-Anforderung. Auslöser:\nN1 · Wissenschaftliche Dokumentation / Analyse: O-3.3-06 · Tabelle 7.7; Kap. 5–6 und 7.5.3 der Masterarbeit · V 2–4\nN1 · Wissenschaftliche Dokumentation / Analyse: O-0991-G1 · Tabelle 7.7; ergänzend Tabelle 7.4; Kap. 5–7 der Masterarbeit · V 1–4\nN1 · Wissenschaftliche Dokumentation / Analyse: O-0991-V1 · Tabelle 7.7; ergänzend Tabelle 7.4; Kap. 5–7 der Masterarbeit · V 1–4\nBei mehreren Anforderungen an dieselbe konkrete Eigenschaft wird für den Vorschlag die höchste erforderliche Mindeststufe berücksichtigt.",
+                "ruleId": "O-3.3-06, O-0991-G1, O-0991-V1",
+                "scopeGroupIds": [
+                  "rmv34e36q6"
+                ],
+                "scopeKeys": [
+                  "outer:whole",
+                  "outer:detail"
+                ],
+                "autoLevel": "2"
+              },
+              {
+                "id": "qimv34e37ff",
+                "requirement": "Dokumentation verbleibender Fehlstellen",
+                "level": "2",
+                "reason": "",
+                "source": "auto",
+                "tip": "Gemeinsame Soll-Anforderung. Auslöser:\nN1 · Wissenschaftliche Dokumentation / Analyse: O-3.3-06 · Tabelle 7.7; Kap. 5–6 und 7.5.3 der Masterarbeit · V 2–4\nN1 · Wissenschaftliche Dokumentation / Analyse: O-0991-V1 · Tabelle 7.7; ergänzend Tabelle 7.4; Kap. 5–7 der Masterarbeit · V 1–4\nBei mehreren Anforderungen an dieselbe konkrete Eigenschaft wird für den Vorschlag die höchste erforderliche Mindeststufe berücksichtigt.",
+                "ruleId": "O-3.3-06, O-0991-V1",
+                "scopeGroupIds": [
+                  "rmv34e36q6"
+                ],
+                "scopeKeys": [
+                  "outer:whole",
+                  "outer:detail"
+                ],
+                "autoLevel": "2"
+              },
+              {
+                "id": "qimv34e37ig",
+                "requirement": "Nachvollziehbarkeit des Erfassungsumfangs",
+                "level": "2",
+                "reason": "",
+                "source": "auto",
+                "tip": "Gemeinsame Soll-Anforderung. Auslöser:\nN1 · Wissenschaftliche Dokumentation / Analyse: O-0991-G1 · Tabelle 7.7; ergänzend Tabelle 7.4; Kap. 5–7 der Masterarbeit · V 1–4\nN1 · Wissenschaftliche Dokumentation / Analyse: O-0991-V1 · Tabelle 7.7; ergänzend Tabelle 7.4; Kap. 5–7 der Masterarbeit · V 1–4\nBei mehreren Anforderungen an dieselbe konkrete Eigenschaft wird für den Vorschlag die höchste erforderliche Mindeststufe berücksichtigt.",
+                "ruleId": "O-0991-G1, O-0991-V1",
+                "scopeGroupIds": [
+                  "rmv34e36q6"
+                ],
+                "scopeKeys": [
+                  "outer:whole",
+                  "outer:detail"
+                ],
+                "autoLevel": "1"
+              }
+            ],
+            "split": false,
+            "commonLevel": "2",
+            "autoCommonLevel": "2",
+            "requireCommonChoice": false,
+            "reason": "",
+            "dismissedAuto": []
+          },
+          "B": {
+            "na": false,
+            "items": [
+              {
+                "id": "qimv34e37kh",
+                "requirement": "Nachvollziehbarkeit geometrieverändernder Bearbeitungen",
+                "level": "2",
+                "reason": "",
+                "source": "auto",
+                "tip": "Gemeinsame Soll-Anforderung. Auslöser:\nN1 · Wissenschaftliche Dokumentation / Analyse: O-3.3-06 · Tabelle 7.7; Kap. 5–6 und 7.5.3 der Masterarbeit · B 2–4\nBei mehreren Anforderungen an dieselbe konkrete Eigenschaft wird für den Vorschlag die höchste erforderliche Mindeststufe berücksichtigt.",
+                "ruleId": "O-3.3-06",
+                "scopeGroupIds": [
+                  "rmv34e36q6"
+                ],
+                "scopeKeys": [
+                  "outer:whole",
+                  "outer:detail"
+                ],
+                "autoLevel": "2"
+              },
+              {
+                "id": "qimv34e37mi",
+                "requirement": "Nachvollziehbarkeit von Texturbearbeitungen",
+                "level": "2",
+                "reason": "",
+                "source": "auto",
+                "tip": "Gemeinsame Soll-Anforderung. Auslöser:\nN1 · Wissenschaftliche Dokumentation / Analyse: O-3.3-06 · Tabelle 7.7; Kap. 5–6 und 7.5.3 der Masterarbeit · B 2–4\nBei mehreren Anforderungen an dieselbe konkrete Eigenschaft wird für den Vorschlag die höchste erforderliche Mindeststufe berücksichtigt.",
+                "ruleId": "O-3.3-06",
+                "scopeGroupIds": [
+                  "rmv34e36q6"
+                ],
+                "scopeKeys": [
+                  "outer:whole",
+                  "outer:detail"
+                ],
+                "autoLevel": "2"
+              },
+              {
+                "id": "qimv34e37nj",
+                "requirement": "Bearbeitungsstatus der verwendeten Modellfassung",
+                "level": "2",
+                "reason": "",
+                "source": "auto",
+                "tip": "Gemeinsame Soll-Anforderung. Auslöser:\nN1 · Wissenschaftliche Dokumentation / Analyse: O-0991-G1 · Tabelle 7.7; ergänzend Tabelle 7.4; Kap. 5–7 der Masterarbeit · B 1–3\nBei mehreren Anforderungen an dieselbe konkrete Eigenschaft wird für den Vorschlag die höchste erforderliche Mindeststufe berücksichtigt.",
+                "ruleId": "O-0991-G1",
+                "scopeGroupIds": [
+                  "rmv34e36q6"
+                ],
+                "scopeKeys": [
+                  "outer:whole",
+                  "outer:detail"
+                ],
+                "autoLevel": "1"
+              }
+            ],
+            "split": false,
+            "commonLevel": "2",
+            "autoCommonLevel": "2",
+            "requireCommonChoice": false,
+            "reason": "",
+            "dismissedAuto": []
+          },
+          "D": {
+            "na": false,
+            "items": [],
+            "split": false,
+            "commonLevel": "",
+            "autoCommonLevel": "",
+            "requireCommonChoice": false,
+            "reason": "",
+            "dismissedAuto": []
+          },
+          "A": {
+            "na": false,
+            "items": [
+              {
+                "id": "qimv34e37pk",
+                "requirement": "Messungen und definierte Datenoperationen",
+                "level": "2",
+                "reason": "",
+                "source": "auto",
+                "tip": "Gemeinsame Soll-Anforderung. Auslöser:\nN1 · Wissenschaftliche Dokumentation / Analyse: O-0991-A1 · Tabelle 7.7 (metrischer oder morphometrischer Formvergleich); ergänzend Tabelle 7.4 sowie Kap. 5.3, 5.8 und 6.6.1 der Masterarbeit · A 2–4\nBei mehreren Anforderungen an dieselbe konkrete Eigenschaft wird für den Vorschlag die höchste erforderliche Mindeststufe berücksichtigt.",
+                "ruleId": "O-0991-A1",
+                "scopeGroupIds": [
+                  "rmv34e36q6"
+                ],
+                "scopeKeys": [
+                  "outer:whole",
+                  "outer:detail"
+                ],
+                "autoLevel": "2"
+              },
+              {
+                "id": "qimv34e37rl",
+                "requirement": "vergleichbare Orientierung / Ausrichtung",
+                "level": "2",
+                "reason": "",
+                "source": "auto",
+                "tip": "Gemeinsame Soll-Anforderung. Auslöser:\nN1 · Wissenschaftliche Dokumentation / Analyse: O-0991-A2 · Tabelle 7.7; ergänzend Tabelle 7.4; Kap. 5.8 und 6.6 der Masterarbeit · A 2–3\nBei mehreren Anforderungen an dieselbe konkrete Eigenschaft wird für den Vorschlag die höchste erforderliche Mindeststufe berücksichtigt.",
+                "ruleId": "O-0991-A2",
+                "scopeGroupIds": [
+                  "rmv34e36q6"
+                ],
+                "scopeKeys": [
+                  "outer:whole",
+                  "outer:detail"
+                ],
+                "autoLevel": "2"
+              }
+            ],
+            "split": false,
+            "commonLevel": "2",
+            "autoCommonLevel": "2",
+            "requireCommonChoice": false,
+            "reason": "",
+            "dismissedAuto": []
+          }
+        }
+      }
+    ]
+  },
+  "b4": {
+    "planning": {
+      "projectConditions": "Objektbewegung nur im konservatorisch zulässigen Umfang.",
+      "procedures": [
+        "Streifenlichtscanning"
+      ],
+      "procedureOwn": "",
+      "procedureLinks": {},
+      "components": [
+        "relevantes Endprodukt",
+        "Masterfassung",
+        "Maßstabs-/Referenz-/Kontrollinformationen",
+        "Bearbeitungs-/Prozessdokumentation"
+      ],
+      "componentOwn": "",
+      "componentsInitialized": true,
+      "system": "Hochauflösendes Streifenlichtsystem; Gerätekonfiguration nach Testmessung festgelegt.",
+      "capture": "Mehrere zulässige Objektlagen; besondere Kontrolle der dunklen und reflektierenden Bereiche.",
+      "control": "Maßstab und unabhängige Kontrollmessungen an geeigneten Referenzen.",
+      "processing": "Registrierung und Zusammenführung ohne geometrisch relevante Glättung; Eingriffe werden dokumentiert.",
+      "products": "Kontrollierte Masterfassung und daraus abgeleitete Nutzungsfassung.",
+      "data": "Erfassungs- und Kontrollinformationen sowie Bearbeitungsschritte werden mit der Masterfassung erhalten.",
+      "conflicts": {
+        "Informationsgewinn ↔ konservatorische Sicherheit": {
+          "status": "applies",
+          "handling": "Zusätzliche Objektlagen nur im konservatorisch zulässigen Umfang; fehlende Bereiche werden nicht durch freie Rekonstruktion ersetzt.",
+          "consequence": "Erfassungsplanung wird an die zulässige Handhabung angepasst."
+        },
+        "Nachnutzbarkeit ↔ Aufwand der Datenhaltung": {
+          "status": "",
+          "handling": "",
+          "consequence": ""
+        },
+        "Nutzbarkeit / Bearbeitung ↔ Modellintegrität / Nachvollziehbarkeit": {
+          "status": "",
+          "handling": "",
+          "consequence": ""
+        },
+        "Standardisierung / Vergleichbarkeit ↔ objektspezifische Anforderungen": {
+          "status": "",
+          "handling": "",
+          "consequence": ""
+        }
+      },
+      "manualConflicts": []
+    },
+    "evaluation": {
+      "inventory": {
+        "0": {
+          "status": "",
+          "evidence": "",
+          "note": ""
+        },
+        "1": {
+          "status": "",
+          "evidence": "",
+          "note": ""
+        },
+        "2": {
+          "status": "",
+          "evidence": "",
+          "note": ""
+        },
+        "3": {
+          "status": "",
+          "evidence": "",
+          "note": ""
+        },
+        "4": {
+          "status": "",
+          "evidence": "",
+          "note": ""
+        },
+        "5": {
+          "status": "",
+          "evidence": "",
+          "note": ""
+        },
+        "6": {
+          "status": "",
+          "evidence": "",
+          "note": ""
+        },
+        "7": {
+          "status": "",
+          "evidence": "",
+          "note": ""
+        },
+        "8": {
+          "status": "",
+          "evidence": "",
+          "note": ""
+        },
+        "9": {
+          "status": "",
+          "evidence": "",
+          "note": ""
+        },
+        "10": {
+          "status": "",
+          "evidence": "",
+          "note": ""
+        },
+        "11": {
+          "status": "",
+          "evidence": "",
+          "note": ""
+        },
+        "12": {
+          "status": "",
+          "evidence": "",
+          "note": ""
+        },
+        "13": {
+          "status": "",
+          "evidence": "",
+          "note": ""
+        },
+        "14": {
+          "status": "",
+          "evidence": "",
+          "note": ""
+        },
+        "15": {
+          "status": "",
+          "evidence": "",
+          "note": ""
+        }
+      }
+    },
+    "actual": {
+      "G|geometrische formtreue relevanter bereiche|joint:outer:whole+outer:detail": {
+        "key": "G|geometrische formtreue relevanter bereiche|joint:outer:whole+outer:detail",
+        "level": "3",
+        "evidence": "",
+        "uncertainty": ""
+      },
+      "G|kleinste relevante merkmalsgröße / detailerkennbarkeit|joint:outer:whole+outer:detail": {
+        "key": "G|kleinste relevante merkmalsgröße / detailerkennbarkeit|joint:outer:whole+outer:detail",
+        "level": "3",
+        "evidence": "",
+        "uncertainty": ""
+      },
+      "G|gesamtform und proportionen|joint:outer:whole+outer:detail": {
+        "key": "G|gesamtform und proportionen|joint:outer:whole+outer:detail",
+        "level": "3",
+        "evidence": "",
+        "uncertainty": ""
+      },
+      "G|maßstab / maßbezug|joint:outer:whole+outer:detail": {
+        "key": "G|maßstab / maßbezug|joint:outer:whole+outer:detail",
+        "level": "3",
+        "evidence": "",
+        "uncertainty": ""
+      },
+      "G|metrische genauigkeit relevanter messungen|joint:outer:whole+outer:detail": {
+        "key": "G|metrische genauigkeit relevanter messungen|joint:outer:whole+outer:detail",
+        "level": "3",
+        "evidence": "",
+        "uncertainty": ""
+      },
+      "G|unsicherheit und kontrollierbarkeit der geometrie|joint:outer:whole+outer:detail": {
+        "key": "G|unsicherheit und kontrollierbarkeit der geometrie|joint:outer:whole+outer:detail",
+        "level": "3",
+        "evidence": "",
+        "uncertainty": ""
+      },
+      "V|abdeckung aller relevanten objektbereiche|joint:outer:whole+outer:detail": {
+        "key": "V|abdeckung aller relevanten objektbereiche|joint:outer:whole+outer:detail",
+        "level": "3",
+        "evidence": "",
+        "uncertainty": ""
+      },
+      "V|dokumentation verbleibender fehlstellen|joint:outer:whole+outer:detail": {
+        "key": "V|dokumentation verbleibender fehlstellen|joint:outer:whole+outer:detail",
+        "level": "3",
+        "evidence": "",
+        "uncertainty": ""
+      },
+      "V|nachvollziehbarkeit des erfassungsumfangs|joint:outer:whole+outer:detail": {
+        "key": "V|nachvollziehbarkeit des erfassungsumfangs|joint:outer:whole+outer:detail",
+        "level": "3",
+        "evidence": "",
+        "uncertainty": ""
+      },
+      "B|nachvollziehbarkeit geometrieverändernder bearbeitungen|joint:outer:whole+outer:detail": {
+        "key": "B|nachvollziehbarkeit geometrieverändernder bearbeitungen|joint:outer:whole+outer:detail",
+        "level": "3",
+        "evidence": "",
+        "uncertainty": ""
+      },
+      "B|nachvollziehbarkeit von texturbearbeitungen|joint:outer:whole+outer:detail": {
+        "key": "B|nachvollziehbarkeit von texturbearbeitungen|joint:outer:whole+outer:detail",
+        "level": "3",
+        "evidence": "",
+        "uncertainty": ""
+      },
+      "B|bearbeitungsstatus der verwendeten modellfassung|joint:outer:whole+outer:detail": {
+        "key": "B|bearbeitungsstatus der verwendeten modellfassung|joint:outer:whole+outer:detail",
+        "level": "3",
+        "evidence": "",
+        "uncertainty": ""
+      },
+      "A|messungen und definierte datenoperationen|joint:outer:whole+outer:detail": {
+        "key": "A|messungen und definierte datenoperationen|joint:outer:whole+outer:detail",
+        "level": "3",
+        "evidence": "",
+        "uncertainty": ""
+      },
+      "A|vergleichbare orientierung / ausrichtung|joint:outer:whole+outer:detail": {
+        "key": "A|vergleichbare orientierung / ausrichtung|joint:outer:whole+outer:detail",
+        "level": "3",
+        "evidence": "",
+        "uncertainty": ""
+      }
+    },
+    "actualUi": {
+      "__joint__|G": {
+        "split": false,
+        "evidence": "",
+        "uncertainty": ""
+      },
+      "__joint__|V": {
+        "split": false,
+        "evidence": "",
+        "uncertainty": ""
+      },
+      "__joint__|B": {
+        "split": false,
+        "evidence": "",
+        "uncertainty": ""
+      },
+      "__joint__|A": {
+        "split": false,
+        "evidence": "",
+        "uncertainty": ""
+      }
+    }
+  },
+  "b5": {
+    "comparisons": {
+      "qimv34e3708": {
+        "status": "fulfilled",
+        "note": ""
+      },
+      "qimv34e3729": {
+        "status": "fulfilled",
+        "note": ""
+      },
+      "qimv34e374a": {
+        "status": "fulfilled",
+        "note": ""
+      },
+      "qimv34e375b": {
+        "status": "fulfilled",
+        "note": ""
+      },
+      "qimv34e377c": {
+        "status": "fulfilled",
+        "note": ""
+      },
+      "qimv34e379d": {
+        "status": "fulfilled",
+        "note": ""
+      },
+      "qimv34e37ce": {
+        "status": "fulfilled",
+        "note": ""
+      },
+      "qimv34e37ff": {
+        "status": "fulfilled",
+        "note": ""
+      },
+      "qimv34e37ig": {
+        "status": "fulfilled",
+        "note": ""
+      },
+      "qimv34e37kh": {
+        "status": "fulfilled",
+        "note": ""
+      },
+      "qimv34e37mi": {
+        "status": "fulfilled",
+        "note": ""
+      },
+      "qimv34e37nj": {
+        "status": "fulfilled",
+        "note": ""
+      },
+      "qimv34e37pk": {
+        "status": "fulfilled",
+        "note": ""
+      },
+      "qimv34e37rl": {
+        "status": "fulfilled",
+        "note": ""
+      }
+    },
+    "consequences": {
+      "qimv34e3708": {
+        "selected": [],
+        "own": "",
+        "note": "",
+        "details": {}
+      },
+      "qimv34e3729": {
+        "selected": [],
+        "own": "",
+        "note": "",
+        "details": {}
+      },
+      "qimv34e374a": {
+        "selected": [],
+        "own": "",
+        "note": "",
+        "details": {}
+      },
+      "qimv34e375b": {
+        "selected": [],
+        "own": "",
+        "note": "",
+        "details": {}
+      },
+      "qimv34e377c": {
+        "selected": [],
+        "own": "",
+        "note": "",
+        "details": {}
+      },
+      "qimv34e379d": {
+        "selected": [],
+        "own": "",
+        "note": "",
+        "details": {}
+      },
+      "qimv34e37ce": {
+        "selected": [],
+        "own": "",
+        "note": "",
+        "details": {}
+      },
+      "qimv34e37ff": {
+        "selected": [],
+        "own": "",
+        "note": "",
+        "details": {}
+      },
+      "qimv34e37ig": {
+        "selected": [],
+        "own": "",
+        "note": "",
+        "details": {}
+      },
+      "qimv34e37kh": {
+        "selected": [],
+        "own": "",
+        "note": "",
+        "details": {}
+      },
+      "qimv34e37mi": {
+        "selected": [],
+        "own": "",
+        "note": "",
+        "details": {}
+      },
+      "qimv34e37nj": {
+        "selected": [],
+        "own": "",
+        "note": "",
+        "details": {}
+      },
+      "qimv34e37pk": {
+        "selected": [],
+        "own": "",
+        "note": "",
+        "details": {}
+      },
+      "qimv34e37rl": {
+        "selected": [],
+        "own": "",
+        "note": "",
+        "details": {}
+      }
+    },
+    "consequenceUi": {}
+  },
+  "workflow": {
+    "started": true,
+    "completed": {
+      "uses": true,
+      "requirements": true,
+      "profile": true,
+      "implementation": true,
+      "comparison": true
+    },
+    "stale": {
+      "uses": false,
+      "requirements": false,
+      "profile": false,
+      "implementation": false,
+      "comparison": false
+    },
+    "activeEdit": null,
+    "revisionLog": [
+      {
+        "target": "implementation",
+        "finishedAt": "11.10.2026, 01:20",
+        "kind": "substantive",
+        "source": "Rückkopplung nach erstem Soll-Praxis-Abgleich",
+        "contextMarkers": [
+          "Die erste angenommene Umsetzungsvariante blieb bei geometrischer Detailwiedergabe und Erfassungsabdeckung unter dem Soll."
+        ],
+        "diffs": [
+          {
+            "field": "Dokumentationsverfahren",
+            "before": "Bildbasierte 3D-Rekonstruktion / photogrammetrischer Workflow",
+            "after": "Streifenlichtscanning"
+          }
+        ]
+      }
+    ],
+    "revisionNoticeDismissed": false
+  },
+  "result": {
+    "type": "planning_result",
+    "label": "Ergebnis",
+    "mode": "planning",
+    "statement": "Geplante Umsetzung erfüllt das Soll voraussichtlich.",
+    "status": "fulfilled",
+    "documentationForms": [
+      "3D-Oberflächendokumentation"
+    ],
+    "threeDRole": "required",
+    "targetUses": [
+      {
+        "ref": "N1",
+        "use": "Wissenschaftliche Dokumentation / Analyse"
+      }
+    ],
+    "consideredReuse": [],
+    "qualityComparison": {
+      "total": 14,
+      "fulfilled": 14,
+      "deviations": 0,
+      "notAssessable": 0,
+      "open": 0,
+      "areas": [
+        {
+          "area": "G",
+          "label": "G – Geometrie",
+          "status": "erfüllt",
+          "total": 6,
+          "fulfilled": 6,
+          "deviations": 0,
+          "notAssessable": 0,
+          "open": 0
+        },
+        {
+          "area": "V",
+          "label": "V – Vollständigkeit, Erfassungsabdeckung und Fehlstellen",
+          "status": "erfüllt",
+          "total": 3,
+          "fulfilled": 3,
+          "deviations": 0,
+          "notAssessable": 0,
+          "open": 0
+        },
+        {
+          "area": "B",
+          "label": "B – Bearbeitung, Modellintegrität und Derivatstatus",
+          "status": "erfüllt",
+          "total": 3,
+          "fulfilled": 3,
+          "deviations": 0,
+          "notAssessable": 0,
+          "open": 0
+        },
+        {
+          "area": "A",
+          "label": "A – analytische, semantische und algorithmische Auswertbarkeit",
+          "status": "erfüllt",
+          "total": 2,
+          "fulfilled": 2,
+          "deviations": 0,
+          "notAssessable": 0,
+          "open": 0
+        }
+      ]
+    },
+    "issues": []
+  }
+}

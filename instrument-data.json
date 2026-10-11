@@ -1,0 +1,3659 @@
+{
+  "meta": {
+    "title": "Vom Fundobjekt zum 3D-Digitalisat",
+    "subtitle": "Planungs- und Bewertungsinstrument",
+    "version": "1.0",
+    "ruleBasis": "Regelbasierte, versionierte Wissensbasis; Objektkontext und Nutzung(en) → konkretisierte Objektinformationen, räumlicher Geltungsbereich und Datenhandlungen → gemeinsame Dokumentationsform beziehungsweise Kombination → Soll-Profil → konkrete Umsetzungsvariante beziehungsweise Bestandsbeschreibung → fachlich eingeschätztes Praxis- beziehungsweise nachweisbasiertes Ist-Profil → Qualitätsabgleich und Folgerungen. Die Anwendung strukturiert und orientiert, berechnet jedoch keine Praxis- oder Ist-Qualität aus einem Verfahren oder Gerät.",
+    "scopeNote": "Die Anwendung ist eine strukturierte Entscheidungshilfe. Sie gibt die Reihenfolge fachlicher Entscheidungen vor, bietet an entscheidungsrelevanten Stellen regelbasierte Orientierung und dokumentiert Festlegungen und Folgen nachvollziehbar. Mehrere Nutzungen werden zu gemeinsamen Anforderungen zusammengeführt. In den Qualitätsbereichen gilt zunächst eine gemeinsame Bereichsstufe; einzelne konkrete Anforderungen können bei Bedarf getrennt abgestuft werden. Zielkonflikte können regelbasiert hervorgehoben und manuell ergänzt werden; ihre fachliche Priorisierung bleibt beim Benutzer.",
+    "threeDBranch": "Ob 3D-spezifische Qualitätsanforderungen benötigt werden, ergibt sich aus den festgelegten Dokumentationsformen. Mindestens eine 3D-bezogene Form führt zum Soll-Profil; ohne 3D-bezogene Form endet der Instrumentweg nach der Formentscheidung.",
+    "thesisBasis": "Masterarbeit",
+    "tableReferences": {
+      "objectReference": "Tabelle 4.1",
+      "objectConditions": "Tabelle 4.2",
+      "process": "Tabelle 7.1",
+      "useAndReuse": "Tabelle 7.2",
+      "documentationRequirement": "Tabellen 7.3–7.4",
+      "documentationForm": "Tabellen 7.5–7.6",
+      "qualityProfile": "Tabelle 7.7",
+      "implementation": "Tabellen 7.8–7.11",
+      "comparison": "Tabellen 7.12–7.13",
+      "dependencies": "Tabelle 7.14",
+      "targetConflicts": "Tabelle 7.15"
+    }
+  },
+  "modes": {
+    "planning": {
+      "label": "Planungsinstrument",
+      "short": "prospektiv",
+      "description": "Planung einer neuen Dokumentation. Aus vorgesehener Nutzung und Nachnutzungshorizont werden benötigte Objektinformationen, Dokumentationsform und Soll-Profil abgeleitet; die konkrete Umsetzung und das Praxis-Profil werden anschließend fachlich geplant beziehungsweise eingeschätzt.",
+      "useLabel": "Vorgesehene Nutzung",
+      "usePlural": "Vorgesehene Nutzungen",
+      "usePrefix": "N"
+    },
+    "evaluation": {
+      "label": "Bewertungsinstrument",
+      "short": "retrospektiv",
+      "description": "Bewertung eines vorhandenen Datenbestands für eine festgelegte Zielnutzung. Bewertet werden kann sowohl die ursprünglich vorgesehene Nutzung als auch eine später hinzugekommene Zielnutzung.",
+      "useLabel": "Zielnutzung",
+      "usePlural": "Zielnutzungen",
+      "usePrefix": "Z"
+    }
+  },
+  "usageCatalog": [
+    {
+      "id": "inventory",
+      "label": "Basisinventarisierung / Sammlungsmanagement",
+      "information": [
+        "Objektidentität",
+        "Inventar- und Kontextinformationen",
+        "Gesamtform",
+        "Grundmaße",
+        "Zustand",
+        "visuell charakteristische Merkmale"
+      ],
+      "description": "Grundlegende Erschließung, Identifikation und Verwaltung eines Objekts im Sammlungs- oder Dokumentationsbestand; umfasst typischerweise Wiederauffindbarkeit, grundlegende Beschreibung, Zustandsbezug und visuelle Wiedererkennbarkeit.",
+      "uiInformation": [
+        "Gesamtform und Grundmaße",
+        "Zustand",
+        "visuell charakteristische Merkmale"
+      ],
+      "source": "Tabelle 7.4; Kap. 6.3 und 6.8.1 der Masterarbeit"
+    },
+    {
+      "id": "science",
+      "label": "Wissenschaftliche Dokumentation / Analyse",
+      "information": [
+        "Gesamtform",
+        "Profilverlauf",
+        "Randform",
+        "Bodenform",
+        "Proportionen",
+        "definierte Maße",
+        "relevante Oberflächenmerkmale",
+        "Bruch- und Kontaktflächen",
+        "räumliche Beziehungen relevanter Bereiche"
+      ],
+      "description": "Fachliche Untersuchung des Objekts, etwa anhand von Form, Maßen, Profilen, Oberflächenmerkmalen, Bruch- oder Kontaktflächen, inneren Strukturen oder vergleichbaren Merkmalen. Die konkrete Information wird erst im nächsten Schritt festgelegt.",
+      "uiInformation": [
+        "Gesamtform, Proportionen und definierte Maße",
+        "Profil-, Rand- oder Bodenform",
+        "metrisch / morphometrisch vergleichbare Formdaten",
+        "relevante Oberflächen- und Detailmerkmale",
+        "Bruch-, Kontakt- und räumliche Beziehungen",
+        "innere Strukturen / Volumen"
+      ],
+      "source": "Tabelle 7.4; Kap. 6.6 der Masterarbeit"
+    },
+    {
+      "id": "publication",
+      "label": "Wissenschaftliche Publikation",
+      "information": [
+        "untersuchte Merkmale",
+        "Maßstab",
+        "Orientierung",
+        "Quellenbezug",
+        "relevante Form- und Oberflächeninformationen"
+      ],
+      "description": "Nachvollziehbare, zitierbare und fachlich geeignete Darstellung von Untersuchungsergebnissen und relevanten Objektmerkmalen für wissenschaftliche Publikationen.",
+      "uiInformation": [
+        "untersuchte Merkmale und relevante Form-/Oberflächeninformationen",
+        "Maßstab und Orientierung",
+        "Quellenbezug"
+      ],
+      "source": "Tabelle 7.4; Kap. 6.2 und 6.6 der Masterarbeit"
+    },
+    {
+      "id": "teaching",
+      "label": "Lehre / fachliche Vermittlung",
+      "information": [
+        "Erkennbarkeit",
+        "räumliche Gesamtform",
+        "charakteristische Merkmale",
+        "Farbe / Oberflächenerscheinung",
+        "Kontextinformation"
+      ],
+      "description": "Fachliche Vermittlung und Lehre, bei der Objektform, charakteristische Merkmale, Oberfläche oder Kontext anschaulich und nachvollziehbar zugänglich gemacht werden.",
+      "uiInformation": [
+        "räumliche Gesamtform und Erkennbarkeit",
+        "charakteristische visuelle Merkmale / Farbe / Oberfläche",
+        "Kontextinformation"
+      ],
+      "source": "Tabelle 7.4; Kap. 6.4.3 der Masterarbeit"
+    },
+    {
+      "id": "web",
+      "label": "Online-Sammlung / Webvermittlung",
+      "information": [
+        "Gesamtform",
+        "Proportionen",
+        "visuell relevante Oberfläche",
+        "Farbe / Oberflächenerscheinung",
+        "Orientierung",
+        "charakteristische Merkmale"
+      ],
+      "description": "Digitale Bereitstellung und Vermittlung in Online-Sammlungen oder Webanwendungen; häufig mit Schwerpunkt auf Wiedererkennbarkeit, räumlicher Betrachtung und visueller Oberfläche.",
+      "uiInformation": [
+        "Gesamtform, Proportionen und Orientierung",
+        "visuell relevante Oberfläche / Farbe",
+        "charakteristische Merkmale"
+      ],
+      "source": "Tabelle 7.4; Kap. 6.3 und 6.4 der Masterarbeit"
+    },
+    {
+      "id": "exhibition",
+      "label": "Ausstellung / öffentliche Vermittlung",
+      "information": [
+        "Erkennbarkeit",
+        "Gesamtform",
+        "charakteristische Merkmale",
+        "Farbe / Oberflächenerscheinung",
+        "Kontextinformation"
+      ],
+      "description": "Öffentliche Vermittlung und Ausstellung, analog oder digital; kann anschauliche Objektpräsentation, räumliche Darstellung und interaktive Vermittlungsformen umfassen.",
+      "uiInformation": [
+        "räumliche Gesamtform und Erkennbarkeit",
+        "charakteristische visuelle Merkmale / Farbe / Oberfläche",
+        "Kontextinformation"
+      ],
+      "source": "Tabelle 7.4; Kap. 6.4 der Masterarbeit"
+    },
+    {
+      "id": "conservation",
+      "label": "Zustands- und Eingriffsdokumentation",
+      "information": [
+        "Zustand, Schäden und Fehlstellen",
+        "Ergänzungen und Materialveränderungen",
+        "Lage und Ausdehnung von Veränderungen / Eingriffen",
+        "Zustandsvergleich / Zustandsversionen",
+        "Lage und Ausdehnung der Proben- oder Eingriffsstelle",
+        "räumlicher Zusammenhang und Materialbezug"
+      ],
+      "description": "Dokumentation von Erhaltungszustand, Schäden, Veränderungen, restauratorischen beziehungsweise konservatorischen Maßnahmen sowie Beprobungen und anderen Eingriffen einschließlich ihrer räumlichen und zeitlichen Zuordnung.",
+      "uiInformation": [
+        "Zustand, Schäden und Fehlstellen",
+        "Ergänzungen und Materialveränderungen",
+        "Lage und Ausdehnung von Veränderungen / Eingriffen",
+        "Zustandsvergleich / Zustandsversionen",
+        "Lage und Ausdehnung der Proben- oder Eingriffsstelle",
+        "räumlicher Zusammenhang und Materialbezug"
+      ],
+      "source": "Tabelle 7.4; Kap. 6.7 der Masterarbeit"
+    },
+    {
+      "id": "print",
+      "label": "3D-Druck / physische Reproduktion",
+      "information": [
+        "Gesamtform",
+        "Maße",
+        "Anschluss- und Kontaktbereiche",
+        "reproduktionsrelevante Oberflächenmerkmale"
+      ],
+      "description": "Herstellung physischer Reproduktionen oder funktionaler Ausgaben aus digitalen beziehungsweise dokumentierten Forminformationen, etwa Repliken, Tastmodelle oder passgenaue Hilfsmittel.",
+      "uiInformation": [
+        "Gesamtform und Maße",
+        "Anschluss- und Kontaktbereiche",
+        "reproduktionsrelevante Oberflächenmerkmale"
+      ],
+      "source": "Tabelle 7.4; Kap. 6.4.4 der Masterarbeit"
+    },
+    {
+      "id": "immersive",
+      "label": "AR/VR / immersive Nutzung",
+      "information": [
+        "Gesamtform",
+        "Orientierung",
+        "visuelle Oberfläche",
+        "Kontextbezug",
+        "für die Interaktion relevante Bereiche"
+      ],
+      "description": "Räumliche Nutzung in AR/VR oder vergleichbaren immersiven Umgebungen, einschließlich virtueller Objektpräsentation, Interaktion und räumlicher Rekontextualisierung.",
+      "uiInformation": [
+        "Gesamtform und Orientierung",
+        "visuelle Oberfläche",
+        "Kontextbezug und Interaktionsbereiche"
+      ],
+      "source": "Tabelle 7.4; Kap. 6.5 der Masterarbeit"
+    },
+    {
+      "id": "researchdata",
+      "label": "Forschungsdatenbereitstellung / langfristige Nachnutzung",
+      "information": [
+        "fachlich benötigte Objektinformationen",
+        "Datenherkunft",
+        "Bearbeitungsgeschichte",
+        "Version",
+        "Kontext",
+        "Ausgangsdaten",
+        "Prozessinformationen"
+      ],
+      "description": "Bereitstellung und Erhaltung von Daten für Nachprüfbarkeit, Reanalyse, Reprozessierung, neue Ableitungen und langfristige wissenschaftliche Nachnutzung.",
+      "uiInformation": [
+        "fachlich benötigte Objektinformationen und Kontext",
+        "Datenherkunft und Prozessinformationen",
+        "Ausgangsdaten und Modell-/Datensatzversionen"
+      ],
+      "source": "Tabelle 7.4; Kap. 6.8.2–6.8.3 der Masterarbeit"
+    },
+    {
+      "id": "algorithmic",
+      "label": "Algorithmische / semantische Auswertung",
+      "information": [
+        "definierte auszuwertende Merkmale",
+        "konsistente Datenstruktur",
+        "Skalierung",
+        "Vergleichbarkeit",
+        "Labels / Klassen",
+        "Annotationen",
+        "Segmentierungen",
+        "Datensatzversionen"
+      ],
+      "description": "Strukturierte, semantische oder algorithmische Auswertung von Objekt- und Merkmalsdaten, einschließlich Annotation, Segmentierung, Klassifikation und automatisiertem Vergleich.",
+      "uiInformation": [
+        "definierte auszuwertende Merkmale",
+        "Skalierung, Vergleichbarkeit und konsistente Datenstruktur",
+        "Labels / Klassen und Annotationen",
+        "Segmentierungen und Datensatzversionen"
+      ],
+      "source": "Tabelle 7.4; Kap. 6.6.8–6.6.9 der Masterarbeit"
+    }
+  ],
+  "featureRules": [
+    {
+      "keywords": [
+        "profil",
+        "randform",
+        "bodenform",
+        "durchmesser",
+        "gefäßhöhe",
+        "proportion"
+      ],
+      "suggestions": [
+        "Gefäßrand",
+        "Wandung",
+        "Boden",
+        "Gesamtprofil",
+        "Henkel / Ansatzbereich",
+        "definierter Profilabschnitt"
+      ]
+    },
+    {
+      "keywords": [
+        "oberfläche",
+        "farbe",
+        "dekor",
+        "inschrift",
+        "ritzung",
+        "relief",
+        "gebrauchsspur"
+      ],
+      "suggestions": [
+        "Außenfläche",
+        "Innenfläche",
+        "Dekorzone",
+        "Inschrift / Ritzung",
+        "Reliefbereich",
+        "definierte Oberflächenzone"
+      ]
+    },
+    {
+      "keywords": [
+        "bruch",
+        "kontakt",
+        "refitting",
+        "negative",
+        "retusche",
+        "grat",
+        "kante"
+      ],
+      "suggestions": [
+        "Bruchfläche",
+        "Kontaktfläche",
+        "Arbeitskante",
+        "Schlagfläche",
+        "Negativ",
+        "Grat",
+        "Retusche"
+      ]
+    },
+    {
+      "keywords": [
+        "innen",
+        "hohlraum",
+        "dichte",
+        "volumen",
+        "materialgrenze"
+      ],
+      "suggestions": [
+        "definierter Volumenbereich",
+        "Hohlraum",
+        "innere Materialgrenze",
+        "Innenstruktur",
+        "verdeckt liegender Bereich"
+      ]
+    },
+    {
+      "keywords": [
+        "schaden",
+        "riss",
+        "fehlstelle",
+        "ergänzung",
+        "zustand",
+        "veränderung"
+      ],
+      "suggestions": [
+        "Riss",
+        "Fehlstelle",
+        "Ergänzung",
+        "Schadensbereich",
+        "Restaurierungsbereich",
+        "definierte Zustandszone"
+      ]
+    },
+    {
+      "keywords": [
+        "gesamtform",
+        "proportion",
+        "orientierung",
+        "wiedererkennbarkeit"
+      ],
+      "suggestions": [
+        "gesamtes Objekt",
+        "Außenkontur",
+        "charakteristische Formbereiche",
+        "Vorder-/Rückseite",
+        "Unterseite",
+        "Innenbereich"
+      ]
+    }
+  ],
+  "conditionCatalog": [
+    {
+      "label": "Größe und Maßstab",
+      "suggestions": [
+        "sehr kleines Objekt / relevantes Kleinmerkmal",
+        "sehr großes oder schweres Objekt",
+        "kleinstes diagnostisches Merkmal"
+      ]
+    },
+    {
+      "label": "Geometrische Form",
+      "suggestions": [
+        "lange / dünne / lineare Geometrie",
+        "flaches Objekt",
+        "komplexe Form",
+        "Hinterschneidung / tiefe Vertiefung",
+        "tiefer Innenraum"
+      ]
+    },
+    {
+      "label": "Optische Oberfläche und Materialwirkung",
+      "suggestions": [
+        "glänzende / stark reflektierende Oberfläche",
+        "transparente / transluzente Oberfläche",
+        "sehr dunkle Oberfläche",
+        "homogene / repetitive / strukturarme Oberfläche"
+      ]
+    },
+    {
+      "label": "Materialkombination",
+      "suggestions": [
+        "mehrere Materialien / Verbundobjekt",
+        "unterschiedliche Oberflächen- oder Materialeigenschaften innerhalb des Objekts"
+      ]
+    },
+    {
+      "label": "Erhaltungszustand und Fragilität",
+      "suggestions": [
+        "instabil / fragil",
+        "verformt / rissig",
+        "empfindliche Oberfläche",
+        "wassergetränkt / austrocknungsgefährdet"
+      ]
+    },
+    {
+      "label": "Beweglichkeit und Handhabung",
+      "suggestions": [
+        "großes Gewicht / schwer handhabbar",
+        "feste Montage",
+        "darf nicht gedreht / umgelagert werden",
+        "konservatorische Handhabungseinschränkung"
+      ]
+    },
+    {
+      "label": "Physische Zugänglichkeit",
+      "suggestions": [
+        "Rückseite / Unterseite nicht zugänglich",
+        "fest eingebaut / mit Träger verbunden",
+        "verdeckte Kontaktfläche"
+      ]
+    },
+    {
+      "label": "Standortgebundene räumliche Bedingungen",
+      "suggestions": [
+        "sehr geringer Arbeitsraum",
+        "nur bestimmte Annäherungsrichtungen möglich",
+        "unveränderbare Aufstellung"
+      ]
+    },
+    {
+      "label": "Nicht veränderbare Umgebungs- oder Zugangsvorgaben",
+      "suggestions": [
+        "Erfassung muss im Freien erfolgen",
+        "nicht kontrollierbares Umgebungslicht",
+        "unveränderbare konservatorische Vorgabe",
+        "institutionelle Zugangs- / Handhabungsvorgabe"
+      ]
+    }
+  ],
+  "documentationForms": [
+    {
+      "label": "Beschreibung / Katalogisierung",
+      "keywords": [
+        "identität",
+        "inventar",
+        "kontext",
+        "zustand"
+      ],
+      "is3D": false
+    },
+    {
+      "label": "Maß- / Profildokumentation",
+      "keywords": [
+        "maß",
+        "profil",
+        "durchmesser",
+        "wandstärke",
+        "proportion"
+      ],
+      "is3D": false
+    },
+    {
+      "label": "Zeichnung",
+      "keywords": [
+        "profil",
+        "darstellung",
+        "inschrift",
+        "kontur"
+      ],
+      "is3D": false
+    },
+    {
+      "label": "Fotografie",
+      "keywords": [
+        "farbe",
+        "oberfläche",
+        "dekor",
+        "wiedererkennbarkeit",
+        "zustand"
+      ],
+      "is3D": false
+    },
+    {
+      "label": "Spezialisierte fotografische / bildgebende Dokumentation",
+      "keywords": [
+        "inschrift",
+        "ritzung",
+        "relief",
+        "oberfläche",
+        "material"
+      ],
+      "is3D": false
+    },
+    {
+      "label": "Radiographische 2D-Dokumentation",
+      "keywords": [
+        "innen",
+        "verdeckt",
+        "materialgrenze",
+        "dichte"
+      ],
+      "is3D": false
+    },
+    {
+      "label": "Abformung / Abklatsch",
+      "keywords": [
+        "abformung",
+        "abklatsch",
+        "squeeze",
+        "relief",
+        "inschrift",
+        "oberfläche",
+        "negativform",
+        "positivform"
+      ],
+      "is3D": false
+    },
+    {
+      "label": "3D-Oberflächendokumentation",
+      "keywords": [
+        "gesamtform",
+        "profil",
+        "form",
+        "bruch",
+        "kontakt",
+        "refitting",
+        "relief",
+        "räumlich",
+        "web"
+      ],
+      "is3D": true
+    },
+    {
+      "label": "Volumetrische / tomographische 3D-Dokumentation",
+      "keywords": [
+        "innen",
+        "hohlraum",
+        "volumen",
+        "materialgrenze",
+        "dichte"
+      ],
+      "is3D": true
+    }
+  ],
+  "qualityLevels": [
+    {
+      "value": "1",
+      "label": "1 – orientierend",
+      "general": "Grundlegende, orientierend bestimmte Ausprägung; geringe Kontrolle beziehungsweise Nachweisbarkeit."
+    },
+    {
+      "value": "2",
+      "label": "2 – definiert",
+      "general": "Die betreffende Eigenschaft ist gezielt bestimmt beziehungsweise in definierter Form verfügbar; Kontrolle und Nachweis bleiben begrenzt."
+    },
+    {
+      "value": "3",
+      "label": "3 – kontrolliert",
+      "general": "Die betreffende Eigenschaft ist systematisch bestimmt und durch dokumentierte Kontrollen beziehungsweise nachvollziehbare Strukturen abgesichert."
+    },
+    {
+      "value": "4",
+      "label": "4 – hochkontrolliert",
+      "general": "Die betreffende Eigenschaft ist mit erhöhtem und explizit dokumentiertem Kontroll- und Nachweisgrad bestimmt."
+    }
+  ],
+  "qualityAreas": {
+    "G": {
+      "label": "G – Geometrie",
+      "levels": {
+        "1": "Orientierende, visuell plausible Form; nicht metrisch belastbar.",
+        "2": "Skalierte und geometrisch definierte Grundform; relevante Formen und Abmessungen nachvollziehbar, jedoch ohne weitergehenden Genauigkeits- oder Unsicherheitsnachweis.",
+        "3": "Kontrollierte, wissenschaftlich belastbare Geometrie; relevante Merkmale für Messung, Profil, Vergleich oder Refitting nutzbar; Kontrollgrundlage dokumentiert.",
+        "4": "Hochkontrollierte Geometrie; Genauigkeit beziehungsweise Unsicherheit und Kontrollgrundlage explizit nachvollziehbar; erhöhte Wiederholbarkeit und Vergleichbarkeit."
+      }
+    },
+    "T": {
+      "label": "T – Textur, Farbe und Oberfläche",
+      "levels": {
+        "1": "Orientierende visuelle Lesbarkeit; Farbe und Oberflächeneigenschaften nicht kontrolliert wiedergegeben.",
+        "2": "Definierte Wiedergabe visueller Oberflächenmerkmale; Farbe, Dekor oder Materialwirkung gezielt erkennbar und räumlich zuordenbar, jedoch ohne weitergehende Referenzkontrolle.",
+        "3": "Kontrollierte Wiedergabe relevanter visueller Merkmale; wesentliche Aufnahme- und Verarbeitungsbedingungen dokumentiert und nachvollziehbar.",
+        "4": "Hochkontrollierte farb- beziehungsweise oberflächenkritische Dokumentation mit geeigneten Referenzen, Prüfbedingungen und dokumentierter Kontrolle."
+      }
+    },
+    "V": {
+      "label": "V – Vollständigkeit, Erfassungsabdeckung und Fehlstellen",
+      "levels": {
+        "1": "Orientierende Abdeckung; grundlegende Ansichten beziehungsweise Bereiche vorhanden; Erfassungsumfang und Fehlstellen nicht systematisch kontrolliert.",
+        "2": "Definierter Erfassungsumfang; festgelegte Objektbereiche gezielt abgedeckt und der Umfang der Erfassung nachvollziehbar; Fehlstellen können bestehen, ohne vollständig systematisch ausgewiesen zu sein.",
+        "3": "Kontrollierte Erfassungsabdeckung; relevante Bereiche systematisch erfasst; Fehlstellen und Ergänzungen nachvollziehbar dokumentiert.",
+        "4": "Hochkontrollierte Erfassungsabdeckung; verbleibende Lücken, Ergänzungen und ihre Auswirkungen systematisch ausgewiesen."
+      }
+    },
+    "B": {
+      "label": "B – Bearbeitung, Modellintegrität und Derivatstatus",
+      "levels": {
+        "1": "Orientierender Modell- und Bearbeitungsstatus; grundlegende Kennzeichnung vorhanden; Präsentationsbearbeitung möglich.",
+        "2": "Definierter Bearbeitungs- und Derivatstatus; wesentliche Bearbeitungen nachvollziehbar; Master- und Derivatstatus unterscheidbar.",
+        "3": "Kontrollierter Bearbeitungsstatus; Eingriffe und wesentliche Veränderungen nachvollziehbar, versioniert und prüfbar.",
+        "4": "Hochkontrollierte Provenienz der Modellzustände; erfasste, berechnete, ergänzte und hypothetische Informationen unterscheidbar."
+      }
+    },
+    "D": {
+      "label": "D – Daten, Metadaten, Paradata, Formate und Langzeitarchivierung",
+      "levels": {
+        "1": "Orientierender Datenzusammenhang; grundlegende Identifikation, Objektzuordnung und Herkunft vorhanden.",
+        "2": "Definierter Daten- und Prozesszusammenhang; zentrale Angaben zu Erfassung, Verarbeitung und Datenstruktur vorhanden und den zugehörigen Daten beziehungsweise Modellfassungen zuordenbar.",
+        "3": "Kontrolliert dokumentierter Datenzusammenhang mit relevanten Daten, Metadaten, Paradata und Modellversionen; Herkunft und Verarbeitung nachvollziehbar.",
+        "4": "Hochkontrollierter, langfristig nachvollziehbarer Datenbestand mit geeigneten Formaten, persistenter Identifikation, geklärten Rechten und begründeter Erhaltungsstrategie."
+      }
+    },
+    "A": {
+      "label": "A – analytische, semantische und algorithmische Auswertbarkeit",
+      "levels": {
+        "1": "Orientierende manuelle Exploration beziehungsweise einfache unstrukturierte Auswertung möglich.",
+        "2": "Definierte Auswertung: Die für festgelegte Operationen benötigten Merkmale und Daten sind zugänglich und gezielt nutzbar.",
+        "3": "Strukturierte und nachvollziehbare wissenschaftliche Auswertung durch geeignete Segmentierungen, Annotationen, Attribute oder vergleichbare Datenstrukturen möglich.",
+        "4": "Hochkontrollierte semantische beziehungsweise algorithmische Auswertbarkeit mit konsistenten, interoperablen und maschinenlesbaren Strukturen."
+      }
+    }
+  },
+  "examples": {
+    "bogen2": [
+      {
+        "label": "N1 – Online-Sammlung / Webvermittlung",
+        "information": "Gesamtform und Proportionen; visuell relevante Oberfläche und Oberflächenerscheinung",
+        "feature": "gesamtes keramisches Ganzgefäß, insbesondere Außenfläche und sichtbarer Innenbereich",
+        "condition": "tiefer Innenraum teilweise schwer zugänglich; Henkel erzeugt Hinterschneidungen"
+      },
+      {
+        "label": "NH1 – typochronologischer / algorithmischer Vergleich",
+        "information": "Profilverlauf; Rand- und Bodenform; Gefäßhöhe und -durchmesser; Proportionen; Henkelmorphologie; gegebenenfalls Dekormerkmale",
+        "feature": "Rand, Wandung, Boden, Henkel und definierte Vergleichsbereiche",
+        "condition": "Henkel und Übergangsbereiche komplexer geformt; definierte Vergleichsbereiche müssen vollständig zugänglich sein"
+      }
+    ]
+  },
+  "qualityRequirements": {
+    "G": [
+      "Maßstab / Maßbezug",
+      "Gesamtform und Proportionen",
+      "geometrische Formtreue relevanter Bereiche",
+      "kleinste relevante Merkmalsgröße / Detailerkennbarkeit",
+      "metrische Genauigkeit relevanter Messungen",
+      "geometrische Vergleichbarkeit / Wiederholbarkeit",
+      "Unsicherheit und Kontrollierbarkeit der Geometrie"
+    ],
+    "T": [
+      "allgemeine visuelle Lesbarkeit",
+      "Farbigkeit / Farbtreue",
+      "Detailerkennbarkeit der Textur",
+      "Dekor und visuelle Oberflächenmerkmale",
+      "Materialwirkung / Oberflächenerscheinung",
+      "visuelle Konsistenz zwischen Aufnahmen oder Modellbereichen",
+      "räumliche Zuordnung visueller Merkmale"
+    ],
+    "V": [
+      "Abdeckung aller relevanten Objektbereiche",
+      "Erfassung von Unterseiten, Innenbereichen oder Hinterschneidungen",
+      "Vollständigkeit analyserelevanter Kontakt- oder Bruchflächen",
+      "Dokumentation verbleibender Fehlstellen",
+      "Kennzeichnung ergänzter oder rekonstruierter Bereiche",
+      "Nachvollziehbarkeit des Erfassungsumfangs"
+    ],
+    "B": [
+      "Bearbeitungsstatus der verwendeten Modellfassung",
+      "Unterscheidung von Hauptfassung und Derivaten",
+      "Nachvollziehbarkeit geometrieverändernder Bearbeitungen",
+      "Nachvollziehbarkeit von Texturbearbeitungen",
+      "Versionierung von Modellzuständen",
+      "Unterscheidung erfasster, berechneter, ergänzter und hypothetischer Informationen"
+    ],
+    "D": [
+      "eindeutige Objekt- und Datenzuordnung",
+      "Aufnahme- und Geräteinformationen",
+      "Verarbeitungs- und Prozessinformationen / Paradata",
+      "Beziehungen zwischen Ausgangsdaten, Arbeitsdaten und Modellfassungen",
+      "Versionierung und digitale Provenienz",
+      "Dateiformate und Datenstruktur",
+      "Rechte und Lizenzen",
+      "persistente Identifikation / Zitierbarkeit",
+      "Erhaltungs- und Archivierungsinformationen"
+    ],
+    "A": [
+      "manuelle Exploration",
+      "Messungen und definierte Datenoperationen",
+      "vergleichbare Orientierung / Ausrichtung",
+      "strukturierte Annotationen",
+      "Segmentierungen",
+      "Attribute und Merkmalsdaten",
+      "semantische Verknüpfungen / kontrollierte Vokabulare",
+      "maschinenlesbare Datenstrukturen",
+      "algorithmische Vergleichbarkeit / Klassifikation",
+      "Interoperabilität"
+    ]
+  },
+  "procedures": [
+    {
+      "label": "Bildbasierte 3D-Rekonstruktion / photogrammetrischer Workflow",
+      "forms": [
+        "3D-Oberflächendokumentation"
+      ],
+      "contribution": "Räumliche Oberflächengeometrie aus mehreren Fotografien; je nach Workflow zusätzlich bildbasierte Textur.",
+      "check": "Bildverband, Sichtbarkeit relevanter Bereiche, Oberflächeneigenschaften, Maßstab, Kontrolle, Auflösung, Verarbeitung und Bearbeitung."
+    },
+    {
+      "label": "Streifenlichtscanning",
+      "forms": [
+        "3D-Oberflächendokumentation"
+      ],
+      "contribution": "Aktive optische Erfassung zugänglicher Oberflächengeometrie; je nach System hohe räumliche Detailtreue.",
+      "check": "Messfeld, Auflösung und Genauigkeit des konkreten Systems, Oberflächeneigenschaften, Abschattungen, Registrierung, Objektlagen und Kontrolle."
+    },
+    {
+      "label": "Laserscanning",
+      "forms": [
+        "3D-Oberflächendokumentation"
+      ],
+      "contribution": "Aktive optische Vermessung sichtbarer Oberflächen; Systemtypen reichen von objektnahem Triangulations- bis zu größermaßstäblichem Scanning.",
+      "check": "Konkretes Messprinzip und System, Arbeitsabstand, Punktabstand, Oberfläche, Sichtlinien, Registrierung, Maßbezug und Verarbeitung."
+    },
+    {
+      "label": "CT / Mikro-CT",
+      "forms": [
+        "Volumetrische / tomographische 3D-Dokumentation"
+      ],
+      "contribution": "Dreidimensionaler Volumendatensatz zur Untersuchung innerer und äußerer Strukturen.",
+      "check": "Objektgröße und Material, Kontrast, Aufnahmegeometrie, Voxelgröße versus tatsächliche Detailerkennbarkeit, Artefakte, Rekonstruktion und Segmentierung."
+    },
+    {
+      "label": "Gaussian Splatting / bildbasierte räumliche Repräsentation",
+      "forms": [
+        "3D-Oberflächendokumentation"
+      ],
+      "contribution": "Bildbasierte räumliche Repräsentation mit hoher visueller Darstellungsqualität; konkrete Ansätze unterscheiden sich stark in ihrer geometrischen Struktur.",
+      "check": "Konkreter GS-Ansatz, geometrische Belastbarkeit, Verhältnis von Darstellung und messbarer Oberfläche, fehlende beziehungsweise ergänzte Bereiche und Ableitbarkeit weiterer Datenprodukte."
+    },
+    {
+      "label": "Kontrollierte Objektfotografie",
+      "forms": [
+        "Fotografie"
+      ],
+      "contribution": "Dokumentiert visuelle Oberflächeninformation, Farbe, Materialwirkung und charakteristische Merkmale.",
+      "check": "Beleuchtung, Perspektive, Maßstab, Schärfe, Farbreferenz, Hintergrund, Konsistenz und Nachbearbeitung."
+    },
+    {
+      "label": "Makro-/Mikrofotografie",
+      "forms": [
+        "Fotografie",
+        "Spezialisierte fotografische / bildgebende Dokumentation"
+      ],
+      "contribution": "Detaildokumentation kleiner Oberflächenmerkmale.",
+      "check": "Abbildungsmaßstab, Schärfentiefe, Beleuchtung, Fokusstrategie, Referenz und Vergleichbarkeit."
+    },
+    {
+      "label": "Multi-Light / RTI",
+      "forms": [
+        "Spezialisierte fotografische / bildgebende Dokumentation"
+      ],
+      "contribution": "Interaktive beziehungsweise abgeleitete Sichtbarmachung schwach ausgeprägter Oberflächen- und Reliefmerkmale.",
+      "check": "Aufnahmegeometrie, stabile Kameraposition, Beleuchtungsrichtungen, Verarbeitung und Abgrenzung gegenüber metrischer 3D-Geometrie."
+    },
+    {
+      "label": "Röntgendokumentation",
+      "forms": [
+        "Radiographische 2D-Dokumentation"
+      ],
+      "contribution": "Zweidimensionale Projektion innerer beziehungsweise verdeckter Strukturen.",
+      "check": "Material und Durchstrahlbarkeit, Projektion, Maßstab, Belichtung/Parameter, gewünschte innere Merkmale und Interpretationsgrenzen."
+    },
+    {
+      "label": "Kombination mehrerer Verfahren / Datenfusion",
+      "forms": [
+        "3D-Oberflächendokumentation",
+        "Volumetrische / tomographische 3D-Dokumentation",
+        "Fotografie",
+        "Spezialisierte fotografische / bildgebende Dokumentation"
+      ],
+      "contribution": "Verbindet unterschiedliche Informationszugänge, wenn eine einzelne Methode die Anforderungen nicht vollständig abdeckt.",
+      "check": "Rollen der einzelnen Verfahren, räumliche Registrierung, Datenzustände, Provenienz, Bearbeitung und klare Trennung der Informationsquellen."
+    },
+    {
+      "label": "Laserunterstützte Profilaufnahme",
+      "forms": [
+        "Maß- / Profildokumentation"
+      ],
+      "contribution": "Spezialisierte digitale Aufnahme von Profil, horizontaler Krümmung und daraus ableitbaren keramologischen Forminformationen, ohne zwingend ein vollständiges flächenhaftes 3D-Modell zu erzeugen.",
+      "check": "Objektorientierung, Gefäßachse, Profil- und Randbezug, Maßstab, Krümmungsbestimmung, erreichbare Genauigkeit und Grenzen gegenüber einer vollständigen räumlichen Oberflächendokumentation."
+    }
+  ],
+  "feasibility": [
+    [
+      "Objekt- und konservatorische Bedingungen",
+      "Lässt sich die Variante unter den bereits im Objektprofil festgestellten Eigenschaften und konservatorischen Bedingungen durchführen, ohne das Objekt oder relevante Merkmale unvertretbar zu beeinträchtigen?"
+    ],
+    [
+      "Situationsgebundene Zugänglichkeit und Standortbedingungen",
+      "Sind alle für die Dokumentationsanforderung relevanten Objektbereiche unter den gegebenen räumlichen, örtlichen oder zugangsbezogenen Bedingungen tatsächlich erreichbar beziehungsweise dokumentierbar?"
+    ],
+    [
+      "Aufnahmebedingungen und Aufnahmestrategie",
+      "Sind Beleuchtung, Objektlagen beziehungsweise Aufnahmepositionen, Arbeitsabstand, Abdeckung, Referenzierung und weitere Aufnahmebedingungen so festgelegt, dass die erforderlichen Informationen voraussichtlich bereitgestellt werden können?"
+    ],
+    [
+      "Technische Ausstattung und Infrastruktur",
+      "Stehen die benötigten Geräte, Aufbauten, Arbeitsmittel, Referenzmittel, Stromversorgung und weiteren technischen Voraussetzungen zur Verfügung beziehungsweise können sie bereitgestellt werden?"
+    ],
+    [
+      "Fachkompetenz",
+      "Ist die erforderliche Kompetenz für Aufnahme, Verarbeitung, Kontrolle und fachliche Beurteilung vorhanden?"
+    ],
+    [
+      "Personal",
+      "Stehen ausreichend Personen für Handhabung, Aufnahme, konservatorische Begleitung und Qualitätskontrolle zur Verfügung?"
+    ],
+    [
+      "Zeit",
+      "Kann die vorgesehene Variante innerhalb des verfügbaren Zeitrahmens aufgenommen, verarbeitet, kontrolliert und dokumentiert werden?"
+    ],
+    [
+      "Budget",
+      "Sind Aufnahme-, Personal-, Geräte-, Verarbeitungs-, Kontroll- und gegebenenfalls externe Leistungen finanzierbar?"
+    ],
+    [
+      "Rechen- und Speicherressourcen",
+      "Stehen ausreichende Ressourcen für Verarbeitung, Sicherung, Austausch und vorgesehene Erhaltung zur Verfügung?"
+    ],
+    [
+      "Qualitätskontrolle und Nachweisbarkeit",
+      "Können die für das Soll-Profil notwendigen Kontrollen, Referenzen und Nachweise durchgeführt und dokumentiert werden?"
+    ],
+    [
+      "Datenmanagement und Dokumentationsinformationen",
+      "Können benötigte Datenprodukte, Metadaten, Paradata, Bearbeitungsinformationen und weitere Nachweise erzeugt und erhalten werden?"
+    ]
+  ],
+  "retrospectiveInventory": [
+    "ursprüngliche Dokumentationsform(en)",
+    "ursprüngliches Dokumentationsverfahren und verwendetes System",
+    "Aufnahmebedingungen, Objektlagen und Erfassungsabdeckung",
+    "Maßstab, Referenzierung, Kalibrierung und Kontrollmessungen",
+    "Registrierung, Rekonstruktion und weitere Verarbeitung",
+    "bekannte Bearbeitungen wie Cleaning, Glättung, Schließen von Fehlstellen oder Reduktion",
+    "Ausgangs- beziehungsweise Rohdaten",
+    "Arbeitsdaten und Projektdateien",
+    "Mastermodell beziehungsweise qualitätsgesicherter Volumendatensatz",
+    "Analysemodelle, Segmentierungen und Annotationen",
+    "Präsentations-, Rekonstruktions- oder Druckfassungen",
+    "Objekt- und Kontextmetadaten",
+    "technische Metadaten und Paradata",
+    "Versionierung und Provenienzbeziehungen",
+    "Formate, Speicher- und Archivkontext",
+    "Rechte, Lizenzen und Nutzungseinschränkungen"
+  ],
+  "consequences": {
+    "planning": [
+      "Umsetzungsvariante anpassen",
+      "anderes oder ergänzendes Verfahren prüfen",
+      "andere beziehungsweise zusätzliche Dokumentationsform prüfen",
+      "zusätzliche Kontrollen oder Referenzen vorsehen",
+      "Verarbeitung oder Bearbeitung ändern",
+      "Datenhaltung / Dokumentationsinformationen anpassen",
+      "Nutzung beziehungsweise prospektiven Nachnutzungshorizont fachlich neu prüfen",
+      "Abweichung begründet akzeptieren und dokumentieren"
+    ],
+    "evaluation": [
+      "weitere vorhandene Nachweise oder Unterlagen suchen",
+      "Reprozessierung vorhandener Daten prüfen",
+      "zusätzliche Dokumentation durchführen",
+      "ergänzende Neudigitalisierung durchführen",
+      "vollständige Neudigitalisierung durchführen",
+      "Zielnutzung nur eingeschränkt zulassen",
+      "Zielnutzung mit vorhandenem Bestand ausschließen",
+      "Unsicherheit beziehungsweise Abweichung dokumentieren"
+    ]
+  },
+  "documentationFormGuide": [
+    {
+      "information": "Objektidentifikation, Inventar- und Kontextinformationen",
+      "forms": [
+        "Beschreibung / Katalogisierung",
+        "Maß- / Profildokumentation",
+        "Fotografie"
+      ],
+      "objectNote": "Räumliche Dokumentation kann ergänzen, ersetzt Objekt-, Inventar- und Kontextinformationen aber nicht.",
+      "keywords": [
+        "objektident",
+        "inventar",
+        "kontext",
+        "objektbezug"
+      ],
+      "id": "F-01",
+      "contextKeywords": [
+        "objektidentifikation",
+        "inventar",
+        "objektbezug"
+      ],
+      "minContextMatches": 1,
+      "informationMatches": [],
+      "source": "Tabelle 7.6; ergänzend Tabelle 4.1 sowie Kap. 4.2 und 7.5.1 der Masterarbeit",
+      "areaMatches": [
+        "Basisinventarisierung / Sammlungsmanagement"
+      ]
+    },
+    {
+      "information": "Allgemeine Ansicht und Wiedererkennbarkeit",
+      "forms": [
+        "Fotografie",
+        "Zeichnung",
+        "3D-Oberflächendokumentation"
+      ],
+      "objectNote": "Bei komplexer Form oder wichtigen Rückseiten, Unterseiten und Innenbereichen können mehrere Ansichten oder eine räumliche Dokumentation sinnvoll sein.",
+      "keywords": [
+        "ansicht",
+        "wiedererkennbarkeit",
+        "erkennbarkeit",
+        "charakteristische",
+        "gesamtform"
+      ],
+      "id": "F-02",
+      "contextKeywords": [
+        "wiedererkennbarkeit",
+        "erkennbarkeit",
+        "gesamtform",
+        "blickrichtungen"
+      ],
+      "minContextMatches": 1,
+      "informationMatches": [
+        "Gesamtform und Grundmaße",
+        "räumliche Gesamtform und Erkennbarkeit",
+        "Gesamtform, Proportionen und Orientierung",
+        "Gesamtform und Orientierung"
+      ],
+      "source": "Tabelle 7.6; ergänzend Tabelle 4.1 sowie Kap. 4.2 und 7.5.1 der Masterarbeit"
+    },
+    {
+      "information": "Farbe, Bemalung und Materialwirkung",
+      "forms": [
+        "Fotografie",
+        "Spezialisierte fotografische / bildgebende Dokumentation",
+        "3D-Oberflächendokumentation"
+      ],
+      "objectNote": "Glanz, Reflexion, Transparenz oder Transluzenz können die Erfassung beeinflussen. Eine texturierte 3D-Dokumentation ersetzt kontrollierte Farbdokumentation nicht automatisch.",
+      "keywords": [
+        "farbe",
+        "bemal",
+        "materialwirkung",
+        "oberfläche",
+        "textur",
+        "dekor",
+        "visuell"
+      ],
+      "id": "F-03",
+      "contextKeywords": [
+        "farbe",
+        "bemalung",
+        "materialwirkung",
+        "textur",
+        "dekor",
+        "farbtreue"
+      ],
+      "minContextMatches": 1,
+      "informationMatches": [
+        "visuell charakteristische Merkmale",
+        "charakteristische visuelle Merkmale / Farbe / Oberfläche",
+        "visuell relevante Oberfläche / Farbe",
+        "visuelle Oberfläche",
+        "relevante Oberflächen- und Detailmerkmale",
+        "reproduktionsrelevante Oberflächenmerkmale"
+      ],
+      "source": "Tabelle 7.6; ergänzend Tabelle 4.1 sowie Kap. 4.2 und 7.5.1 der Masterarbeit"
+    },
+    {
+      "information": "Diagnostische Formmerkmale",
+      "forms": [
+        "Zeichnung",
+        "Maß- / Profildokumentation",
+        "3D-Oberflächendokumentation"
+      ],
+      "objectNote": "Entscheidend ist, welche Formbereiche die fachliche Information tragen. Gesamtform, einzelne Konturen und definierte Vergleichsbereiche können unterschiedliche Dokumentationszugänge benötigen.",
+      "keywords": [
+        "diagnost",
+        "formmerk",
+        "kontur",
+        "form",
+        "proportion",
+        "rand",
+        "boden"
+      ],
+      "id": "F-04",
+      "contextKeywords": [
+        "diagnostische formmerkmale",
+        "formmerkmal",
+        "kontur",
+        "randform",
+        "bodenform"
+      ],
+      "minContextMatches": 1,
+      "informationMatches": [
+        "Gesamtform, Proportionen und definierte Maße",
+        "Profil-, Rand- oder Bodenform",
+        "metrisch / morphometrisch vergleichbare Formdaten"
+      ],
+      "source": "Tabelle 7.6; ergänzend Tabelle 4.1 sowie Kap. 4.2 und 7.5.1 der Masterarbeit"
+    },
+    {
+      "information": "Profil, Rand, Wandstärke und Durchmesser",
+      "forms": [
+        "Maß- / Profildokumentation",
+        "Zeichnung",
+        "3D-Oberflächendokumentation"
+      ],
+      "objectNote": "Orientierung, Zugänglichkeit von Innen- und Außenkonturen sowie ein geeigneter Maßbezug sind zu berücksichtigen. Eine laserunterstützte Profilaufnahme kann Profil, Randkrümmung und Durchmesser gezielt digital erfassen, ohne ein vollständiges 3D-Modell vorauszusetzen.",
+      "keywords": [
+        "profil",
+        "rand",
+        "wandstärke",
+        "durchmesser",
+        "gefäß",
+        "proportion"
+      ],
+      "id": "F-05",
+      "contextKeywords": [
+        "profil",
+        "wandstärke",
+        "durchmesser",
+        "randform",
+        "bodenform"
+      ],
+      "minContextMatches": 1,
+      "informationMatches": [
+        "Profil-, Rand- oder Bodenform",
+        "Gesamtform, Proportionen und definierte Maße",
+        "metrisch / morphometrisch vergleichbare Formdaten"
+      ],
+      "source": "Tabelle 7.6; ergänzend Tabelle 4.1 sowie Kap. 4.2 und 7.5.1 der Masterarbeit"
+    },
+    {
+      "information": "Räumliche Gesamtform und äußere Geometrie",
+      "forms": [
+        "Maß- / Profildokumentation",
+        "Fotografie",
+        "3D-Oberflächendokumentation"
+      ],
+      "objectNote": "Hinterschneidungen, Innenräume, Unterseiten und schwer zugängliche Bereiche können zusätzliche Ansichten oder ergänzende Dokumentationsformen erforderlich machen.",
+      "keywords": [
+        "gesamtform",
+        "geometr",
+        "räumlich",
+        "proportion",
+        "form"
+      ],
+      "id": "F-06",
+      "contextKeywords": [
+        "räumliche gesamtform",
+        "äußere geometrie",
+        "gesamtform und proportionen",
+        "räumliche gesamtform und erkennbarkeit"
+      ],
+      "minContextMatches": 1,
+      "informationMatches": [
+        "Gesamtform und Grundmaße",
+        "Gesamtform, Proportionen und definierte Maße",
+        "räumliche Gesamtform und Erkennbarkeit",
+        "Gesamtform, Proportionen und Orientierung",
+        "Gesamtform und Maße",
+        "Gesamtform und Orientierung"
+      ],
+      "source": "Tabelle 7.6; ergänzend Tabelle 4.1 sowie Kap. 4.2 und 7.5.1 der Masterarbeit"
+    },
+    {
+      "information": "Bruchflächen, Kontaktbereiche und Refitting",
+      "forms": [
+        "Maß- / Profildokumentation",
+        "Fotografie",
+        "3D-Oberflächendokumentation"
+      ],
+      "objectNote": "Größe, Oberflächenbeschaffenheit und Zugänglichkeit der Kontaktbereiche sind entscheidend; relevante Flächen müssen vollständig und vergleichbar dokumentierbar sein.",
+      "keywords": [
+        "bruch",
+        "kontakt",
+        "refitting",
+        "passung",
+        "schlagfläche"
+      ],
+      "id": "F-07",
+      "contextKeywords": [
+        "bruchfläche",
+        "kontaktfläche",
+        "refitting",
+        "passung",
+        "schlagfläche"
+      ],
+      "minContextMatches": 1,
+      "informationMatches": [
+        "Bruch-, Kontakt- und räumliche Beziehungen",
+        "Anschluss- und Kontaktbereiche"
+      ],
+      "source": "Tabelle 7.6; ergänzend Tabelle 4.1 sowie Kap. 4.2 und 7.5.1 der Masterarbeit"
+    },
+    {
+      "information": "Feines Relief, Ritzungen, Inschriften oder Gebrauchsspuren",
+      "forms": [
+        "Fotografie",
+        "Spezialisierte fotografische / bildgebende Dokumentation",
+        "Zeichnung",
+        "3D-Oberflächendokumentation"
+      ],
+      "objectNote": "Kleinste relevante Merkmalsgröße, Oberflächenbeschaffenheit und Beleuchtung bestimmen, welche Form der Detaildokumentation geeignet ist.",
+      "keywords": [
+        "relief",
+        "ritzung",
+        "inschrift",
+        "gebrauchsspur",
+        "oberflächenmerk",
+        "detail",
+        "retusche",
+        "grat",
+        "kante"
+      ],
+      "id": "F-08",
+      "contextKeywords": [
+        "relief",
+        "ritzung",
+        "inschrift",
+        "gebrauchsspur",
+        "retusche",
+        "grat",
+        "feine details"
+      ],
+      "minContextMatches": 1,
+      "informationMatches": [
+        "relevante Oberflächen- und Detailmerkmale",
+        "untersuchte Merkmale und relevante Form-/Oberflächeninformationen",
+        "charakteristische visuelle Merkmale / Farbe / Oberfläche",
+        "visuell relevante Oberfläche / Farbe",
+        "reproduktionsrelevante Oberflächenmerkmale"
+      ],
+      "source": "Tabelle 7.6; ergänzend Tabelle 4.1 sowie Kap. 4.2 und 7.5.1 der Masterarbeit"
+    },
+    {
+      "information": "Innere Strukturen, Hohlräume oder verdeckte Bereiche",
+      "forms": [
+        "Radiographische 2D-Dokumentation",
+        "Volumetrische / tomographische 3D-Dokumentation"
+      ],
+      "objectNote": "Material, Objektgröße, Dichteunterschiede und die räumliche Lage der gesuchten Strukturen bestimmen, ob eine Projektionsaufnahme ausreicht oder ein Volumendatensatz benötigt wird.",
+      "keywords": [
+        "innen",
+        "hohlraum",
+        "verdeckt",
+        "dichte",
+        "volumen",
+        "materialgrenze",
+        "innenstruktur"
+      ],
+      "id": "F-09",
+      "contextKeywords": [
+        "innere struktur",
+        "innenstruktur",
+        "hohlraum",
+        "verdeckte bereiche",
+        "materialgrenze",
+        "volumen"
+      ],
+      "minContextMatches": 1,
+      "informationMatches": [
+        "innere Strukturen / Volumen"
+      ],
+      "source": "Tabelle 7.6; ergänzend Tabelle 4.1 sowie Kap. 4.2 und 7.5.1 der Masterarbeit"
+    },
+    {
+      "information": "Metrische und räumliche Informationen für Analyse, Vergleich oder Refitting",
+      "forms": [
+        "Maß- / Profildokumentation",
+        "3D-Oberflächendokumentation"
+      ],
+      "objectNote": "Metrische oder morphometrische Aufgaben begründen nicht für sich allein eine volumetrische/tomographische Dokumentation. Diese wird erst bei einem zusätzlichen Informationsbedarf an inneren oder verdeckten Strukturen relevant.",
+      "keywords": [
+        "metrisch",
+        "maß",
+        "morphometr",
+        "vergleich",
+        "refitting",
+        "räumliche beziehung",
+        "skalierung"
+      ],
+      "id": "F-10",
+      "contextKeywords": [
+        "metrisch",
+        "morphometrisch",
+        "formvergleich",
+        "skalierung",
+        "räumliche beziehung"
+      ],
+      "minContextMatches": 1,
+      "informationMatches": [
+        "Gesamtform, Proportionen und definierte Maße",
+        "metrisch / morphometrisch vergleichbare Formdaten",
+        "Bruch-, Kontakt- und räumliche Beziehungen",
+        "Maßstab und Orientierung",
+        "Skalierung, Vergleichbarkeit und konsistente Datenstruktur"
+      ],
+      "source": "Tabelle 7.6; ergänzend Tabelle 4.1 sowie Kap. 4.2 und 7.5.1 der Masterarbeit"
+    },
+    {
+      "information": "Zustand, Veränderung und Eingriff",
+      "forms": [
+        "Beschreibung / Katalogisierung",
+        "Fotografie",
+        "Spezialisierte fotografische / bildgebende Dokumentation",
+        "Maß- / Profildokumentation",
+        "3D-Oberflächendokumentation"
+      ],
+      "objectNote": "Die geeignete Form hängt davon ab, ob Zustand, räumliche Ausdehnung, Oberfläche oder Eingriffslage dokumentiert werden sollen. Innere beziehungsweise verdeckte Strukturen begründen volumetrische Verfahren nur bei einem entsprechenden Informationsbedarf.",
+      "keywords": [
+        "zustand",
+        "veränder",
+        "schaden",
+        "riss",
+        "fehlstelle",
+        "ergänzung",
+        "eingriff",
+        "probe",
+        "monitor"
+      ],
+      "id": "F-11",
+      "contextKeywords": [
+        "zustandsvergleich",
+        "monitoring",
+        "schaden",
+        "fehlstelle",
+        "eingriffsstelle",
+        "probenstelle"
+      ],
+      "minContextMatches": 1,
+      "informationMatches": [
+        "Zustand",
+        "Zustand, Schäden und Fehlstellen",
+        "Ergänzungen und Materialveränderungen",
+        "Lage und Ausdehnung von Veränderungen / Eingriffen",
+        "Zustandsvergleich / Zustandsversionen",
+        "Lage und Ausdehnung der Proben- oder Eingriffsstelle",
+        "räumlicher Zusammenhang und Materialbezug"
+      ],
+      "source": "Tabelle 7.6; ergänzend Tabelle 4.1 sowie Kap. 4.2 und 7.5.1 der Masterarbeit"
+    },
+    {
+      "information": "Vermittlung und interaktive räumliche Darstellung",
+      "forms": [
+        "Beschreibung / Katalogisierung",
+        "Zeichnung",
+        "Fotografie",
+        "3D-Oberflächendokumentation"
+      ],
+      "objectNote": "Für Vermittlung ist eine volumetrische Dokumentation nicht allein aufgrund des Vermittlungszwecks angezeigt; sie wird nur bei zusätzlichem Bedarf an inneren Strukturen relevant.",
+      "keywords": [
+        "vermittlung",
+        "web",
+        "interaktiv",
+        "ar/vr",
+        "immersiv",
+        "präsentation",
+        "ausstellung",
+        "lehre"
+      ],
+      "id": "F-12",
+      "contextKeywords": [
+        "web-modell",
+        "interaktive darstellung",
+        "immersive darstellung",
+        "virtuelle ausstellung"
+      ],
+      "minContextMatches": 1,
+      "informationMatches": [
+        "räumliche Gesamtform und Erkennbarkeit",
+        "Gesamtform, Proportionen und Orientierung",
+        "Gesamtform und Orientierung",
+        "Kontextbezug und Interaktionsbereiche"
+      ],
+      "source": "Tabelle 7.6; ergänzend Tabelle 4.1 sowie Kap. 4.2 und 7.5.1 der Masterarbeit"
+    },
+    {
+      "id": "F-13",
+      "information": "Ausgewählte Form-, Relief- oder Oberflächeninformation physisch übertragen",
+      "forms": [
+        "Abformung / Abklatsch"
+      ],
+      "objectNote": "Kann ausgewählte Oberflächenmerkmale, Eindrücke oder Reliefs als Negativ- beziehungsweise Positivform dokumentieren. Objektkontakt, mögliche Rückstände und konservatorische Verträglichkeit müssen fachlich geprüft werden.",
+      "informationMatches": [
+        "relevante Oberflächen- und Detailmerkmale",
+        "untersuchte Merkmale und relevante Form-/Oberflächeninformationen"
+      ],
+      "contextKeywords": [
+        "abformung",
+        "abklatsch",
+        "squeeze",
+        "inschrift",
+        "relief",
+        "eindruck",
+        "oberflächenmerkmal"
+      ],
+      "minContextMatches": 1,
+      "source": "Tabelle 7.6; ergänzend Tabelle 4.1 sowie Kap. 4.2 und 7.5.1 der Masterarbeit"
+    }
+  ],
+  "procedureGuide": [
+    {
+      "requirement": "Dreidimensionale Erfassung der äußeren Form bei optisch gut erfassbarer Oberfläche",
+      "procedures": [
+        "Bildbasierte 3D-Rekonstruktion / photogrammetrischer Workflow",
+        "Streifenlichtscanning",
+        "Laserscanning"
+      ],
+      "contribution": "Räumliche Erfassung der sichtbaren Objektoberfläche.",
+      "check": "Erforderliche Detailstufe, Maßbezug, Oberflächeneigenschaften, Aufnahmeabdeckung und Kontrolle.",
+      "keywords": [
+        "äußere form",
+        "gesamtform",
+        "oberfläche",
+        "3d-oberfläche",
+        "geometr"
+      ],
+      "id": "P-01",
+      "selectedFormMatches": [
+        "3D-Oberflächendokumentation"
+      ],
+      "areaMatches": [],
+      "contextKeywords": [
+        "äußere form",
+        "gesamtform",
+        "äußere geometrie"
+      ],
+      "minContextMatches": 1,
+      "informationMatches": [
+        "Gesamtform und Grundmaße",
+        "Gesamtform, Proportionen und definierte Maße",
+        "räumliche Gesamtform und Erkennbarkeit",
+        "Gesamtform, Proportionen und Orientierung",
+        "Gesamtform und Maße",
+        "Gesamtform und Orientierung"
+      ],
+      "source": "Tabelle 7.9; Kap. 4.2 und 7.6.1 der Masterarbeit"
+    },
+    {
+      "requirement": "Hohe Anforderungen an geometrische Form, Maße oder Oberflächendetails",
+      "procedures": [
+        "Bildbasierte 3D-Rekonstruktion / photogrammetrischer Workflow",
+        "Streifenlichtscanning",
+        "Laserscanning",
+        "Kombination mehrerer Verfahren / Datenfusion"
+      ],
+      "contribution": "Geometrisch belastbare Erfassung relevanter Formen und Oberflächen.",
+      "check": "Erreichbare Auflösung und Genauigkeit müssen für die konkrete Anforderung nachgewiesen werden; der Verfahrensname allein genügt nicht.",
+      "keywords": [
+        "metrisch",
+        "maß",
+        "genauigkeit",
+        "detail",
+        "formtreue",
+        "geometr",
+        "morphometr",
+        "refitting"
+      ],
+      "id": "P-02",
+      "selectedFormMatches": [],
+      "areaMatches": [],
+      "contextKeywords": [
+        "metrisch",
+        "morphometrisch",
+        "refitting",
+        "formtreue",
+        "detailerkennbarkeit"
+      ],
+      "minContextMatches": 1,
+      "requiredSelectedForms": [
+        "3D-Oberflächendokumentation"
+      ],
+      "informationMatches": [
+        "metrisch / morphometrisch vergleichbare Formdaten",
+        "Profil-, Rand- oder Bodenform",
+        "Bruch-, Kontakt- und räumliche Beziehungen"
+      ],
+      "source": "Tabelle 7.9; Kap. 4.2 und 7.6.1 der Masterarbeit"
+    },
+    {
+      "requirement": "Geometrie und visuelle Oberfläche beziehungsweise Farbe sind gleichzeitig wichtig",
+      "procedures": [
+        "Bildbasierte 3D-Rekonstruktion / photogrammetrischer Workflow",
+        "Kontrollierte Objektfotografie",
+        "Kombination mehrerer Verfahren / Datenfusion"
+      ],
+      "contribution": "Verbindung räumlicher Form mit visuellen Oberflächeninformationen.",
+      "check": "Farbkontrolle, Beleuchtung und Texturerzeugung sind gesondert zu berücksichtigen.",
+      "keywords": [
+        "farbe",
+        "textur",
+        "materialwirkung",
+        "visuell",
+        "oberfläche",
+        "geometr",
+        "glänzende",
+        "reflektierende",
+        "transparent",
+        "transluzent"
+      ],
+      "id": "P-03",
+      "selectedFormMatches": [],
+      "areaMatches": [],
+      "contextKeywords": [],
+      "minContextMatches": 1,
+      "allKeywordGroups": [
+        [
+          "geometrie",
+          "gesamtform",
+          "3d-oberfläche"
+        ],
+        [
+          "farbe",
+          "textur",
+          "materialwirkung",
+          "dekor",
+          "visuelle oberfläche"
+        ]
+      ],
+      "requiredSelectedForms": [
+        "3D-Oberflächendokumentation"
+      ],
+      "informationMatches": [
+        "relevante Oberflächen- und Detailmerkmale",
+        "charakteristische visuelle Merkmale / Farbe / Oberfläche",
+        "visuell relevante Oberfläche / Farbe",
+        "visuelle Oberfläche"
+      ],
+      "source": "Tabelle 7.9; Kap. 4.2 und 7.6.1 der Masterarbeit"
+    },
+    {
+      "requirement": "Feines Relief, Ritzungen, Inschriften oder andere kleinräumige Oberflächenmerkmale",
+      "procedures": [
+        "Bildbasierte 3D-Rekonstruktion / photogrammetrischer Workflow",
+        "Streifenlichtscanning",
+        "Makro-/Mikrofotografie",
+        "Multi-Light / RTI"
+      ],
+      "contribution": "Räumliche beziehungsweise visuelle Erfassung feiner Oberflächenmerkmale.",
+      "check": "Detailerkennbarkeit, Beleuchtung, Oberflächeneigenschaften und Bearbeitung können das Ergebnis wesentlich beeinflussen.",
+      "keywords": [
+        "relief",
+        "ritzung",
+        "inschrift",
+        "gebrauchsspur",
+        "detail",
+        "retusche",
+        "grat",
+        "kante"
+      ],
+      "id": "P-04",
+      "selectedFormMatches": [],
+      "areaMatches": [],
+      "contextKeywords": [
+        "relief",
+        "ritzung",
+        "inschrift",
+        "gebrauchsspur",
+        "retusche",
+        "grat",
+        "kante"
+      ],
+      "minContextMatches": 1,
+      "requiredSelectedForms": [
+        "3D-Oberflächendokumentation"
+      ],
+      "informationMatches": [
+        "relevante Oberflächen- und Detailmerkmale",
+        "untersuchte Merkmale und relevante Form-/Oberflächeninformationen"
+      ],
+      "source": "Tabelle 7.9; Kap. 4.2 und 7.6.1 der Masterarbeit"
+    },
+    {
+      "requirement": "Komplexe Form, Hinterschneidungen oder schwer zugängliche Außenbereiche",
+      "procedures": [
+        "Bildbasierte 3D-Rekonstruktion / photogrammetrischer Workflow",
+        "Streifenlichtscanning",
+        "Laserscanning",
+        "Kombination mehrerer Verfahren / Datenfusion"
+      ],
+      "contribution": "Erweiterung der Erfassungsabdeckung durch zusätzliche Positionen, Objektlagen oder komplementäre Verfahren.",
+      "check": "Zugänglichkeit, sichere Handhabung, gemeinsame Referenzierung und verbleibende Fehlstellen.",
+      "keywords": [
+        "komplexe form",
+        "hinterschneidung",
+        "schwer zugänglich",
+        "innenbereich",
+        "unterseite",
+        "abdeckung",
+        "fehlstelle",
+        "lange / dünne / lineare geometrie",
+        "flaches objekt",
+        "tiefe vertiefung",
+        "physisch nicht zugänglich",
+        "nur aus bestimmten richtungen zugänglich",
+        "sehr geringer arbeitsraum"
+      ],
+      "id": "P-05",
+      "selectedFormMatches": [],
+      "areaMatches": [],
+      "contextKeywords": [
+        "hinterschneidung",
+        "schwer zugänglich",
+        "unterseite",
+        "komplex geformt",
+        "lange / dünne / lineare geometrie",
+        "flaches objekt",
+        "tiefe vertiefung",
+        "physisch nicht zugänglich",
+        "nur aus bestimmten richtungen zugänglich",
+        "sehr geringer arbeitsraum"
+      ],
+      "minContextMatches": 1,
+      "requiredSelectedForms": [
+        "3D-Oberflächendokumentation"
+      ],
+      "informationMatches": [],
+      "source": "Tabelle 7.9; Kap. 4.2 und 7.6.1 der Masterarbeit"
+    },
+    {
+      "requirement": "Großes, schweres oder nicht frei bewegliches Objekt",
+      "procedures": [
+        "Bildbasierte 3D-Rekonstruktion / photogrammetrischer Workflow",
+        "Laserscanning"
+      ],
+      "contribution": "Räumliche Erfassung mit objektangepassten Aufnahme- und Positionierungsstrategien.",
+      "check": "Arbeitsraum, Aufnahmedistanzen, Abschattungen, Maßbezug und technische Zugänglichkeit.",
+      "keywords": [
+        "groß",
+        "schwer",
+        "nicht frei beweglich",
+        "nicht beweglich",
+        "sperrig",
+        "sehr großes oder schweres objekt",
+        "unveränderbare aufstellung",
+        "fest eingebaut",
+        "eingeschränkte beweglichkeit"
+      ],
+      "id": "P-06",
+      "selectedFormMatches": [],
+      "areaMatches": [],
+      "contextKeywords": [
+        "große oder sperrige objekte",
+        "sperrig",
+        "nicht frei beweglich",
+        "großes objekt",
+        "sehr großes oder schweres objekt",
+        "unveränderbare aufstellung",
+        "fest eingebaut",
+        "eingeschränkte beweglichkeit"
+      ],
+      "minContextMatches": 1,
+      "requiredSelectedForms": [
+        "3D-Oberflächendokumentation"
+      ],
+      "informationMatches": [],
+      "source": "Tabelle 7.9; Kap. 4.2 und 7.6.1 der Masterarbeit"
+    },
+    {
+      "requirement": "Fragiles oder konservatorisch empfindliches Objekt",
+      "procedures": [
+        "Bildbasierte 3D-Rekonstruktion / photogrammetrischer Workflow",
+        "Streifenlichtscanning",
+        "Laserscanning"
+      ],
+      "contribution": "Möglichst berührungsarme beziehungsweise berührungslose Erfassung, soweit fachlich und konservatorisch geeignet.",
+      "check": "Berührung, Objektbewegung, Positionierung, Beleuchtung, Aufnahmezeit und konservatorische Freigabe. CT / Mikro-CT wird nur bei zusätzlichem Informationsbedarf an inneren Strukturen orientierend vorgeschlagen.",
+      "keywords": [
+        "fragil",
+        "instabil",
+        "empfindlich",
+        "konservator",
+        "bewegung",
+        "handling",
+        "empfindliche oberfläche",
+        "objekt darf nicht bewegt",
+        "konservatorische vorgabe"
+      ],
+      "id": "P-07",
+      "selectedFormMatches": [],
+      "areaMatches": [],
+      "contextKeywords": [
+        "fragil",
+        "konservatorisch empfindlich",
+        "instabil",
+        "handling eingeschränkt",
+        "empfindliche oberfläche",
+        "objekt darf nicht bewegt",
+        "konservatorische vorgabe"
+      ],
+      "minContextMatches": 1,
+      "informationMatches": [],
+      "source": "Tabelle 7.9; Kap. 4.2 und 7.6.1 der Masterarbeit"
+    },
+    {
+      "requirement": "Innere Strukturen, Hohlräume oder verdeckte Volumenbereiche",
+      "procedures": [
+        "CT / Mikro-CT",
+        "Röntgendokumentation"
+      ],
+      "contribution": "Volumetrische beziehungsweise projektive Darstellung innerer Strukturen und Beziehungen.",
+      "check": "Objektgröße, Material, Dichteunterschiede, erreichbare Auflösung und mögliche Artefakte.",
+      "keywords": [
+        "innen",
+        "hohlraum",
+        "verdeckt",
+        "volumen",
+        "dichte",
+        "materialgrenze"
+      ],
+      "id": "P-08",
+      "selectedFormMatches": [
+        "Volumetrische / tomographische 3D-Dokumentation"
+      ],
+      "areaMatches": [],
+      "contextKeywords": [
+        "innere struktur",
+        "innenstruktur",
+        "hohlraum",
+        "verdeckte volumenbereiche",
+        "materialgrenze"
+      ],
+      "minContextMatches": 1,
+      "informationMatches": [
+        "innere Strukturen / Volumen"
+      ],
+      "source": "Tabelle 7.9; Kap. 4.2 und 7.6.1 der Masterarbeit"
+    },
+    {
+      "requirement": "Metrische Analyse, morphometrischer Vergleich oder Refitting",
+      "procedures": [
+        "Bildbasierte 3D-Rekonstruktion / photogrammetrischer Workflow",
+        "Streifenlichtscanning",
+        "Laserscanning",
+        "Kombination mehrerer Verfahren / Datenfusion"
+      ],
+      "contribution": "Räumliche Messung und Vergleichbarkeit relevanter Formen, Flächen und Beziehungen.",
+      "check": "Geometrische Qualität, Maß- und Referenzbezug sowie relevante Objektbereiche müssen überprüfbar sein; Präsentationsqualität allein reicht nicht.",
+      "keywords": [
+        "metrisch",
+        "morphometr",
+        "vergleich",
+        "refitting",
+        "maßstab",
+        "skalierung",
+        "passung"
+      ],
+      "id": "P-09",
+      "selectedFormMatches": [],
+      "areaMatches": [],
+      "contextKeywords": [
+        "metrisch",
+        "morphometrisch",
+        "refitting",
+        "passung",
+        "skalierung"
+      ],
+      "minContextMatches": 1,
+      "requiredSelectedForms": [
+        "3D-Oberflächendokumentation"
+      ],
+      "informationMatches": [
+        "metrisch / morphometrisch vergleichbare Formdaten",
+        "Bruch-, Kontakt- und räumliche Beziehungen",
+        "Profil-, Rand- oder Bodenform"
+      ],
+      "source": "Tabelle 7.9; Kap. 4.2 und 7.6.1 der Masterarbeit"
+    },
+    {
+      "requirement": "Unterschiedliche Informationsanforderungen an äußere Form, Oberfläche und innere Strukturen",
+      "procedures": [
+        "Kombination mehrerer Verfahren / Datenfusion",
+        "CT / Mikro-CT",
+        "Kontrollierte Objektfotografie",
+        "Bildbasierte 3D-Rekonstruktion / photogrammetrischer Workflow",
+        "Streifenlichtscanning",
+        "Laserscanning"
+      ],
+      "contribution": "Zusammenführung komplementärer Informationsquellen.",
+      "check": "Gemeinsame Referenzierung, Datenbezug, Bearbeitungsstatus und Beziehungen zwischen den Datenquellen.",
+      "keywords": [
+        "kombination",
+        "innere struktur",
+        "äußere form",
+        "farbe",
+        "oberfläche",
+        "datenfusion"
+      ],
+      "id": "P-10",
+      "selectedFormMatches": [],
+      "areaMatches": [],
+      "contextKeywords": [],
+      "minContextMatches": 1,
+      "allKeywordGroups": [
+        [
+          "äußere form",
+          "gesamtform",
+          "3d-oberfläche",
+          "oberflächenmerkmale"
+        ],
+        [
+          "innere struktur",
+          "innenstruktur",
+          "hohlraum",
+          "volumetrisch",
+          "tomographisch"
+        ]
+      ],
+      "allSelectedForms": [
+        "3D-Oberflächendokumentation",
+        "Volumetrische / tomographische 3D-Dokumentation"
+      ],
+      "informationMatches": [
+        "innere Strukturen / Volumen"
+      ],
+      "source": "Tabelle 7.9; Kap. 4.2 und 7.6.1 der Masterarbeit"
+    },
+    {
+      "requirement": "Profil-, Rand- und Durchmesserinformation bei keramischen Fragmenten",
+      "procedures": [
+        "Laserunterstützte Profilaufnahme"
+      ],
+      "contribution": "Gezielte digitale Formdokumentation keramischer Profile und horizontaler Krümmung ohne vollständige flächenhafte 3D-Erfassung.",
+      "check": "Objektorientierung, Gefäßachse, Profil- und Randbezug, Maßstab und Grenzen gegenüber zusätzlicher Oberflächen- oder 3D-Dokumentation.",
+      "keywords": [
+        "profil",
+        "rand",
+        "durchmesser",
+        "keramik",
+        "gefäß"
+      ],
+      "id": "P-11",
+      "selectedFormMatches": [
+        "Maß- / Profildokumentation"
+      ],
+      "informationMatches": [
+        "Profil-, Rand- oder Bodenform"
+      ],
+      "areaMatches": [
+        "Wissenschaftliche Dokumentation / Analyse"
+      ],
+      "contextKeywords": [
+        "profil",
+        "rand",
+        "durchmesser",
+        "keramik"
+      ],
+      "minContextMatches": 1,
+      "source": "Tabelle 7.9; Kap. 4.2 und 7.6.1 der Masterarbeit"
+    }
+  ],
+  "objectReferenceCatalog": {
+    "groups": [
+      {
+        "id": "ceramic",
+        "label": "Keramik",
+        "features": [
+          "Gefäß- und Randform",
+          "Wandstärke",
+          "Profil",
+          "Material / Fabric",
+          "Oberfläche",
+          "Dekor",
+          "Herstellungs- und Gebrauchsspuren",
+          "Zustand",
+          "Bruchflächen"
+        ],
+        "approaches": [
+          "Beschreibung / Katalogisierung",
+          "Maß- / Profildokumentation",
+          "Zeichnung",
+          "Fotografie",
+          "gegebenenfalls 3D-Oberflächendokumentation"
+        ],
+        "note": "Die Gesamtform allein bildet nicht alle relevanten Informationen ab. Randstellung, Profilverlauf, Wandstärke, Oberfläche und Bruchflächen können abhängig von der Fragestellung eigenständige Informationsbereiche darstellen.",
+        "source": "Tabelle 4.1; Kap. 4.1.4–4.1.6 der Masterarbeit"
+      },
+      {
+        "id": "lithics",
+        "label": "Lithische Artefakte",
+        "features": [
+          "Rohmaterial",
+          "Grundform",
+          "Dorsal- und Ventralfläche",
+          "Schlagfläche",
+          "Bulbus",
+          "Negative",
+          "Grate",
+          "Cortex",
+          "Retuschen",
+          "Arbeitskanten",
+          "Gebrauchsspuren",
+          "Bruchflächen"
+        ],
+        "approaches": [
+          "Beschreibung",
+          "Zeichnung",
+          "Fotografie",
+          "gegebenenfalls hochauflösende 3D-Oberflächendokumentation",
+          "ergänzende Detaildokumentation"
+        ],
+        "note": "Für technologische und funktionale Untersuchungen ist die Lesbarkeit feiner Kanten und Oberflächenmerkmale entscheidend. Eine plausible Gesamtgeometrie allein genügt dafür nicht zwangsläufig.",
+        "source": "Tabelle 4.1; Kap. 4.1.4–4.1.6 der Masterarbeit"
+      },
+      {
+        "id": "metal",
+        "label": "Metallfunde",
+        "features": [
+          "Form",
+          "Proportion",
+          "Querschnitt",
+          "Verzierung",
+          "Verbindungselemente",
+          "Reparaturen",
+          "Herstellungstechnik",
+          "Korrosion",
+          "Erhaltungszustand",
+          "innere Konstruktion"
+        ],
+        "approaches": [
+          "Beschreibung",
+          "Fotografie",
+          "Zeichnung",
+          "Zustandsdokumentation",
+          "radiographische Dokumentation",
+          "gegebenenfalls 3D-Oberflächen- oder volumetrische Dokumentation"
+        ],
+        "note": "Korrosion und Überlagerungen können ursprüngliche Formen oder konstruktive Merkmale verdecken. Äußere Oberfläche und innere Struktur können unterschiedliche Dokumentationszugänge erfordern.",
+        "source": "Tabelle 4.1; Kap. 4.1.4–4.1.6 der Masterarbeit"
+      },
+      {
+        "id": "transparent",
+        "label": "Glas, Email, Bernstein, Gagat und vergleichbare Materialien",
+        "features": [
+          "Form",
+          "Farbe",
+          "Transparenz / Transluzenz",
+          "Einschlüsse",
+          "Blasen",
+          "Herstellungs- und Bearbeitungsspuren",
+          "Oberflächenzustand",
+          "Risse",
+          "Materialwirkung"
+        ],
+        "approaches": [
+          "Beschreibung",
+          "kontrollierte Fotografie",
+          "Zustandsdokumentation",
+          "gegebenenfalls Zeichnung",
+          "3D-Oberflächendokumentation",
+          "spezialisierte fotografische / bildgebende Dokumentation"
+        ],
+        "note": "Glanz, Reflexion, Transparenz oder Brechung können relevante Informationen darstellen und zugleich bestimmte Erfassungsverfahren erschweren. Form, Farbe und Materialwirkung sind getrennt zu betrachten.",
+        "source": "Tabelle 4.1; Kap. 4.1.4–4.1.6 der Masterarbeit"
+      },
+      {
+        "id": "wood",
+        "label": "Holz",
+        "features": [
+          "Form",
+          "Holzart",
+          "Faserverlauf",
+          "Jahrringe",
+          "Werkzeugspuren",
+          "Verbindungen",
+          "Bohrungen",
+          "Risse",
+          "Verformungen",
+          "Feuchtigkeit",
+          "konservatorischer Zustand"
+        ],
+        "approaches": [
+          "Beschreibung",
+          "Fotografie",
+          "Zustands- und Konservierungsdokumentation",
+          "Maßdokumentation",
+          "gegebenenfalls 3D-Dokumentation",
+          "Proben- und Lagerungsdokumentation"
+        ],
+        "note": "Insbesondere bei wassergetränktem Holz können Zustand und Form veränderlich sein. Aufnahmezeitpunkt, Lagerung und konservatorische Bedingungen gehören zum Dokumentationszusammenhang.",
+        "source": "Tabelle 4.1; Kap. 4.1.4–4.1.6 der Masterarbeit"
+      },
+      {
+        "id": "leather",
+        "label": "Leder",
+        "features": [
+          "Form",
+          "Schnittformen",
+          "Nähte",
+          "Löcher",
+          "Reparaturen",
+          "Tragespuren",
+          "Falten",
+          "Verformungen",
+          "Schichtablösungen",
+          "Salze",
+          "frühere Behandlungen"
+        ],
+        "approaches": [
+          "Beschreibung",
+          "Fotografie",
+          "Zustands- und Konservierungsdokumentation",
+          "gegebenenfalls Zeichnung",
+          "Detail- oder 3D-Dokumentation"
+        ],
+        "note": "Leder kann stark verformt und fragil sein. Lagerung, Handling und Materialzustand können bestimmen, welche Bereiche überhaupt zugänglich sind.",
+        "source": "Tabelle 4.1; Kap. 4.1.4–4.1.6 der Masterarbeit"
+      },
+      {
+        "id": "textiles",
+        "label": "Textilien",
+        "features": [
+          "Faserart",
+          "Fadenrichtung",
+          "Drehung",
+          "Zwirnung",
+          "Bindung",
+          "Fadendichte",
+          "Webkante",
+          "Nähte",
+          "Reparaturen",
+          "Farbe",
+          "Anhaftungen",
+          "Verfärbungen",
+          "Gebrauchsspuren"
+        ],
+        "approaches": [
+          "fachterminologische Beschreibung",
+          "Fotografie",
+          "Makro- und Detaildokumentation",
+          "Zustandsdokumentation",
+          "gegebenenfalls spezialisierte fotografische / bildgebende Dokumentation"
+        ],
+        "note": "Feine textile Strukturen benötigen häufig eine andere Dokumentationsebene als die Gesamtform. Anhaftungen, Verfärbungen, Falten und Reparaturen können eigenständige archäologische Informationen tragen.",
+        "source": "Tabelle 4.1; Kap. 4.1.4–4.1.6 der Masterarbeit"
+      },
+      {
+        "id": "animal",
+        "label": "Knochen, Geweih, Elfenbein und Horn",
+        "features": [
+          "Materialbestimmung",
+          "anatomischer Ursprung",
+          "Wachstums- und Strukturmerkmale",
+          "Bearbeitungsspuren",
+          "Schnitte",
+          "Bohrungen",
+          "Politur",
+          "Gebrauchsspuren",
+          "Brüche",
+          "Reparaturen",
+          "Zustand"
+        ],
+        "approaches": [
+          "Beschreibung",
+          "Fotografie",
+          "Zeichnung",
+          "Detaildokumentation",
+          "gegebenenfalls 3D-Oberflächen- oder volumetrische Dokumentation"
+        ],
+        "note": "Äußere Form, Materialstruktur sowie Bearbeitungs- und Gebrauchsspuren liegen auf unterschiedlichen Informationsebenen und sind nicht ohne Weiteres durch dieselbe Dokumentationsform abzudecken.",
+        "source": "Tabelle 4.1; Kap. 4.1.4–4.1.6 der Masterarbeit"
+      },
+      {
+        "id": "archaeobotanical-macroremains",
+        "label": "Archäobotanische Makroreste",
+        "features": [
+          "taxonomisch diagnostische Formmerkmale",
+          "Oberflächenmerkmale",
+          "Größe und Proportionen",
+          "Ansatz- und Bruchstellen",
+          "anatomische Strukturmerkmale bei Holz / Holzkohle",
+          "Erhaltungsform",
+          "taphonomische Veränderungen"
+        ],
+        "approaches": [
+          "fachliche Bestimmung und Beschreibung",
+          "Maß- und Mengendokumentation",
+          "Stereo- / Lichtmikroskopie",
+          "Makro- / Mikrofotografie",
+          "Vergleich mit Referenzsammlungen",
+          "gegebenenfalls spezialisierte 3D-Oberflächen- oder volumetrische Dokumentation"
+        ],
+        "note": "Pflanzliche Makroreste umfassen unter anderem Samen, Früchte, Druschreste sowie Holz und Holzkohle. Bestimmung und Aussagekraft hängen von diagnostischen Merkmalen, Referenzmaterial, Erhaltungsform und taphonomischen Veränderungen ab. 3D-Dokumentation ist keine allgemeine Voraussetzung, kann aber für spezielle morphometrische oder strukturelle Fragestellungen relevant sein.",
+        "source": "Tabelle 4.1; Kap. 4.1.4–4.1.6 der Masterarbeit"
+      },
+      {
+        "label": "Unbekannt / noch nicht bestimmt",
+        "features": [],
+        "note": "Material- oder Fundgruppe ist derzeit nicht belastbar bestimmt; die Angabe kann später präzisiert werden.",
+        "source": "Tabelle 4.1; Kap. 4.1.4–4.1.6 der Masterarbeit"
+      }
+    ],
+    "multiMaterialContext": {
+      "id": "multi-material",
+      "label": "Mehrmaterialiges / zusammengesetztes Objekt",
+      "features": [
+        "Materialkombination",
+        "Materialverbindungen",
+        "Verbindungstechnik",
+        "Herstellungsreihenfolge",
+        "Reparaturen",
+        "Korrosion",
+        "Abbauprozesse",
+        "konservatorische Wechselwirkungen"
+      ],
+      "approaches": [
+        "Eigenschaften der Einzelmaterialien getrennt berücksichtigen",
+        "Materialverbindungen und Kontaktzonen gezielt dokumentieren",
+        "je nach Informationsbedarf unterschiedliche Dokumentationsformen kombinieren"
+      ],
+      "note": "Bei mehreren Materialgruppen sind zusätzlich die Beziehungen zwischen den Bestandteilen relevant. Verbindungstechniken, Herstellungsreihenfolge sowie gegenseitige Korrosions-, Abbau- und konservatorische Wechselwirkungen können eigenständige Dokumentationsanforderungen begründen.",
+      "source": "Tabelle 4.2 (Materialkombination); ergänzend Tabelle 4.1 und Kap. 4.1.4–4.1.6 der Masterarbeit"
+    },
+    "conditions": [
+      {
+        "id": "size",
+        "label": "Größe und Maßstab",
+        "examples": [
+          "sehr kleines Objekt / kleinstes diagnostisches Merkmal",
+          "sehr großes Objekt"
+        ],
+        "note": "Abbildungsmaßstab, Detailerkennbarkeit, Fokus und Schärfentiefe, Arbeitsabstand und erreichbare Auflösung können relevant werden.",
+        "source": "Tabelle 4.2; Kap. 4.1.5–4.1.6 der Masterarbeit"
+      },
+      {
+        "id": "geometry",
+        "label": "Geometrische Form",
+        "examples": [
+          "lange oder dünne Form",
+          "flaches Objekt",
+          "Hinterschneidung / tiefe Vertiefung",
+          "Innenraum"
+        ],
+        "note": "Einzelne Bereiche können aus üblichen Aufnahmepositionen nicht erreichbar sein; zusätzliche Ansichten, Objektlagen oder ergänzende Dokumentationsformen können erforderlich werden.",
+        "source": "Tabelle 4.2; Kap. 4.1.5–4.1.6 der Masterarbeit"
+      },
+      {
+        "id": "surface",
+        "label": "Optische Oberfläche und Materialwirkung",
+        "examples": [
+          "glänzend / spiegelnd / stark reflektierend",
+          "transparent / transluzent",
+          "sehr dunkel",
+          "homogen / repetitiv"
+        ],
+        "note": "Beleuchtung und Erfassungsprinzip beeinflussen Erkennbarkeit beziehungsweise Rekonstruierbarkeit; Verfahren können auf dieselbe Oberfläche unterschiedlich reagieren.",
+        "source": "Tabelle 4.2; Kap. 4.1.5–4.1.6 der Masterarbeit"
+      },
+      {
+        "id": "material-combination",
+        "label": "Materialkombination",
+        "examples": [
+          "Kompositobjekt",
+          "unterschiedliche Oberflächen- oder Materialeigenschaften innerhalb eines Objekts"
+        ],
+        "note": "Einzelne Bestandteile können unterschiedliche Merkmale, Erhaltungsbedingungen und Dokumentationszugänge aufweisen.",
+        "source": "Tabelle 4.2; Kap. 4.1.5–4.1.6 der Masterarbeit"
+      },
+      {
+        "id": "condition",
+        "label": "Erhaltungszustand und Fragilität",
+        "examples": [
+          "instabil",
+          "verformt / rissig",
+          "empfindlich",
+          "wassergetränkt / austrocknungsgefährdet"
+        ],
+        "note": "Zulässige Objektlagen, Fixierung, Handhabung, Aufnahmezeit und mögliche Einwirkungen können eingeschränkt sein.",
+        "source": "Tabelle 4.2; Kap. 4.1.5–4.1.6 der Masterarbeit"
+      },
+      {
+        "id": "handling",
+        "label": "Beweglichkeit und Handhabung",
+        "examples": [
+          "großes Gewicht",
+          "feste Montage",
+          "darf nicht gedreht / umgelagert werden"
+        ],
+        "note": "Erreichbare Ansichten und Erfassungsabdeckung können begrenzt sein; die Aufnahmeplanung muss die zulässige Handhabung berücksichtigen.",
+        "source": "Tabelle 4.2; Kap. 4.1.5–4.1.6 der Masterarbeit"
+      },
+      {
+        "id": "access",
+        "label": "Physische Zugänglichkeit",
+        "examples": [
+          "Rückseite / Unterseite nicht erreichbar",
+          "Einbau in Träger oder Umgebung",
+          "verdeckte Kontaktfläche"
+        ],
+        "note": "Relevante Bereiche können mit oberflächengebundenen Verfahren nicht unmittelbar dokumentierbar sein; nicht erfasste Bereiche müssen kenntlich bleiben.",
+        "source": "Tabelle 4.2; Kap. 4.1.5–4.1.6 der Masterarbeit"
+      },
+      {
+        "id": "site",
+        "label": "Standortgebundene räumliche Bedingungen",
+        "examples": [
+          "sehr geringer Arbeitsraum",
+          "nur bestimmte Annäherungsrichtungen",
+          "unveränderbare Aufstellung"
+        ],
+        "note": "Positionierung von Gerät, Objekt oder Beleuchtung sowie mögliche Aufnahmedistanzen können eingeschränkt sein.",
+        "source": "Tabelle 4.2; Kap. 4.1.5–4.1.6 der Masterarbeit"
+      },
+      {
+        "id": "fixed-environment",
+        "label": "Nicht veränderbare Umgebungs- oder Zugangsvorgaben",
+        "examples": [
+          "zwingende Erfassung im Freien",
+          "nicht kontrollierbares Umgebungslicht",
+          "unveränderbare konservatorische oder institutionelle Vorgabe"
+        ],
+        "note": "Bestimmte Dokumentationsformen oder technische Ansätze können erschwert oder ausgeschlossen sein; diese Vorgaben sind von frei wählbaren Aufnahmebedingungen und veränderbaren Projektressourcen zu unterscheiden.",
+        "source": "Tabelle 4.2; Kap. 4.1.5–4.1.6 der Masterarbeit"
+      }
+    ]
+  },
+  "qualityOrientationGuide": [
+    {
+      "areas": [
+        "G",
+        "T",
+        "V",
+        "B"
+      ],
+      "ranges": {
+        "G": "1–2",
+        "T": "1–2",
+        "V": "1–2",
+        "B": "1"
+      },
+      "note": "Erkennbarkeit von Form und Oberfläche, Sichtbarkeit relevanter Bereiche; Bearbeitungs- und Modellstatus grundlegend gekennzeichnet.",
+      "keywords": [
+        "darstellung",
+        "orientierung",
+        "ansicht",
+        "wiedererkennbarkeit",
+        "vermittlung",
+        "web",
+        "präsentation"
+      ],
+      "requirements": {
+        "G": [
+          "Gesamtform und Proportionen",
+          "geometrische Formtreue relevanter Bereiche"
+        ],
+        "T": [
+          "allgemeine visuelle Lesbarkeit",
+          "räumliche Zuordnung visueller Merkmale"
+        ],
+        "V": [
+          "Abdeckung aller relevanten Objektbereiche",
+          "Nachvollziehbarkeit des Erfassungsumfangs"
+        ],
+        "B": [
+          "Bearbeitungsstatus der verwendeten Modellfassung"
+        ]
+      },
+      "id": "O-3.3-01",
+      "areaMatches": [
+        "Basisinventarisierung / Sammlungsmanagement",
+        "Lehre / fachliche Vermittlung",
+        "Online-Sammlung / Webvermittlung",
+        "Ausstellung / öffentliche Vermittlung",
+        "AR/VR / immersive Nutzung"
+      ],
+      "contextKeywords": [
+        "räumliche darstellung",
+        "interaktive darstellung",
+        "web-modell",
+        "wiedererkennbar"
+      ],
+      "minContextMatches": 1,
+      "label": "Allgemeine räumliche Darstellung und Orientierung",
+      "informationMatches": [
+        "Gesamtform und Grundmaße",
+        "räumliche Gesamtform und Erkennbarkeit",
+        "Gesamtform, Proportionen und Orientierung",
+        "Gesamtform und Orientierung"
+      ],
+      "source": "Tabelle 7.7; Kap. 5–6 und 7.5.3 der Masterarbeit"
+    },
+    {
+      "areas": [
+        "G",
+        "V",
+        "B"
+      ],
+      "ranges": {
+        "G": "2–3",
+        "V": "2–3",
+        "B": "2–3"
+      },
+      "note": "Maßbezug, Profilverlauf, relevante Formbereiche und Einfluss von Bearbeitung.",
+      "keywords": [
+        "profil",
+        "wandstärke",
+        "durchmesser",
+        "maßbezogen",
+        "formanalyse",
+        "randform"
+      ],
+      "requirements": {
+        "G": [
+          "Maßstab / Maßbezug",
+          "Gesamtform und Proportionen",
+          "geometrische Formtreue relevanter Bereiche",
+          "metrische Genauigkeit relevanter Messungen"
+        ],
+        "V": [
+          "Abdeckung aller relevanten Objektbereiche",
+          "Nachvollziehbarkeit des Erfassungsumfangs"
+        ],
+        "B": [
+          "Bearbeitungsstatus der verwendeten Modellfassung",
+          "Nachvollziehbarkeit geometrieverändernder Bearbeitungen"
+        ]
+      },
+      "id": "O-3.3-02",
+      "contextKeywords": [
+        "profil",
+        "wandstärke",
+        "durchmesser",
+        "randform"
+      ],
+      "minContextMatches": 2,
+      "label": "Maßbezogene Form- oder Profilanalyse",
+      "informationMatches": [
+        "Profil-, Rand- oder Bodenform"
+      ],
+      "source": "Tabelle 7.7; Kap. 5–6 und 7.5.3 der Masterarbeit"
+    },
+    {
+      "areas": [
+        "G",
+        "V",
+        "B",
+        "A"
+      ],
+      "ranges": {
+        "G": "3–4",
+        "V": "3",
+        "B": "3",
+        "A": "2–4"
+      },
+      "note": "Geometrische Belastbarkeit, einheitliche Orientierung, Vergleichbarkeit und geeignete Messgrundlage.",
+      "keywords": [
+        "metrisch",
+        "morphometr",
+        "formvergleich",
+        "vergleich",
+        "messung"
+      ],
+      "requirements": {
+        "G": [
+          "Maßstab / Maßbezug",
+          "geometrische Formtreue relevanter Bereiche",
+          "metrische Genauigkeit relevanter Messungen",
+          "geometrische Vergleichbarkeit / Wiederholbarkeit",
+          "Unsicherheit und Kontrollierbarkeit der Geometrie"
+        ],
+        "V": [
+          "Abdeckung aller relevanten Objektbereiche",
+          "Nachvollziehbarkeit des Erfassungsumfangs"
+        ],
+        "B": [
+          "Bearbeitungsstatus der verwendeten Modellfassung",
+          "Nachvollziehbarkeit geometrieverändernder Bearbeitungen",
+          "Versionierung von Modellzuständen"
+        ],
+        "A": [
+          "Messungen und definierte Datenoperationen",
+          "vergleichbare Orientierung / Ausrichtung",
+          "algorithmische Vergleichbarkeit / Klassifikation"
+        ]
+      },
+      "id": "O-3.3-03",
+      "contextKeywords": [
+        "morphometrisch",
+        "metrische untersuchung",
+        "formvergleich",
+        "skalierung",
+        "vergleichbarkeit"
+      ],
+      "minContextMatches": 2,
+      "label": "Metrischer oder morphometrischer Formvergleich",
+      "informationMatches": [
+        "metrisch / morphometrisch vergleichbare Formdaten",
+        "Skalierung, Vergleichbarkeit und konsistente Datenstruktur"
+      ],
+      "source": "Tabelle 7.7; Kap. 5–6 und 7.5.3 der Masterarbeit"
+    },
+    {
+      "areas": [
+        "G",
+        "V",
+        "B",
+        "A"
+      ],
+      "ranges": {
+        "G": "3–4",
+        "V": "3–4",
+        "B": "3–4",
+        "A": "3–4"
+      },
+      "note": "Vollständige relevante Flächen, unverfälschte Geometrie und zuverlässige Vergleichbarkeit.",
+      "keywords": [
+        "refitting",
+        "bruchfläche",
+        "kontaktfläche",
+        "passung"
+      ],
+      "requirements": {
+        "G": [
+          "Maßstab / Maßbezug",
+          "geometrische Formtreue relevanter Bereiche",
+          "kleinste relevante Merkmalsgröße / Detailerkennbarkeit",
+          "metrische Genauigkeit relevanter Messungen",
+          "geometrische Vergleichbarkeit / Wiederholbarkeit"
+        ],
+        "V": [
+          "Vollständigkeit analyserelevanter Kontakt- oder Bruchflächen",
+          "Dokumentation verbleibender Fehlstellen",
+          "Nachvollziehbarkeit des Erfassungsumfangs"
+        ],
+        "B": [
+          "Nachvollziehbarkeit geometrieverändernder Bearbeitungen",
+          "Versionierung von Modellzuständen"
+        ],
+        "A": [
+          "Messungen und definierte Datenoperationen",
+          "vergleichbare Orientierung / Ausrichtung",
+          "algorithmische Vergleichbarkeit / Klassifikation"
+        ]
+      },
+      "id": "O-3.3-04",
+      "contextKeywords": [
+        "refitting",
+        "kontaktfläche",
+        "passung"
+      ],
+      "minContextMatches": 1,
+      "label": "Refitting oder Vergleich von Bruch- und Kontaktflächen",
+      "informationMatches": [
+        "Bruch-, Kontakt- und räumliche Beziehungen",
+        "Anschluss- und Kontaktbereiche"
+      ],
+      "source": "Tabelle 7.7; Kap. 5–6 und 7.5.3 der Masterarbeit"
+    },
+    {
+      "areas": [
+        "T",
+        "V",
+        "B"
+      ],
+      "ranges": {
+        "T": "2–4",
+        "V": "2–3",
+        "B": "2–3"
+      },
+      "note": "Kontrollierte Wiedergabe der relevanten visuellen Merkmale und nachvollziehbare Bearbeitung.",
+      "keywords": [
+        "farbe",
+        "bemalung",
+        "textur",
+        "materialwirkung",
+        "visuelle oberfläche",
+        "oberflächenmerkmale"
+      ],
+      "requirements": {
+        "T": [
+          "Farbigkeit / Farbtreue",
+          "Detailerkennbarkeit der Textur",
+          "Dekor und visuelle Oberflächenmerkmale",
+          "Materialwirkung / Oberflächenerscheinung",
+          "visuelle Konsistenz zwischen Aufnahmen oder Modellbereichen",
+          "räumliche Zuordnung visueller Merkmale"
+        ],
+        "V": [
+          "Abdeckung aller relevanten Objektbereiche",
+          "Dokumentation verbleibender Fehlstellen"
+        ],
+        "B": [
+          "Nachvollziehbarkeit von Texturbearbeitungen",
+          "Bearbeitungsstatus der verwendeten Modellfassung"
+        ]
+      },
+      "id": "O-3.3-05",
+      "contextKeywords": [
+        "farbe",
+        "bemalung",
+        "farbtreue",
+        "materialwirkung",
+        "textur"
+      ],
+      "minContextMatches": 1,
+      "label": "Farbe, Bemalung oder visuelle Oberflächenmerkmale",
+      "informationMatches": [
+        "visuell charakteristische Merkmale",
+        "charakteristische visuelle Merkmale / Farbe / Oberfläche",
+        "visuell relevante Oberfläche / Farbe",
+        "visuelle Oberfläche",
+        "relevante Oberflächen- und Detailmerkmale"
+      ],
+      "source": "Tabelle 7.7; Kap. 5–6 und 7.5.3 der Masterarbeit"
+    },
+    {
+      "areas": [
+        "G",
+        "T",
+        "V",
+        "B"
+      ],
+      "ranges": {
+        "G": "2–4",
+        "T": "2–4",
+        "V": "2–4",
+        "B": "2–4"
+      },
+      "note": "Detailerkennbarkeit, vollständige relevante Oberfläche und Begrenzung verfälschender Bearbeitung; G oder T können je nach Merkmal unterschiedlich wichtig sein.",
+      "keywords": [
+        "relief",
+        "ritzung",
+        "inschrift",
+        "gebrauchsspuren",
+        "retusche",
+        "kante",
+        "grat"
+      ],
+      "requirements": {
+        "G": [
+          "geometrische Formtreue relevanter Bereiche",
+          "kleinste relevante Merkmalsgröße / Detailerkennbarkeit"
+        ],
+        "T": [
+          "Detailerkennbarkeit der Textur",
+          "Dekor und visuelle Oberflächenmerkmale",
+          "räumliche Zuordnung visueller Merkmale"
+        ],
+        "V": [
+          "Abdeckung aller relevanten Objektbereiche",
+          "Dokumentation verbleibender Fehlstellen"
+        ],
+        "B": [
+          "Nachvollziehbarkeit geometrieverändernder Bearbeitungen",
+          "Nachvollziehbarkeit von Texturbearbeitungen"
+        ]
+      },
+      "id": "O-3.3-06",
+      "contextKeywords": [
+        "ritzung",
+        "inschrift",
+        "gebrauchsspur",
+        "retusche",
+        "feines relief"
+      ],
+      "minContextMatches": 1,
+      "label": "Feines Relief, Ritzungen, Inschriften oder Gebrauchsspuren",
+      "informationMatches": [
+        "relevante Oberflächen- und Detailmerkmale",
+        "untersuchte Merkmale und relevante Form-/Oberflächeninformationen"
+      ],
+      "source": "Tabelle 7.7; Kap. 5–6 und 7.5.3 der Masterarbeit"
+    },
+    {
+      "areas": [
+        "V",
+        "B",
+        "D",
+        "A"
+      ],
+      "ranges": {
+        "V": "3–4",
+        "B": "2–4",
+        "D": "2–4",
+        "A": "2–4"
+      },
+      "note": "Relevante Volumenbereiche, Artefakte, Segmentierung und Nachvollziehbarkeit der Verarbeitung; G/T sind aufgabenabhängig.",
+      "keywords": [
+        "innere struktur",
+        "innenstruktur",
+        "hohlraum",
+        "volumetrisch",
+        "ct",
+        "dichte"
+      ],
+      "requirements": {
+        "V": [
+          "Erfassung von Unterseiten, Innenbereichen oder Hinterschneidungen",
+          "Dokumentation verbleibender Fehlstellen",
+          "Nachvollziehbarkeit des Erfassungsumfangs"
+        ],
+        "B": [
+          "Bearbeitungsstatus der verwendeten Modellfassung",
+          "Versionierung von Modellzuständen"
+        ],
+        "D": [
+          "Aufnahme- und Geräteinformationen",
+          "Verarbeitungs- und Prozessinformationen / Paradata",
+          "Beziehungen zwischen Ausgangsdaten, Arbeitsdaten und Modellfassungen",
+          "Versionierung und digitale Provenienz"
+        ],
+        "A": [
+          "Segmentierungen",
+          "Attribute und Merkmalsdaten",
+          "maschinenlesbare Datenstrukturen"
+        ]
+      },
+      "id": "O-3.3-07",
+      "contextKeywords": [
+        "innere struktur",
+        "innenstruktur",
+        "hohlraum",
+        "volumetrisch",
+        "ct"
+      ],
+      "minContextMatches": 1,
+      "label": "Innere Strukturen und volumetrische Untersuchung",
+      "informationMatches": [
+        "innere Strukturen / Volumen"
+      ],
+      "source": "Tabelle 7.7; Kap. 5–6 und 7.5.3 der Masterarbeit"
+    },
+    {
+      "areas": [
+        "G",
+        "T",
+        "V",
+        "B"
+      ],
+      "ranges": {
+        "G": "1–3",
+        "T": "1–3",
+        "V": "2–3",
+        "B": "1–2"
+      },
+      "note": "Dokumentiert den Zustand beziehungsweise einen Eingriff zu einem bestimmten Zeitpunkt. Anforderungen an Wiederholbarkeit, Zeitreihenvergleich und Versionierung werden dadurch nicht automatisch vorausgesetzt.",
+      "keywords": [
+        "zustand",
+        "eingriff",
+        "probenstelle"
+      ],
+      "requirements": {
+        "G": [
+          "geometrische Formtreue relevanter Bereiche"
+        ],
+        "T": [
+          "allgemeine visuelle Lesbarkeit",
+          "räumliche Zuordnung visueller Merkmale"
+        ],
+        "V": [
+          "Abdeckung aller relevanten Objektbereiche",
+          "Nachvollziehbarkeit des Erfassungsumfangs"
+        ],
+        "B": [
+          "Bearbeitungsstatus der verwendeten Modellfassung"
+        ]
+      },
+      "id": "O-3.3-08a",
+      "areaMatches": [
+        "Zustands- und Eingriffsdokumentation"
+      ],
+      "contextKeywords": [
+        "zustand festhalten",
+        "eingriff dokumentieren",
+        "probenstelle",
+        "eingriffsbereich"
+      ],
+      "minContextMatches": 1,
+      "label": "Einmalige Zustands- oder Eingriffsdokumentation",
+      "informationMatches": [
+        "Zustand",
+        "Zustand, Schäden und Fehlstellen",
+        "Ergänzungen und Materialveränderungen",
+        "Lage und Ausdehnung der Proben- oder Eingriffsstelle",
+        "räumlicher Zusammenhang und Materialbezug"
+      ],
+      "source": "Tabelle 7.7; Kap. 5–6 und 7.5.3 der Masterarbeit"
+    },
+    {
+      "areas": [
+        "G",
+        "T",
+        "V",
+        "B",
+        "D"
+      ],
+      "ranges": {
+        "V": "3–4",
+        "B": "3–4",
+        "D": "3–4"
+      },
+      "note": "Vergleichbarkeit zwischen Aufnahmezeitpunkten, wiederholbare Bedingungen und Versionierung; G und T richten sich nach der beobachteten Veränderung.",
+      "keywords": [
+        "zustand",
+        "monitoring",
+        "veränderung",
+        "restaurierung",
+        "eingriff"
+      ],
+      "requirements": {
+        "G": [
+          "geometrische Vergleichbarkeit / Wiederholbarkeit",
+          "Unsicherheit und Kontrollierbarkeit der Geometrie"
+        ],
+        "T": [
+          "visuelle Konsistenz zwischen Aufnahmen oder Modellbereichen",
+          "räumliche Zuordnung visueller Merkmale"
+        ],
+        "V": [
+          "Abdeckung aller relevanten Objektbereiche",
+          "Nachvollziehbarkeit des Erfassungsumfangs"
+        ],
+        "B": [
+          "Versionierung von Modellzuständen",
+          "Bearbeitungsstatus der verwendeten Modellfassung"
+        ],
+        "D": [
+          "Aufnahme- und Geräteinformationen",
+          "Verarbeitungs- und Prozessinformationen / Paradata",
+          "Versionierung und digitale Provenienz"
+        ]
+      },
+      "id": "O-3.3-08b",
+      "areaMatches": [],
+      "contextKeywords": [
+        "monitoring",
+        "zustandsvergleich",
+        "vor und nach",
+        "zwischen zeitpunkten",
+        "veränderung zwischen zeitpunkten"
+      ],
+      "minContextMatches": 1,
+      "label": "Zustandsvergleich, Vorher-Nachher-Vergleich und Monitoring",
+      "informationMatches": [
+        "Zustandsvergleich / Zustandsversionen",
+        "Lage und Ausdehnung von Veränderungen / Eingriffen"
+      ],
+      "source": "Tabelle 7.7; Kap. 5–6 und 7.5.3 der Masterarbeit"
+    },
+    {
+      "areas": [
+        "G",
+        "V",
+        "B"
+      ],
+      "ranges": {
+        "G": "2–3",
+        "V": "2–3",
+        "B": "1–2",
+        "T": "n. a. häufig"
+      },
+      "note": "Maßstab, relevante Form und Kennzeichnung technischer Veränderungen am Derivat.",
+      "keywords": [
+        "3d-druck",
+        "replik",
+        "tastmodell",
+        "ausstellungskopie",
+        "reproduktion",
+        "halterung"
+      ],
+      "requirements": {
+        "G": [
+          "Maßstab / Maßbezug",
+          "Gesamtform und Proportionen",
+          "geometrische Formtreue relevanter Bereiche"
+        ],
+        "V": [
+          "Abdeckung aller relevanten Objektbereiche",
+          "Dokumentation verbleibender Fehlstellen",
+          "Kennzeichnung ergänzter oder rekonstruierter Bereiche"
+        ],
+        "B": [
+          "Unterscheidung von Hauptfassung und Derivaten",
+          "Nachvollziehbarkeit geometrieverändernder Bearbeitungen"
+        ]
+      },
+      "id": "O-3.3-09",
+      "areaMatches": [
+        "3D-Druck / physische Reproduktion"
+      ],
+      "contextKeywords": [
+        "3d-druck",
+        "replik",
+        "tastmodell",
+        "ausstellungskopie"
+      ],
+      "minContextMatches": 1,
+      "label": "3D-Druck oder physische Reproduktion",
+      "informationMatches": [
+        "Gesamtform und Maße",
+        "Anschluss- und Kontaktbereiche",
+        "reproduktionsrelevante Oberflächenmerkmale"
+      ],
+      "source": "Tabelle 7.7; Kap. 5–6 und 7.5.3 der Masterarbeit"
+    },
+    {
+      "areas": [
+        "B",
+        "D",
+        "G",
+        "T",
+        "A"
+      ],
+      "ranges": {
+        "B": "erhöht",
+        "D": "erhöht"
+      },
+      "note": "Erfasste, berechnete, ergänzte und hypothetische Bestandteile müssen klar unterscheidbar bleiben; weitere Bereiche sind aufgabenabhängig.",
+      "keywords": [
+        "rekonstruktion",
+        "hypothetisch",
+        "ergänzung"
+      ],
+      "requirements": {
+        "B": [
+          "Bearbeitungsstatus der verwendeten Modellfassung",
+          "Unterscheidung von Hauptfassung und Derivaten",
+          "Versionierung von Modellzuständen",
+          "Unterscheidung erfasster, berechneter, ergänzter und hypothetischer Informationen"
+        ],
+        "D": [
+          "Verarbeitungs- und Prozessinformationen / Paradata",
+          "Beziehungen zwischen Ausgangsdaten, Arbeitsdaten und Modellfassungen",
+          "Versionierung und digitale Provenienz"
+        ]
+      },
+      "id": "O-3.3-10",
+      "contextKeywords": [
+        "virtuelle rekonstruktion",
+        "hypothetisch",
+        "rekonstruktion"
+      ],
+      "minContextMatches": 1,
+      "label": "Virtuelle Rekonstruktion",
+      "informationMatches": [
+        "Kontextbezug und Interaktionsbereiche"
+      ],
+      "source": "Tabelle 7.7; Kap. 5–6 und 7.5.3 der Masterarbeit"
+    },
+    {
+      "areas": [
+        "D",
+        "B"
+      ],
+      "ranges": {
+        "D": "3–4",
+        "B": "erhöht"
+      },
+      "note": "Provenienz, Modellversionen, Metadaten, Paradata, Rechte, Formate und Nachvollziehbarkeit; weitere Bereiche richten sich nach der geplanten Analyse.",
+      "keywords": [
+        "forschungsdaten",
+        "nachnutzung",
+        "reprozessierung",
+        "zitation",
+        "repository",
+        "datenbereitstellung"
+      ],
+      "requirements": {
+        "D": [
+          "eindeutige Objekt- und Datenzuordnung",
+          "Aufnahme- und Geräteinformationen",
+          "Verarbeitungs- und Prozessinformationen / Paradata",
+          "Beziehungen zwischen Ausgangsdaten, Arbeitsdaten und Modellfassungen",
+          "Versionierung und digitale Provenienz",
+          "Dateiformate und Datenstruktur",
+          "Rechte und Lizenzen",
+          "persistente Identifikation / Zitierbarkeit",
+          "Erhaltungs- und Archivierungsinformationen"
+        ],
+        "B": [
+          "Bearbeitungsstatus der verwendeten Modellfassung",
+          "Unterscheidung von Hauptfassung und Derivaten",
+          "Versionierung von Modellzuständen"
+        ]
+      },
+      "id": "O-3.3-11",
+      "areaMatches": [
+        "Forschungsdatenbereitstellung / langfristige Nachnutzung"
+      ],
+      "contextKeywords": [
+        "forschungsdaten",
+        "reprozessierung",
+        "repository"
+      ],
+      "minContextMatches": 1,
+      "label": "Wissenschaftliche Nachnutzung und Forschungsdatenbereitstellung",
+      "informationMatches": [
+        "fachlich benötigte Objektinformationen und Kontext",
+        "Datenherkunft und Prozessinformationen",
+        "Ausgangsdaten und Modell-/Datensatzversionen"
+      ],
+      "source": "Tabelle 7.7; Kap. 5–6 und 7.5.3 der Masterarbeit"
+    },
+    {
+      "areas": [
+        "A",
+        "D"
+      ],
+      "ranges": {
+        "A": "3–4",
+        "D": "3–4"
+      },
+      "note": "Strukturierte Merkmale, Annotationen, Segmentierungen, Vergleichbarkeit und maschinenlesbare Datenstrukturen; die Informationsbereiche selbst bleiben zusätzlich relevant.",
+      "keywords": [
+        "algorithmisch",
+        "ki",
+        "semantisch",
+        "annotation",
+        "segmentierung",
+        "klassifikation",
+        "machine learning"
+      ],
+      "requirements": {
+        "A": [
+          "strukturierte Annotationen",
+          "Segmentierungen",
+          "Attribute und Merkmalsdaten",
+          "semantische Verknüpfungen / kontrollierte Vokabulare",
+          "maschinenlesbare Datenstrukturen",
+          "algorithmische Vergleichbarkeit / Klassifikation",
+          "Interoperabilität"
+        ],
+        "D": [
+          "Verarbeitungs- und Prozessinformationen / Paradata",
+          "Dateiformate und Datenstruktur",
+          "Versionierung und digitale Provenienz"
+        ]
+      },
+      "id": "O-3.3-12",
+      "areaMatches": [
+        "Algorithmische / semantische Auswertung"
+      ],
+      "contextKeywords": [
+        "algorithmisch",
+        "semantisch",
+        "annotation",
+        "segmentierung",
+        "klassifikation",
+        "machine learning"
+      ],
+      "minContextMatches": 1,
+      "label": "Semantische oder algorithmische Auswertung",
+      "informationMatches": [
+        "definierte auszuwertende Merkmale",
+        "Skalierung, Vergleichbarkeit und konsistente Datenstruktur",
+        "Labels / Klassen und Annotationen",
+        "Segmentierungen und Datensatzversionen"
+      ],
+      "source": "Tabelle 7.7; Kap. 5–6 und 7.5.3 der Masterarbeit"
+    },
+    {
+      "id": "O-0991-G1",
+      "label": "Räumliche Form und geometrische Details",
+      "areas": [
+        "G",
+        "V",
+        "B"
+      ],
+      "ranges": {
+        "G": "1–4",
+        "V": "1–4",
+        "B": "1–3"
+      },
+      "note": "Geometrische Form und relevante Details werden getrennt von metrischer Kontrollierbarkeit und Farbwiedergabe konkretisiert.",
+      "informationMatches": [
+        "Darstellung: räumliche Form und geometrische Details"
+      ],
+      "requirements": {
+        "G": [
+          "Gesamtform und Proportionen",
+          "geometrische Formtreue relevanter Bereiche",
+          "kleinste relevante Merkmalsgröße / Detailerkennbarkeit"
+        ],
+        "V": [
+          "Abdeckung aller relevanten Objektbereiche",
+          "Nachvollziehbarkeit des Erfassungsumfangs"
+        ],
+        "B": [
+          "Bearbeitungsstatus der verwendeten Modellfassung"
+        ]
+      },
+      "source": "Tabelle 7.7; ergänzend Tabelle 7.4; Kap. 5–7 der Masterarbeit"
+    },
+    {
+      "id": "O-0991-T1",
+      "label": "Farbe und visuelle Oberfläche",
+      "areas": [
+        "T",
+        "V",
+        "B"
+      ],
+      "ranges": {
+        "T": "1–4",
+        "V": "1–4",
+        "B": "1–3"
+      },
+      "note": "Farb- und Oberflächeninformationen werden als eigener Schwerpunkt geführt und nicht aus geometrischer Detailfülle abgeleitet.",
+      "informationMatches": [
+        "Darstellung: Farbe und visuelle Oberfläche"
+      ],
+      "requirements": {
+        "T": [
+          "Farbigkeit / Farbtreue",
+          "Detailerkennbarkeit der Textur",
+          "Dekor und visuelle Oberflächenmerkmale",
+          "Materialwirkung / Oberflächenerscheinung",
+          "räumliche Zuordnung visueller Merkmale"
+        ],
+        "V": [
+          "Abdeckung aller relevanten Objektbereiche"
+        ],
+        "B": [
+          "Nachvollziehbarkeit von Texturbearbeitungen",
+          "Bearbeitungsstatus der verwendeten Modellfassung"
+        ]
+      },
+      "source": "Tabelle 7.7; ergänzend Tabelle 7.4; Kap. 5.4 und 6 der Masterarbeit"
+    },
+    {
+      "id": "O-0991-A1",
+      "label": "Verlässlich messen",
+      "areas": [
+        "G",
+        "A"
+      ],
+      "ranges": {
+        "G": "3–4",
+        "A": "2–4"
+      },
+      "note": "Verlässliche Messungen benötigen eine kontrollierte metrische Grundlage; Maßbezug allein reicht nicht aus. Für den Vorschlag wird deshalb mindestens G3 angesetzt.",
+      "informationMatches": [
+        "Operation: verlässlich messen"
+      ],
+      "requirements": {
+        "G": [
+          "Maßstab / Maßbezug",
+          "geometrische Formtreue relevanter Bereiche",
+          "metrische Genauigkeit relevanter Messungen",
+          "Unsicherheit und Kontrollierbarkeit der Geometrie"
+        ],
+        "A": [
+          "Messungen und definierte Datenoperationen"
+        ]
+      },
+      "source": "Tabelle 7.7 (metrischer oder morphometrischer Formvergleich); ergänzend Tabelle 7.4 sowie Kap. 5.3, 5.8 und 6.6.1 der Masterarbeit"
+    },
+    {
+      "id": "O-0991-A2",
+      "label": "Formen oder Merkmale vergleichen",
+      "areas": [
+        "A"
+      ],
+      "ranges": {
+        "A": "2–3"
+      },
+      "note": "Vergleich setzt eine für die gewählte Operation konsistente Orientierung beziehungsweise strukturierte Vergleichsgrundlage voraus; metrische Genauigkeit wird nur verlangt, wenn sie zusätzlich festgelegt ist.",
+      "informationMatches": [
+        "Operation: Formen oder Merkmale vergleichen"
+      ],
+      "requirements": {
+        "A": [
+          "vergleichbare Orientierung / Ausrichtung"
+        ]
+      },
+      "source": "Tabelle 7.7; ergänzend Tabelle 7.4; Kap. 5.8 und 6.6 der Masterarbeit"
+    },
+    {
+      "id": "O-0991-A3",
+      "label": "Annotieren oder segmentieren",
+      "areas": [
+        "A",
+        "D"
+      ],
+      "ranges": {
+        "A": "2–3",
+        "D": "2–3"
+      },
+      "note": "Annotation und Segmentierung benötigen adressierbare Bereiche und nachvollziehbare Datenstrukturen, ohne automatisch hochgradig algorithmische Anforderungen vorauszusetzen.",
+      "informationMatches": [
+        "Operation: annotieren / segmentieren"
+      ],
+      "requirements": {
+        "A": [
+          "strukturierte Annotationen",
+          "Segmentierungen",
+          "Attribute und Merkmalsdaten"
+        ],
+        "D": [
+          "Dateiformate und Datenstruktur",
+          "Versionierung und digitale Provenienz"
+        ]
+      },
+      "source": "Tabelle 7.7; ergänzend Tabelle 7.4; Kap. 5.7–5.8 und 6.6.8 der Masterarbeit"
+    },
+    {
+      "id": "O-0991-A4",
+      "label": "Algorithmisch oder maschinell auswerten",
+      "areas": [
+        "A",
+        "D"
+      ],
+      "ranges": {
+        "A": "3–4",
+        "D": "3–4"
+      },
+      "note": "Algorithmische Auswertung erfordert strukturierte, vergleichbare und maschinenlesbare Daten sowie nachvollziehbare Daten- und Prozessinformationen.",
+      "informationMatches": [
+        "Operation: algorithmisch / maschinell auswerten"
+      ],
+      "requirements": {
+        "A": [
+          "maschinenlesbare Datenstrukturen",
+          "algorithmische Vergleichbarkeit / Klassifikation",
+          "Interoperabilität"
+        ],
+        "D": [
+          "Verarbeitungs- und Prozessinformationen / Paradata",
+          "Dateiformate und Datenstruktur",
+          "Versionierung und digitale Provenienz"
+        ]
+      },
+      "source": "Tabelle 7.7; ergänzend Tabelle 7.4; Kap. 5.7–5.8 und 6.6.9 der Masterarbeit"
+    },
+    {
+      "id": "O-0991-D1",
+      "label": "Neue Derivate erzeugen",
+      "areas": [
+        "B",
+        "D"
+      ],
+      "ranges": {
+        "B": "2–3",
+        "D": "2–3"
+      },
+      "note": "Neue Ableitungen setzen eine geeignete Ausgangs- oder Masterfassung und nachvollziehbare Beziehungen zwischen Fassungen voraus.",
+      "informationMatches": [
+        "Operation: neue Derivate erzeugen"
+      ],
+      "requirements": {
+        "B": [
+          "Unterscheidung von Hauptfassung und Derivaten",
+          "Versionierung von Modellzuständen"
+        ],
+        "D": [
+          "Beziehungen zwischen Ausgangsdaten, Arbeitsdaten und Modellfassungen",
+          "Versionierung und digitale Provenienz"
+        ]
+      },
+      "source": "Tabelle 7.7; ergänzend Tabelle 7.4; Kap. 3.4, 5.6–5.7 und 6 der Masterarbeit"
+    },
+    {
+      "id": "O-0991-D2",
+      "label": "Ausgangsdaten erneut verarbeiten",
+      "areas": [
+        "D",
+        "B"
+      ],
+      "ranges": {
+        "D": "3–4",
+        "B": "2–3"
+      },
+      "note": "Reprozessierung benötigt geeignete Ausgangsdaten sowie nachvollziehbare Prozess-, Referenz- und Versionsinformationen.",
+      "informationMatches": [
+        "Operation: Ausgangsdaten erneut verarbeiten"
+      ],
+      "requirements": {
+        "D": [
+          "Aufnahme- und Geräteinformationen",
+          "Verarbeitungs- und Prozessinformationen / Paradata",
+          "Beziehungen zwischen Ausgangsdaten, Arbeitsdaten und Modellfassungen",
+          "Versionierung und digitale Provenienz"
+        ],
+        "B": [
+          "Versionierung von Modellzuständen"
+        ]
+      },
+      "source": "Tabelle 7.7; ergänzend Tabelle 7.4; Kap. 3.4, 5.7 und 6.8 der Masterarbeit"
+    },
+    {
+      "id": "O-0991-D3",
+      "label": "Daten weitergeben und zitierbar bereitstellen",
+      "areas": [
+        "D"
+      ],
+      "ranges": {
+        "D": "2–4"
+      },
+      "note": "Weitergabe und wissenschaftliche Referenzierbarkeit benötigen eindeutige Zuordnung, Rechteinformationen und gegebenenfalls persistente Identifikation.",
+      "informationMatches": [
+        "Operation: Daten weitergeben / zitierbar bereitstellen"
+      ],
+      "requirements": {
+        "D": [
+          "eindeutige Objekt- und Datenzuordnung",
+          "Rechte und Lizenzen",
+          "persistente Identifikation / Zitierbarkeit"
+        ]
+      },
+      "source": "Tabelle 7.7; ergänzend Tabelle 7.4; Kap. 5.7 und 6.8.2 der Masterarbeit"
+    },
+    {
+      "id": "O-0991-D4",
+      "label": "Langfristig erhalten",
+      "areas": [
+        "D"
+      ],
+      "ranges": {
+        "D": "3–4"
+      },
+      "note": "Langfristige Nutzbarkeit verlangt geeignete Formate, Erhaltungsinformationen und einen nachvollziehbaren Datenzusammenhang.",
+      "informationMatches": [
+        "Operation: langfristig erhalten"
+      ],
+      "requirements": {
+        "D": [
+          "Dateiformate und Datenstruktur",
+          "Versionierung und digitale Provenienz",
+          "Erhaltungs- und Archivierungsinformationen"
+        ]
+      },
+      "source": "Tabelle 7.7; ergänzend Tabelle 7.4; Kap. 5.7 und 6.8 der Masterarbeit"
+    },
+    {
+      "id": "O-0991-V1",
+      "label": "Erfassungsumfang: gesamtes Objekt",
+      "areas": [
+        "V"
+      ],
+      "ranges": {
+        "V": "1–4"
+      },
+      "note": "Wenn das gesamte Objekt benötigt wird, muss die Erfassungsabdeckung für alle fachlich relevanten äußeren Bereiche nachvollziehbar sein.",
+      "informationMatches": [
+        "Erfassungsumfang: gesamtes Objekt"
+      ],
+      "requirements": {
+        "V": [
+          "Abdeckung aller relevanten Objektbereiche",
+          "Nachvollziehbarkeit des Erfassungsumfangs",
+          "Dokumentation verbleibender Fehlstellen"
+        ]
+      },
+      "source": "Tabelle 7.7; ergänzend Tabelle 7.4; Kap. 5–7 der Masterarbeit"
+    },
+    {
+      "id": "O-0991-V2",
+      "label": "Erfassungsumfang: bestimmte Bereiche oder Details",
+      "areas": [
+        "V"
+      ],
+      "ranges": {
+        "V": "1–4"
+      },
+      "note": "Bei lokal begrenzten Anforderungen wird Vollständigkeit auf die ausdrücklich relevanten Bereiche bezogen, nicht pauschal auf das gesamte Objekt.",
+      "informationMatches": [
+        "Erfassungsumfang: bestimmte Bereiche / Details"
+      ],
+      "requirements": {
+        "V": [
+          "Abdeckung aller relevanten Objektbereiche",
+          "Nachvollziehbarkeit des Erfassungsumfangs"
+        ]
+      },
+      "source": "Tabelle 7.7; ergänzend Tabelle 7.4; Kap. 5–7 der Masterarbeit"
+    },
+    {
+      "id": "O-0991-V3",
+      "label": "Erfassungsumfang: innere Strukturen oder Volumen",
+      "areas": [
+        "V"
+      ],
+      "ranges": {
+        "V": "1–4"
+      },
+      "note": "Innere beziehungsweise volumetrische Bereiche benötigen eine nachvollziehbare Abdeckung der für die Nutzung relevanten Strukturen; verbleibende nicht erfasste Bereiche bleiben kenntlich.",
+      "informationMatches": [
+        "Erfassungsumfang: innere Strukturen / Volumen"
+      ],
+      "requirements": {
+        "V": [
+          "Erfassung von Unterseiten, Innenbereichen oder Hinterschneidungen",
+          "Nachvollziehbarkeit des Erfassungsumfangs",
+          "Dokumentation verbleibender Fehlstellen"
+        ]
+      },
+      "source": "Tabelle 7.7; ergänzend Tabelle 7.4; Kap. 5–7 der Masterarbeit"
+    },
+    {
+      "id": "O-0991-D0",
+      "label": "Basisinventarisierung und eindeutige Datenzuordnung",
+      "areas": [
+        "D"
+      ],
+      "ranges": {
+        "D": "1–2"
+      },
+      "note": "Bei Basisinventarisierung und Sammlungsmanagement gehört die eindeutige Zuordnung von Objekt und digitalem Datenbestand unmittelbar zur Nutzung und muss nicht als eigene Datenhandlung ausgewählt werden.",
+      "areaMatches": [
+        "Basisinventarisierung / Sammlungsmanagement"
+      ],
+      "requirements": {
+        "D": [
+          "eindeutige Objekt- und Datenzuordnung"
+        ]
+      },
+      "source": "Tabelle 7.7; ergänzend Tabelle 7.4; Kap. 3.4, 5.7 und 6.3 der Masterarbeit"
+    },
+    {
+      "areas": [
+        "G"
+      ],
+      "ranges": {
+        "G": "2"
+      },
+      "note": "Ein nachvollziehbarer Größen- beziehungsweise Maßbezug ist erforderlich, ohne damit automatisch eine weitergehende metrische Auswertbarkeit zu behaupten.",
+      "keywords": [
+        "größe",
+        "maße",
+        "maßstab",
+        "maßbezug"
+      ],
+      "requirements": {
+        "G": [
+          "Maßstab / Maßbezug"
+        ]
+      },
+      "id": "O-0994-G0",
+      "informationMatches": [
+        "Größe, Maße und Maßstab"
+      ],
+      "label": "Größe, Maße und Maßstab",
+      "source": "Tabelle 7.4 und Tabelle 7.7; Kap. 5.3.2, 6 und 7.5.3 der Masterarbeit"
+    }
+  ],
+  "dataComponentGuide": [
+    {
+      "id": "O-4.1D-01",
+      "use": "Interne Orientierung und Basisinventarisierung",
+      "components": [
+        "relevantes Endprodukt",
+        "Objekt- und Kontextinformationen",
+        "Modell-/Datenstatus"
+      ],
+      "function": "Wiederauffinden, Identifizieren und grundlegende interne Nutzung",
+      "areaMatches": [
+        "Basisinventarisierung / Sammlungsmanagement"
+      ],
+      "requirementKeywords": [
+        "eindeutige objekt- und datenzuordnung"
+      ],
+      "informationMatches": [
+        "Gesamtform und Grundmaße",
+        "Zustand",
+        "visuell charakteristische Merkmale"
+      ],
+      "source": "Tabelle 7.10; Kap. 3.4, 5.7, 6 und 7.6.1 der Masterarbeit",
+      "operationMatches": []
+    },
+    {
+      "id": "O-4.1D-02",
+      "use": "Webvermittlung und digitale Präsentation",
+      "components": [
+        "Präsentations-/Nutzungsderivat",
+        "Objekt- und Kontextinformationen",
+        "Rechte/Lizenzinformationen",
+        "Versions-/Provenienzinformationen",
+        "Masterfassung"
+      ],
+      "function": "Präsentation des Objekts und gegebenenfalls spätere Erzeugung neuer Präsentationsfassungen",
+      "areaMatches": [
+        "Online-Sammlung / Webvermittlung",
+        "Ausstellung / öffentliche Vermittlung",
+        "Lehre / fachliche Vermittlung",
+        "AR/VR / immersive Nutzung"
+      ],
+      "requirementKeywords": [],
+      "informationMatches": [
+        "räumliche Gesamtform und Erkennbarkeit",
+        "Gesamtform, Proportionen und Orientierung",
+        "Gesamtform und Orientierung",
+        "visuelle Oberfläche",
+        "charakteristische visuelle Merkmale / Farbe / Oberfläche",
+        "visuell relevante Oberfläche / Farbe"
+      ],
+      "source": "Tabelle 7.10; Kap. 3.4, 5.7, 6 und 7.6.1 der Masterarbeit",
+      "operationMatches": []
+    },
+    {
+      "id": "O-4.1D-03",
+      "use": "Erzeugung neuer Derivate oder Ausgabeformate",
+      "components": [
+        "Masterfassung",
+        "Versions-/Provenienzinformationen",
+        "Ausgangs-/Rohdaten"
+      ],
+      "function": "Neue Ausgabeformate ohne Neudigitalisierung ableiten",
+      "areaMatches": [],
+      "requirementKeywords": [
+        "unterscheidung von hauptfassung und derivaten"
+      ],
+      "informationMatches": [
+        "Ausgangsdaten und Modell-/Datensatzversionen"
+      ],
+      "source": "Tabelle 7.10; Kap. 3.4, 5.7, 6 und 7.6.1 der Masterarbeit",
+      "operationMatches": [
+        "Neue Derivate erzeugen"
+      ]
+    },
+    {
+      "id": "O-4.1D-04",
+      "use": "Wissenschaftliche Publikation",
+      "components": [
+        "zitierbare Modell-/Datenfassung",
+        "Metadaten und Paradata",
+        "Maßstabs-/Methoden-/Bearbeitungsinformationen",
+        "Rechte/Lizenzinformationen",
+        "Persistente Identifikation/Zitierbarkeit"
+      ],
+      "function": "Nachvollziehbarkeit, Referenzierbarkeit und wissenschaftliche Einordnung",
+      "areaMatches": [
+        "Wissenschaftliche Publikation"
+      ],
+      "requirementKeywords": [
+        "persistente identifikation",
+        "zitierbarkeit",
+        "rechte und lizenzen"
+      ],
+      "informationMatches": [
+        "untersuchte Merkmale und relevante Form-/Oberflächeninformationen",
+        "Maßstab und Orientierung",
+        "Quellenbezug"
+      ],
+      "source": "Tabelle 7.10; Kap. 3.4, 5.7, 6 und 7.6.1 der Masterarbeit",
+      "operationMatches": []
+    },
+    {
+      "id": "O-4.1D-05",
+      "use": "Metrische, morphologische oder vergleichende Analyse",
+      "components": [
+        "Masterfassung",
+        "Analysefassung",
+        "Maßstabs-/Referenz-/Kontrollinformationen",
+        "Bearbeitungs-/Prozessdokumentation",
+        "Metadaten und Paradata",
+        "Ausgangs-/Rohdaten"
+      ],
+      "function": "Belastbare Analyse und Beurteilung analytisch relevanter Veränderungen",
+      "areaMatches": [],
+      "requirementKeywords": [
+        "maßstab / maßbezug",
+        "metrische genauigkeit",
+        "geometrische vergleichbarkeit"
+      ],
+      "informationMatches": [
+        "metrisch / morphometrisch vergleichbare Formdaten",
+        "Profil-, Rand- oder Bodenform",
+        "Bruch-, Kontakt- und räumliche Beziehungen"
+      ],
+      "source": "Tabelle 7.10; Kap. 3.4, 5.7, 6 und 7.6.1 der Masterarbeit",
+      "operationMatches": [
+        "Verlässlich messen",
+        "Formen oder Merkmale vergleichen"
+      ]
+    },
+    {
+      "id": "O-4.1D-06",
+      "use": "Restaurierung, Monitoring und Zustandsvergleich",
+      "components": [
+        "datierte Vergleichsfassungen",
+        "Zustands-/Eingriffsinformationen",
+        "Aufnahme-/Vergleichsbedingungen",
+        "Metadaten und Paradata",
+        "Versions-/Provenienzinformationen"
+      ],
+      "function": "Nachvollziehbarer Vergleich unterschiedlicher Objektzustände",
+      "areaMatches": [
+        "Zustands- und Eingriffsdokumentation"
+      ],
+      "requirementKeywords": [
+        "versionierung von modellzuständen"
+      ],
+      "informationMatches": [
+        "Zustandsvergleich / Zustandsversionen",
+        "Lage und Ausdehnung von Veränderungen / Eingriffen",
+        "Lage und Ausdehnung der Proben- oder Eingriffsstelle"
+      ],
+      "source": "Tabelle 7.10; Kap. 3.4, 5.7, 6 und 7.6.1 der Masterarbeit",
+      "operationMatches": [
+        "Zustände vergleichen"
+      ]
+    },
+    {
+      "id": "O-4.1D-07",
+      "use": "Reprozessierung oder spätere Neubearbeitung",
+      "components": [
+        "Ausgangs-/Rohdaten",
+        "Maßstabs-/Referenz-/Kontrollinformationen",
+        "Bearbeitungs-/Prozessdokumentation",
+        "Objekt- und Kontextinformationen",
+        "Versions-/Provenienzinformationen"
+      ],
+      "function": "Erneute Verarbeitung unter veränderten Bedingungen oder mit anderer Software",
+      "areaMatches": [],
+      "requirementKeywords": [
+        "beziehungen zwischen ausgangsdaten, arbeitsdaten und modellfassungen",
+        "verarbeitungs- und prozessinformationen"
+      ],
+      "informationMatches": [
+        "Datenherkunft und Prozessinformationen",
+        "Ausgangsdaten und Modell-/Datensatzversionen"
+      ],
+      "source": "Tabelle 7.10; Kap. 3.4, 5.7, 6 und 7.6.1 der Masterarbeit",
+      "operationMatches": [
+        "Ausgangsdaten erneut verarbeiten"
+      ]
+    },
+    {
+      "id": "O-4.1D-08",
+      "use": "Forschungsdatenpublikation und weitergehende Nachnutzung",
+      "components": [
+        "Ausgangs-/Rohdaten",
+        "Masterfassung",
+        "Präsentations-/Nutzungsderivat",
+        "Metadaten und Paradata",
+        "Versions-/Provenienzinformationen",
+        "Rechte/Lizenzinformationen",
+        "Persistente Identifikation/Zitierbarkeit",
+        "Archivierungs-/Bereitstellungsinformationen"
+      ],
+      "function": "Wissenschaftliche Prüfung, Zitierbarkeit, Weiterverwendung und längerfristige Nachnutzung",
+      "areaMatches": [
+        "Forschungsdatenbereitstellung / langfristige Nachnutzung"
+      ],
+      "requirementKeywords": [
+        "erhaltungs- und archivierungsinformationen",
+        "dateiformate und datenstruktur",
+        "persistente identifikation"
+      ],
+      "informationMatches": [
+        "fachlich benötigte Objektinformationen und Kontext",
+        "Datenherkunft und Prozessinformationen",
+        "Ausgangsdaten und Modell-/Datensatzversionen"
+      ],
+      "source": "Tabelle 7.10; Kap. 3.4, 5.7, 6 und 7.6.1 der Masterarbeit",
+      "operationMatches": [
+        "Daten weitergeben / zitierbar bereitstellen",
+        "Langfristig erhalten"
+      ]
+    },
+    {
+      "id": "O-4.1D-09",
+      "use": "Algorithmische oder semantische Auswertung",
+      "components": [
+        "Analysefassung",
+        "Metadaten und Paradata",
+        "Bearbeitungs-/Prozessdokumentation",
+        "Versions-/Provenienzinformationen",
+        "strukturierte Merkmalsdaten/Annotationen/Segmentierungen"
+      ],
+      "function": "Maschinelle Auswertung und nachvollziehbare Zuordnung von Merkmalen, Klassen und Analyseergebnissen",
+      "areaMatches": [
+        "Algorithmische / semantische Auswertung"
+      ],
+      "requirementKeywords": [
+        "maschinenlesbare datenstrukturen",
+        "strukturierte annotationen",
+        "segmentierungen",
+        "attribute und merkmalsdaten",
+        "interoperabilität"
+      ],
+      "informationMatches": [
+        "definierte auszuwertende Merkmale",
+        "Skalierung, Vergleichbarkeit und konsistente Datenstruktur",
+        "Labels / Klassen und Annotationen",
+        "Segmentierungen und Datensatzversionen"
+      ],
+      "source": "Tabelle 7.10; Kap. 3.4, 5.7, 6 und 7.6.1 der Masterarbeit",
+      "operationMatches": [
+        "Annotieren / segmentieren",
+        "Algorithmisch / maschinell auswerten"
+      ]
+    }
+  ],
+  "dataContextFields": [
+    {
+      "field": "Objektbezug",
+      "examples": "Inventarnummer, Objektbezeichnung, Material, Maße, Fundort/Fundkontext, Datierung, Aufbewahrungsort",
+      "function": "eindeutige Identifikation und archäologische Einordnung"
+    },
+    {
+      "field": "Zweck und Status",
+      "examples": "vorgesehene bzw. ursprüngliche Nutzung, Funktion des Datenprodukts, Status der Modell- oder Datenfassung",
+      "function": "Einordnung von Zweckbindung, Funktion und Status"
+    },
+    {
+      "field": "Nachvollziehbarkeit der Dokumentationsentscheidung",
+      "examples": "Auswahl dokumentierter Informationen, Gründe für Umfang und Form, Qualitätsanforderungen, Einschränkungen und Abwägungen",
+      "function": "Begründung, warum bestimmte Informationen in bestimmter Form und Qualität dokumentiert oder nicht dokumentiert wurden"
+    },
+    {
+      "field": "Verfahren",
+      "examples": "bildbasierte 3D-Rekonstruktion, Streifenlicht-/Laserscanning, CT/Mikro-CT, hybride Workflows",
+      "function": "Einordnung des Erfassungs- beziehungsweise Rekonstruktionsprinzips"
+    },
+    {
+      "field": "Aufnahme",
+      "examples": "Datum, verantwortliche Personen, Gerät, Kamera/Scanner, Objektiv, Beleuchtung, Objektlagen, Maßstab, Farbreferenz, Halterungen",
+      "function": "Nachvollziehbarkeit relevanter Entstehungsbedingungen"
+    },
+    {
+      "field": "Verarbeitung",
+      "examples": "Software/Version, zentrale Parameter, Alignment/Registrierung, Rekonstruktion, Meshing, Segmentierung, Texturierung",
+      "function": "Einordnung der Entstehung der Modell- oder Datenfassung"
+    },
+    {
+      "field": "Bearbeitung",
+      "examples": "Bereinigung, Filterung, Glättung, Lochfüllung, Decimation, Retusche, Farbkorrektur, Ergänzung, Derivatbildung",
+      "function": "Erkennbarkeit qualitätsrelevanter Veränderungen"
+    },
+    {
+      "field": "Daten- und Modellfassungen",
+      "examples": "Ausgangs-, Arbeits-, Master-, Analyse- und Derivatdaten",
+      "function": "Zuordnung der Funktionen und Beziehungen verschiedener Datenzustände"
+    },
+    {
+      "field": "Qualitätskontrolle und Grenzen",
+      "examples": "Kontrollmessungen, Referenzdaten, bekannte Fehler, Datenlücken, Erfassungsabdeckung, Unsicherheiten, Nutzungseinschränkungen",
+      "function": "Beurteilung von Belastbarkeit und Aussagegrenzen"
+    },
+    {
+      "field": "Rechte und Zugriff",
+      "examples": "Urheber- und Nutzungsrechte, Lizenz, Zugriffsbedingungen, sensible Informationen",
+      "function": "rechtlich und institutionell nachvollziehbare Nutzung"
+    },
+    {
+      "field": "Erhaltung und Bereitstellung",
+      "examples": "Speicherort/Repositorium, Dateiformate, Versionierung, persistente Kennung, Erhaltungszuständigkeit",
+      "function": "Auffindbarkeit, Zitierbarkeit und Verfügbarkeit im vorgesehenen Zeithorizont"
+    }
+  ],
+  "targetConflicts": [
+    {
+      "label": "Informationsgewinn ↔ konservatorische Sicherheit",
+      "keywords": [
+        "fragil",
+        "konservator",
+        "beweg",
+        "strahlung",
+        "handling",
+        "nicht frei beweglich"
+      ],
+      "description": "Vollständige oder hochauflösende Erfassung kann zusätzliche Bewegung, Positionierung, Beleuchtung oder Strahlung erfordern.",
+      "guidance": "Die benötigte Information und die konservatorische Grenze getrennt sichtbar halten; die vertretbare Priorität bleibt eine fachliche Entscheidung.",
+      "source": "Tabelle 7.15; Kap. 7.6.2 und 7.9 der Masterarbeit"
+    },
+    {
+      "label": "Fachlich erforderliche Qualität ↔ verfügbare Ressourcen",
+      "keywords": [
+        "budget",
+        "zeit",
+        "personal",
+        "fachkompetenz",
+        "ausstattung",
+        "infrastruktur",
+        "ressourcen"
+      ],
+      "description": "Das Soll-Profil kann Anforderungen ergeben, die mit vorhandenen Mitteln schwer oder nicht erreichbar sind.",
+      "guidance": "Das Soll nicht allein wegen Ressourcenmangels absenken; Umsetzung anpassen, Ressourcen ergänzen oder Einschränkung dokumentieren.",
+      "source": "Tabelle 7.15; Kap. 7.6.2 und 7.9 der Masterarbeit"
+    },
+    {
+      "label": "Unmittelbare Nutzung ↔ spätere Nachnutzung",
+      "keywords": [
+        "nachnutzung",
+        "reprozessierung",
+        "spätere",
+        "derivat",
+        "forschungsdaten"
+      ],
+      "description": "Für die aktuelle Aufgabe kann eine reduzierte Dokumentation genügen, während spätere Nutzung umfangreichere Daten erfordert.",
+      "guidance": "Den Nachnutzungshorizont bewusst bestimmen und seine Folgen für Qualität, Modellfassungen und Datenhaltung dokumentieren.",
+      "source": "Tabelle 7.15; Kap. 7.6.2 und 7.9 der Masterarbeit"
+    },
+    {
+      "label": "Nachnutzbarkeit ↔ Aufwand der Datenhaltung",
+      "keywords": [
+        "archiv",
+        "speicher",
+        "repositori",
+        "langfrist",
+        "ausgangsdaten",
+        "masterfassung"
+      ],
+      "description": "Umfangreiche Datenhaltung kann spätere Nutzung erleichtern, verursacht aber Speicher-, Pflege- und Verwaltungsaufwand.",
+      "guidance": "Nur diejenigen Bestandteile gezielt erhalten, die für die bewusst vorgesehene Nachnutzung benötigt werden.",
+      "source": "Tabelle 7.15; Kap. 7.6.2 und 7.9 der Masterarbeit"
+    },
+    {
+      "label": "Nutzbarkeit / Bearbeitung ↔ Modellintegrität / Nachvollziehbarkeit",
+      "keywords": [
+        "glättung",
+        "cleaning",
+        "lochfüll",
+        "reduktion",
+        "decimation",
+        "rekonstruktion",
+        "bearbeitung",
+        "derivat"
+      ],
+      "description": "Bearbeitung kann ein Modell besser nutzbar machen, zugleich aber Informationen verändern oder entfernen.",
+      "guidance": "Modellfassungen und Eingriffe unterscheiden; analytisch relevante Bearbeitungen nachvollziehbar halten.",
+      "source": "Tabelle 7.15; Kap. 7.6.2 und 7.9 der Masterarbeit"
+    },
+    {
+      "label": "Standardisierung / Vergleichbarkeit ↔ objektspezifische Anforderungen",
+      "keywords": [
+        "standard",
+        "serie",
+        "vergleichbarkeit",
+        "objektspezif",
+        "material",
+        "oberfläche"
+      ],
+      "description": "Einheitliche Workflows erleichtern Vergleich und Datenmanagement, können Besonderheiten einzelner Objekte aber unzureichend berücksichtigen.",
+      "guidance": "Gemeinsamen Rahmen beibehalten, aber fachlich notwendige objektspezifische Anpassungen zulassen und dokumentieren.",
+      "source": "Tabelle 7.15; Kap. 7.6.2 und 7.9 der Masterarbeit"
+    },
+    {
+      "label": "Zugänglichkeit / Nachnutzung ↔ rechtliche, ethische oder kulturelle Einschränkungen",
+      "keywords": [
+        "rechte",
+        "lizenz",
+        "zugriff",
+        "sensibel",
+        "kulturell",
+        "community",
+        "repatriierung"
+      ],
+      "description": "Offene Bereitstellung kann fachlich wünschenswert sein, aber Rechte, Schutzinteressen oder kulturelle Sensibilitäten können sie begrenzen.",
+      "guidance": "Einschränkungen und ihre Folgen für Nutzung und Nachnutzung dokumentieren; die Systematik entscheidet ihre Zulässigkeit nicht selbst.",
+      "source": "Tabelle 7.15; Kap. 7.6.2 und 7.9 der Masterarbeit"
+    }
+  ]
+}
