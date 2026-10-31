@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: >-
+  If you use COMPASS in research or teaching, please cite the software
+  using the information provided in this file. If you modify or
+  redistribute COMPASS, retain the required origin and copyright notices.
+type: software
+title: "COMPASS – A planning and assessment tool for archaeological object documentation"
+version: "1.0"
+authors:
+  - family-names: "Weßling"
+    given-names: "Ronny"
+abstract: >-
+  COMPASS is a web-based planning and assessment tool for archaeological
+  object documentation. It supports the definition of intended uses,
+  documentation requirements, documentation forms, and quality target
+  profiles, and allows prospective planning or retrospective assessment
+  by comparing target requirements with practice or existing-data profiles.
+  The application provides rule-based guidance and documents decisions,
+  limitations, and resulting conclusions.
+keywords:
+  - archaeology
+  - archaeological documentation
+  - cultural heritage
+  - 3D digitisation
+  - decision support
+  - quality assessment
+  - research software
+license: PolyForm-Noncommercial-1.0.0
+repository-code: "https://github.com/RonnyWessling/COMPASS-A-planning-and-assessment-tool-for-archaeological-object-documentation"
+url: "https://ronnywessling.github.io/COMPASS-A-planning-and-assessment-tool-for-archaeological-object-documentation/"
