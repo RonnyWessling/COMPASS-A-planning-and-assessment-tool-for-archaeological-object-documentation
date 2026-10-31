@@ -6,6 +6,7 @@ message: >-
 type: software
 title: "COMPASS – A planning and assessment tool for archaeological object documentation"
 version: "1.0"
+doi: 10.5281/zenodo.23847599
 authors:
   - family-names: "Weßling"
     given-names: "Ronny"
