@@ -3,6 +3,12 @@
 Lokale Webanwendung zur strukturierten Planung und Bewertung archäologischer Objektdokumentation.
 
 Version 1.0 ist der für die Masterarbeit eingefrorene Entwicklungsstand. Weitere konzeptionelle Änderungen sollen nur bei einem tatsächlich festgestellten fachlichen oder technischen Fehler erfolgen.
+# COMPASS – Planning and Assessment Tool
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.23847599)
+
+A web-based planning and assessment tool for
+archaeological object documentation.
 
 ## Start
 
