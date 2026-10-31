@@ -34,6 +34,32 @@ Das Instrument ist kein Entscheidungsautomat. Regelbasierte Orientierung hebt ty
 - `docs/` – vollständige Wissensbasis und Entscheidungslogik als HTML und PDF
 - `beispiele/` – vier hypothetische Anwendungsfälle als finaler JSON-Fallzustand und Prüfbericht (PDF)
 
+## License and citation / Lizenz und Zitierung
+
+**COMPASS – A planning and assessment tool for archaeological object documentation**  
+Original author: **Ronny Weßling**  
+Original repository: https://github.com/RonnyWessling/COMPASS-A-planning-and-assessment-tool-for-archaeological-object-documentation
+
+- **Software / Quellcode:** PolyForm Noncommercial 1.0.0 (see `LICENSE`).
+  Noncommercial use, modification and redistribution are permitted subject
+  to the license conditions; required notices must be preserved.
+- **Original COMPASS documentation and figures:** CC BY-NC-SA 4.0 (see
+  `LICENSE-DOCUMENTATION.md`). Modified documentation must be shared under
+  the ShareAlike conditions.
+- **Attribution / Herkunft:** When redistributing a modified copy, retain
+  the origin and copyright notice in `NOTICE.md` and identify the original
+  project and modifications.
+- **Commercial use:** Not authorized by these licenses for the relevant
+  COMPASS materials without separate permission from the rights holder.
+- **Scientific citation:** GitHub displays a citation suggestion based on
+  `CITATION.cff`. Once a Zenodo DOI is assigned, cite the exact release DOI.
+
+Note: PolyForm Noncommercial does **not** impose a complete ShareAlike
+obligation on independently added code in derivative software. Its mandatory
+notice and noncommercial terms continue to apply to the original covered
+software. External dependencies and third-party materials remain governed
+by their respective licenses.
+
 
 ## Credit
 © Ronny Weßling, 2026
